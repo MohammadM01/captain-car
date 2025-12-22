@@ -36,11 +36,11 @@ const Home = () => {
                             {/* Platform Shadow/Glow */}
                             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-4/5 h-12 md:h-24 bg-gradient-to-t from-black via-brand-red/10 to-transparent blur-3xl z-0 transition-all duration-1000 group-hover:via-brand-red/20" />
 
-                            {/* Smoke/Cloud Oval Background - Visible only on Laptop/Desktop */}
+                            {/* Smoke/Cloud Oval Background - Visible on All Devices */}
                             <img
                                 src="/assets/figma-img/smoke0cloud.png"
                                 alt="Smoke Effect"
-                                className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-[100px] md:w-[1750px] max-w-none h-auto object-contain opacity-80 z-0 pointer-events-none mix-blend-screen"
+                                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-[100px] md:mt-[100px] w-[180%] md:w-[1750px] max-w-none h-auto object-contain opacity-80 z-0 pointer-events-none mix-blend-screen"
                             />
 
                             {/* CLEAN IMAGE: No background text/ghosting behind it */}
@@ -356,8 +356,7 @@ const Home = () => {
                     <p className="text-gray-600 text-xs uppercase tracking-widest">© 2025 Captain Car. All Rights Reserved.</p>
                     <p className="text-gray-700 text-xs tracking-wide">Designed with precision.</p>
                 </div>
-            </footer>
-        </div>
+            </footer>        </div>
     );
 };
 
