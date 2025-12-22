@@ -44,7 +44,7 @@ const Home = () => {
                             <img
                                 src="/assets/figma-img/smoke0cloud.png"
                                 alt="Smoke Effect"
-                                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-[185px] md:mt-[100px] w-[180%] md:w-[1750px] max-w-none h-auto object-contain opacity-80 z-0 pointer-events-none mix-blend-screen"
+                                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-[155px] md:mt-[100px] w-[130%] md:w-[1750px] max-w-none h-auto object-contain opacity-80 z-0 pointer-events-none mix-blend-screen"
                             />
 
                             {/* CLEAN IMAGE: No background text/ghosting behind it */}
