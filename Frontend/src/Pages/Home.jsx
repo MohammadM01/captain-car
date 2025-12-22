@@ -7,7 +7,7 @@ const Home = () => {
         <div className="bg-black text-white font-sans overflow-x-hidden selection:bg-brand-red selection:text-white">
 
             {/* ================= HERO SECTION ================= */}
-            <div className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-16 overflow-hidden">
+            <div className="relative min-h-screen flex flex-col items-center justify-center pt-20 pb-12 overflow-hidden">
                 {/* Background Components */}
                 {/* Pattern 1 */}
                 <div
@@ -31,41 +31,27 @@ const Home = () => {
                     }}
                 />
 
-                {/* Cloud Effects */}
-                <div
-                    className="absolute bottom-0 left-0 right-0 h-1/2 z-2 opacity-80"
-                    style={{
-                        backgroundImage: 'url(/uploaded_cloud_0.png)',
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'bottom',
-                        backgroundRepeat: 'no-repeat',
-                    }}
-                />
-
-                {/* 2024 Watermark */}
-                <div className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-full select-none pointer-events-none flex justify-center items-center mix-blend-overlay">
-                    <span className="text-[28vw] font-black text-[#ffffff] leading-none tracking-tighter opacity-[0.03]">
-                        2024
-                    </span>
-                </div>
+                {/* REMOVED CLOUD LAYER TO FIX "2 IMAGES" ISSUE (Suspected cloud image contains duplicate car/artifact) */}
+                {/* Created a subtle CSS gradient instead for depth if needed */}
+                <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black via-black/50 to-transparent z-1 pointer-events-none"></div>
 
                 {/* Hero Content */}
                 <ScrollReveal>
-                    <div className="relative z-10 flex flex-col items-center justify-center w-full px-4">
-                        <div className="text-center max-w-5xl mx-auto mb-8">
-                            <h1 className="text-5xl md:text-7xl lg:text-9xl font-black mb-6 leading-tight tracking-tighter uppercase italic">
-                                <span className="block text-white">Enhance Your Vehicle's</span>
-                                <span className="block text-white">Performance</span>
+                    <div className="relative z-10 flex flex-col items-center justify-center w-full px-4 pt-4 md:pt-0">
+                        <div className="text-center max-w-5xl mx-auto mb-6 md:mb-8">
+                            <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black mb-4 md:mb-6 leading-tight tracking-tighter uppercase italic flex flex-col gap-2 md:gap-4">
+                                <span className="text-white drop-shadow-lg">Enhance Your Vehicle's</span>
+                                <span className="text-white drop-shadow-lg">Performance</span>
                             </h1>
-                            <p className="text-xl md:text-2xl text-gray-300 font-medium tracking-wide">
+                            <p className="text-base md:text-2xl text-gray-300 font-medium tracking-wide mt-4">
                                 Trusted Modification Workshop for Cars and Trucks
                             </p>
                         </div>
 
                         {/* Car Image with Glow */}
-                        <div className="relative w-full max-w-7xl mx-auto my-12 group">
+                        <div className="relative w-full max-w-7xl mx-auto my-6 md:my-12 group">
                             {/* Platform Shadow/Glow */}
-                            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-4/5 h-24 bg-gradient-to-t from-black via-brand-red/10 to-transparent blur-3xl z-0 transition-all duration-1000 group-hover:via-brand-red/20" />
+                            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-4/5 h-16 md:h-24 bg-gradient-to-t from-black via-brand-red/10 to-transparent blur-3xl z-0 transition-all duration-1000 group-hover:via-brand-red/20" />
 
                             <img
                                 src="/assets/figma-img/car.png"
@@ -75,11 +61,11 @@ const Home = () => {
                         </div>
 
                         {/* CTA Buttons */}
-                        <div className="flex flex-col sm:flex-row gap-8 items-center justify-center mt-8 mb-40">
-                            <Button variant="secondary" className="px-12 py-4 bg-white text-black font-black rounded-full hover:bg-gray-200 transition-all transform hover:-translate-y-1 shadow-[0_10px_20px_rgba(255,255,255,0.1)] text-lg uppercase tracking-wider">
+                        <div className="flex flex-col sm:flex-row gap-4 md:gap-8 items-center justify-center mt-4 mb-24 md:mb-40 w-full px-4">
+                            <Button variant="secondary" className="px-10 py-4 bg-white text-black font-black rounded-full hover:bg-gray-200 transition-all transform hover:-translate-y-1 shadow-[0_10px_20px_rgba(255,255,255,0.1)] text-base md:text-lg uppercase tracking-wider w-full sm:w-auto">
                                 Discover More
                             </Button>
-                            <button className="text-gray-300 text-lg font-bold hover:text-brand-red transition-colors duration-300 uppercase tracking-[0.2em] border-b-2 border-transparent hover:border-brand-red pb-1">
+                            <button className="text-gray-300 text-base md:text-lg font-bold hover:text-brand-red transition-colors duration-300 uppercase tracking-[0.2em] border-b-2 border-transparent hover:border-brand-red pb-1 py-3 w-full sm:w-auto">
                                 Upgrade Now
                             </button>
                         </div>
@@ -88,40 +74,41 @@ const Home = () => {
             </div>
 
             {/* ================= ABOUT US SECTION ================= */}
-            <div className="relative py-32 px-6 md:px-16" style={{
+            <div className="relative py-20 px-6 md:px-16" style={{
                 backgroundColor: '#0a0a0a',
                 backgroundImage: 'url(/assets/figma-img/bg-pattern.png)',
                 backgroundSize: 'cover',
-                backgroundBlendMode: 'overlay'
+                backgroundBlendMode: 'overlay',
+                backgroundAttachment: 'scroll' /* Kept scroll for mobile performance */
             }}>
                 {/* Visual Transitions */}
                 <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
 
                 <ScrollReveal>
-                    <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+                    <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center">
                         {/* Left: Logo Graphic */}
                         <div className="flex justify-center md:justify-start relative">
                             <div className="absolute inset-0 bg-brand-red/5 blur-3xl rounded-full opacity-50"></div>
                             <img
                                 src="/assets/figma-img/logo.png"
                                 alt="OCD Fab & Performance Logo"
-                                className="w-full max-w-xl object-contain drop-shadow-2xl relative z-10"
+                                className="w-full max-w-xs md:max-w-xl object-contain drop-shadow-2xl relative z-10"
                             />
                         </div>
 
                         {/* Right: Content */}
-                        <div className="text-left">
-                            <h2 className="text-6xl md:text-7xl font-black mb-6 tracking-tighter uppercase text-white">About Us</h2>
-                            <h3 className="text-2xl md:text-3xl text-brand-red font-bold mb-10 uppercase tracking-widest leading-snug">
+                        <div className="text-center md:text-left">
+                            <h2 className="text-4xl md:text-7xl font-black mb-4 md:mb-6 tracking-tighter uppercase text-white">About Us</h2>
+                            <h3 className="text-xl md:text-3xl text-brand-red font-bold mb-6 md:mb-10 uppercase tracking-widest leading-snug">
                                 Welcome to OCD Fab & Performance
                             </h3>
 
-                            <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-8 font-medium tracking-wide">
+                            <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-6 md:mb-8 font-medium tracking-wide">
                                 Where passion meets precision. Since 1995, we've been redefining vehicle modification.
                                 Our friendly team of professionals shares a love for automotive mastery. We set trends with
                                 innovative excellence, ensuring your vehicle stands out.
                             </p>
-                            <p className="text-gray-400 text-lg leading-relaxed font-normal">
+                            <p className="text-gray-400 text-base md:text-lg leading-relaxed font-normal">
                                 Elevate your ride with our commitment to precision. Join us on a journey where your automotive dreams become reality.
                             </p>
                         </div>
@@ -133,15 +120,15 @@ const Home = () => {
             <div className="relative py-24 px-6 bg-black">
                 <ScrollReveal>
                     <div className="max-w-7xl mx-auto text-center">
-                        <h2 className="text-5xl md:text-6xl font-black mb-4 uppercase text-white tracking-tighter">Services</h2>
-                        <h3 className="text-xl md:text-2xl text-brand-red font-bold mb-16 uppercase tracking-widest">
+                        <h2 className="text-4xl md:text-6xl font-black mb-4 uppercase text-white tracking-tighter">Services</h2>
+                        <h3 className="text-lg md:text-2xl text-brand-red font-bold mb-12 md:mb-16 uppercase tracking-widest">
                             Upgrade performance, style, and comfort with OCD.
                         </h3>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto relative z-10">
                             {['Performance Package', 'Exterior Modification', 'Interior Modification', 'Audio System', 'Suspension Upgrades', 'Other Services'].map((service, index) => (
                                 <div key={index} className="group bg-[#111] border border-white/5 py-6 px-8 rounded-xl shadow-lg hover:bg-brand-red hover:border-brand-red transition-all duration-300 cursor-pointer transform hover:-translate-y-2">
-                                    <span className="text-gray-300 group-hover:text-white font-bold text-xl uppercase tracking-wider transition-colors">{service}</span>
+                                    <span className="text-gray-300 group-hover:text-white font-bold text-lg md:text-xl uppercase tracking-wider transition-colors">{service}</span>
                                 </div>
                             ))}
                         </div>
@@ -153,9 +140,9 @@ const Home = () => {
             <div className="relative py-24 px-6 bg-[#0a0a0a]">
                 <ScrollReveal>
                     <div className="max-w-8xl mx-auto text-center">
-                        <h2 className="text-5xl md:text-6xl font-black mb-4 uppercase text-white tracking-tighter">Products</h2>
-                        <h3 className="text-xl md:text-2xl text-brand-red font-bold mb-16 uppercase tracking-widest">
-                            Welcome to OCD Fab & Performance
+                        <h2 className="text-4xl md:text-6xl font-black mb-4 uppercase text-white tracking-tighter">Products</h2>
+                        <h3 className="text-lg md:text-2xl text-brand-red font-bold mb-12 md:mb-16 uppercase tracking-widest">
+                            Explore our premium selection
                         </h3>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-4">
@@ -230,7 +217,7 @@ const Home = () => {
             <div className="relative py-24 px-4 bg-black">
                 <ScrollReveal>
                     <div className="max-w-7xl mx-auto text-center mb-16">
-                        <h2 className="text-5xl md:text-6xl font-black mb-4 uppercase text-white tracking-tighter">Gallery</h2>
+                        <h2 className="text-4xl md:text-6xl font-black mb-4 uppercase text-white tracking-tighter">Gallery</h2>
                         <div className="h-1 w-24 bg-brand-red mx-auto"></div>
                     </div>
 
@@ -252,8 +239,9 @@ const Home = () => {
                         <div className="col-span-1 md:col-span-2 row-span-1 overflow-hidden rounded-xl border border-white/10 group">
                             <img src="/seatcover1.png" alt="Gallery 5" className="w-full h-64 object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 grayscale group-hover:grayscale-0" />
                         </div>
+                        {/* Removed duplicate cloud image usage here too just in case it was contributing to the "2 images" feel, replaced with car display */}
                         <div className="col-span-1 md:col-span-2 row-span-1 overflow-hidden rounded-xl border border-white/10 group">
-                            <img src="/uploaded_cloud_0.png" alt="Gallery 6" className="w-full h-64 object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 grayscale group-hover:grayscale-0" />
+                            <img src="/cardisplay1.png" alt="Gallery 6" className="w-full h-64 object-contain opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 grayscale group-hover:grayscale-0 bg-[#111]" />
                         </div>
                     </div>
                 </ScrollReveal>
@@ -270,7 +258,6 @@ const Home = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                        {/* Testimonial 1 */}
                         <div className="bg-[#121212] p-8 rounded-xl border border-white/5 relative hover:border-brand-red/30 transition-all">
                             <div className="flex items-center gap-4 mb-6">
                                 <div className="w-16 h-16 rounded-full bg-gray-700 flex items-center justify-center overflow-hidden">
@@ -286,7 +273,6 @@ const Home = () => {
                             </p>
                         </div>
 
-                        {/* Testimonial 2 */}
                         <div className="bg-[#121212] p-8 rounded-xl border border-white/5 relative hover:border-brand-red/30 transition-all">
                             <div className="flex items-center gap-4 mb-6">
                                 <div className="w-16 h-16 rounded-full bg-brand-red flex items-center justify-center overflow-hidden">
@@ -316,7 +302,6 @@ const Home = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
-                        {/* Blog 1 */}
                         <div className="bg-[#111] rounded-xl overflow-hidden group cursor-pointer shadow-lg hover:shadow-brand-red/10 transition-all">
                             <div className="h-48 overflow-hidden">
                                 <img src="/uploaded_cloud_0.png" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Blog 1" />
@@ -326,7 +311,6 @@ const Home = () => {
                                 <a href="#" className="text-gray-500 text-sm font-bold uppercase tracking-wider hover:text-white mt-4 inline-block">Read More ↗</a>
                             </div>
                         </div>
-                        {/* Blog 2 */}
                         <div className="bg-[#111] rounded-xl overflow-hidden group cursor-pointer shadow-lg hover:shadow-brand-red/10 transition-all">
                             <div className="h-48 overflow-hidden">
                                 <img src="/uploaded_cloud_1.png" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Blog 2" />
@@ -336,7 +320,6 @@ const Home = () => {
                                 <a href="#" className="text-gray-500 text-sm font-bold uppercase tracking-wider hover:text-white mt-4 inline-block">Read More ↗</a>
                             </div>
                         </div>
-                        {/* Blog 3 */}
                         <div className="bg-[#111] rounded-xl overflow-hidden group cursor-pointer shadow-lg hover:shadow-brand-red/10 transition-all">
                             <div className="h-48 overflow-hidden">
                                 <img src="/uploaded_cloud_0.png" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Blog 3" />
@@ -379,11 +362,9 @@ const Home = () => {
                     </div>
 
                     <div className="max-w-5xl mx-auto rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl h-96 relative">
-                        {/* Placeholder for map */}
                         <div className="absolute inset-0 bg-[#222] flex items-center justify-center">
                             <p className="text-gray-500 font-mono text-lg">Interactive Map Integration</p>
                         </div>
-                        {/* Overlay Button */}
                         <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
                             <a href="#" className="bg-brand-red text-white font-bold px-8 py-3 rounded-full shadow-lg hover:bg-red-700 transition">Get Directions</a>
                         </div>
@@ -422,7 +403,6 @@ const Home = () => {
             {/* ================= FOOTER ================= */}
             <footer className="bg-black border-t border-white/10 pt-20 pb-10 px-6">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 text-center md:text-left">
-                    {/* Brand */}
                     <div>
                         <h2 className="text-4xl font-black text-brand-red italic mb-6">CAPTAIN</h2>
                         <p className="text-gray-400 text-sm leading-relaxed">
@@ -430,7 +410,6 @@ const Home = () => {
                         </p>
                     </div>
 
-                    {/* Quick Links */}
                     <div>
                         <h4 className="text-white font-bold uppercase tracking-widest mb-6">Quick Links</h4>
                         <ul className="space-y-4 text-gray-500 text-sm">
@@ -441,7 +420,6 @@ const Home = () => {
                         </ul>
                     </div>
 
-                    {/* Services */}
                     <div>
                         <h4 className="text-white font-bold uppercase tracking-widest mb-6">Services</h4>
                         <ul className="space-y-4 text-gray-500 text-sm">
@@ -452,7 +430,6 @@ const Home = () => {
                         </ul>
                     </div>
 
-                    {/* Contact */}
                     <div>
                         <h4 className="text-white font-bold uppercase tracking-widest mb-6">Contact</h4>
                         <p className="text-gray-500 text-sm mb-2">123 Auto Hub, Bhiwandi</p>
