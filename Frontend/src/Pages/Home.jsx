@@ -32,12 +32,11 @@ const Home = () => {
                         </div>
 
                         {/* Car Image Container - REMOVED CLOUD IMAGE LAYER COMPLETELY */}
-                        <div className="relative w-full max-w-7xl mx-auto my-4 md:my-12 group flex justify-center items-center">
+                        <div className="relative w-full max-w-7xl mx-auto mt-8 md:mt-150 my-4 md:my-12 group flex justify-center items-center">
                             {/* Platform Shadow/Glow */}
                             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-4/5 h-12 md:h-24 bg-gradient-to-t from-black via-brand-red/10 to-transparent blur-3xl z-0 transition-all duration-1000 group-hover:via-brand-red/20" />
 
                             {/* Smoke/Cloud Oval Background - Visible on All Devices */}
-
 
                             {/* Smoke/Cloud Oval Background - Visible on All Devices */}
 
