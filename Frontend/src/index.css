@@ -1,12 +1,10 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
 
-@theme {
+:root {
   --color-brand-red: #DC143C;
   --color-brand-red-dark: #B22222;
   --color-brand-red-light: #FF6B6B;
-
-  --font-sans: Inter, system-ui, sans-serif;
 }
 
 * {
@@ -18,7 +16,9 @@ body {
   padding: 0;
   background-color: black;
   color: white;
-  font-family: var(--font-sans);
+  font-family: Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #root {

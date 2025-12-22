@@ -4,37 +4,40 @@ import Button from '../Components/Button';
 const Home = () => {
     return (
         <div className="relative min-h-screen overflow-hidden bg-black">
-            {/* Background Pattern Layer 1 */}
+            {/* Background Pattern Layer 1 - Bottom Layer */}
             <div
-                className="absolute inset-0 opacity-10"
+                className="absolute inset-0 z-0 opacity-20"
                 style={{
                     backgroundImage: 'url(/assets/figma-img/bg-pattern.png)',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
                 }}
             />
 
-            {/* Background Pattern Layer 2 */}
+            {/* Background Pattern Layer 2 - Above Pattern 1 */}
             <div
-                className="absolute inset-0 opacity-5"
+                className="absolute inset-0 z-1 opacity-15"
                 style={{
                     backgroundImage: 'url(/assets/figma-img/bg-pattern2.png)',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
                 }}
             />
 
-            {/* Cloud Effects */}
+            {/* Cloud Effects - Above Patterns */}
             <div
-                className="absolute bottom-0 left-0 right-0 h-1/2 opacity-20"
+                className="absolute bottom-0 left-0 right-0 h-1/2 z-2 opacity-30"
                 style={{
                     backgroundImage: 'url(/assets/figma-img/bg-cloud.png)',
                     backgroundSize: 'cover',
                     backgroundPosition: 'bottom',
+                    backgroundRepeat: 'no-repeat',
                 }}
             />
 
-            {/* Main Content */}
+            {/* Main Content - Top Layer */}
             <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 pt-24 pb-16">
                 {/* Hero Text */}
                 <div className="text-center max-w-5xl mx-auto mb-8">
