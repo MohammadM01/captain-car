@@ -7,7 +7,7 @@ const Home = () => {
         <div className="bg-black text-white font-sans overflow-x-hidden selection:bg-brand-red selection:text-white">
 
             {/* ================= HERO SECTION ================= */}
-            <div className="relative w-full flex flex-col items-center justify-center pt-32 pb-12 md:min-h-screen md:pt-40 md:pb-20 overflow-hidden">
+            <div className="relative w-full flex flex-col items-center justify-center pt-20 pb-12 md:min-h-screen md:pt-40 md:pb-20 overflow-hidden">
                 {/* Background Components - Kept simple patterns only */}
                 <div className="absolute inset-0 z-0 opacity-20" style={{ backgroundImage: 'url(/assets/figma-img/bg-pattern.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }} />
 
@@ -17,37 +17,41 @@ const Home = () => {
                 {/* Hero Content */}
                 <ScrollReveal>
                     <div className="relative z-10 flex flex-col items-center justify-center w-full px-4">
-                        <div className="text-center max-w-6xl mx-auto mb-8 md:mb-8 mt-4 md:mt-0 relative z-20 pointer-events-none">
+                        <div className="text-center max-w-6xl mx-auto mb-4 md:mb-8 mt-4 md:mt-0 relative z-20 pointer-events-none">
                             {/* Improved Visibility & Styling: Textured Backing & Stronger Shadows */}
                             <div className="inline-block px-4 py-2 rounded-xl backdrop-blur-sm bg-black/10 md:bg-transparent md:backdrop-filter-none">
-                                <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black mb-6 leading-tight tracking-tighter uppercase italic flex flex-col gap-2 md:gap-4 drop-shadow-[0_8px_15px_rgba(0,0,0,0.9)]">
+                                <h1 className="text-3xl sm:text-5xl md:text-8xl lg:text-9xl font-black mb-4 md:mb-6 leading-tight tracking-tighter uppercase italic flex flex-col gap-1 md:gap-4 drop-shadow-[0_8px_15px_rgba(0,0,0,0.9)]">
                                     <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-300 drop-shadow-sm">Enhance Your</span>
                                     <span className="text-stroke-white text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400 drop-shadow-md">Vehicle's</span>
                                     <span className="text-brand-red drop-shadow-[0_0_25px_rgba(220,20,60,0.8)]">Performance</span>
                                 </h1>
-                                <p className="text-base md:text-2xl text-white font-bold tracking-widest uppercase mt-4 max-w-3xl mx-auto drop-shadow-[0_2px_4px_rgba(0,0,0,1)] bg-black/40 md:bg-transparent px-4 py-1 rounded">
+                                <p className="text-xs md:text-2xl text-white font-bold tracking-widest uppercase mt-2 md:mt-4 max-w-3xl mx-auto drop-shadow-[0_2px_4px_rgba(0,0,0,1)] bg-black/40 md:bg-transparent px-4 py-1 rounded">
                                     Trusted Modification Workshop for Cars and Trucks
                                 </p>
                             </div>
                         </div>
 
                         {/* Car Image Container - REMOVED CLOUD IMAGE LAYER COMPLETELY */}
-                        <div className="relative w-full max-w-7xl mx-auto my-6 md:my-12 group flex justify-center items-center">
+                        <div className="relative w-full max-w-7xl mx-auto my-4 md:my-12 group flex justify-center items-center">
                             {/* Platform Shadow/Glow */}
                             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-4/5 h-12 md:h-24 bg-gradient-to-t from-black via-brand-red/10 to-transparent blur-3xl z-0 transition-all duration-1000 group-hover:via-brand-red/20" />
 
                             {/* Smoke/Cloud Oval Background - Visible on All Devices */}
+
+
+                            {/* Smoke/Cloud Oval Background - Visible on All Devices */}
+
                             <img
                                 src="/assets/figma-img/smoke0cloud.png"
                                 alt="Smoke Effect"
-                                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-[100px] md:mt-[100px] w-[180%] md:w-[1750px] max-w-none h-auto object-contain opacity-80 z-0 pointer-events-none mix-blend-screen"
+                                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-[185px] md:mt-[100px] w-[180%] md:w-[1750px] max-w-none h-auto object-contain opacity-80 z-0 pointer-events-none mix-blend-screen"
                             />
 
                             {/* CLEAN IMAGE: No background text/ghosting behind it */}
                             <img
                                 src="/assets/figma-img/car2.png"
                                 alt="Modified Porsche GT3 RS"
-                                className="relative z-10 w-[90%] md:w-[90%] h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out md:-mt-[800px]"
+                                className="relative z-10 w-[95%] md:w-[90%] h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out md:-mt-[800px]"
                             />
                         </div>
 
