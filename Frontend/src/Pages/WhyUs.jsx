@@ -126,6 +126,106 @@ const WhyUs = () => {
                     </div>
                 </ScrollReveal>
 
+                {/* ================= WHY CAPTAIN IS BETTER (Cards) ================= */}
+                <ScrollReveal direction="up" delay={300}>
+                    <div className="mb-20 pt-20 border-t border-white/5">
+                        <div className="text-center mb-16">
+                            <h2 className="text-3xl md:text-6xl font-black text-white uppercase italic tracking-tighter mb-6">
+                                Why <span className="text-[#E31E24]">Captain</span> is Better?
+                            </h2>
+                            <p className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
+                                We don't just sell car audio – we deliver an experience. Here's what makes Captain Car Audio the #1 choice in Bhiwandi.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {/* Card 1: Superior Service */}
+                            <div className="bg-[#0a0a0a] border border-white/10 p-8 rounded-3xl hover:border-[#E31E24] transition-all duration-300 group">
+                                <div className="w-14 h-14 rounded-full bg-[#E31E24]/10 flex items-center justify-center mb-8 group-hover:bg-[#E31E24] transition-colors">
+                                    <svg className="w-6 h-6 fill-[#E31E24] group-hover:fill-white transition-colors" viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z" /></svg>
+                                </div>
+                                <h3 className="text-2xl font-black text-[#E31E24] uppercase italic mb-6">Superior Service</h3>
+                                <ul className="space-y-4">
+                                    <li className="flex items-start gap-3">
+                                        <svg className="w-5 h-5 fill-[#E31E24] mt-1 shrink-0" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" /></svg>
+                                        <p className="text-gray-400 text-sm leading-relaxed"><strong className="text-white">Expert Technicians</strong> – Our team has 15+ years of hands-on experience installing 10,000+ systems</p>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <svg className="w-5 h-5 fill-[#E31E24] mt-1 shrink-0" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" /></svg>
+                                        <p className="text-gray-400 text-sm leading-relaxed"><strong className="text-white">Same Day Installation</strong> – Walk in today, drive out with premium sound</p>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <svg className="w-5 h-5 fill-[#E31E24] mt-1 shrink-0" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z" /></svg>
+                                        <p className="text-gray-400 text-sm leading-relaxed"><strong className="text-white">After-Sales Support</strong> – Free tuning, adjustments & lifetime technical support</p>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <svg className="w-5 h-5 fill-[#E31E24] mt-1 shrink-0" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" /></svg>
+                                        <p className="text-gray-400 text-sm leading-relaxed"><strong className="text-white">Clean Installation</strong> – No visible wires, no damage to your car's interior</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            {/* Card 2: Best Pricing */}
+                            <div className="bg-[#1a0505] border border-[#E31E24]/50 p-8 rounded-3xl relative overflow-hidden group shadow-[0_0_40px_-10px_rgba(227,30,36,0.2)]">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-[#E31E24]/20 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
+
+                                <div className="w-14 h-14 rounded-full bg-[#E31E24] border border-[#E31E24] flex items-center justify-center mb-8 text-white relative z-10">
+                                    <svg className="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M12.5 6.9c1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 2.5 1.68 2.5 2.45 0 .84-.44 1.54-1.6 1.54-1.28 0-2.32-.6-2.61-1.9h-2.2c.28 2.22 1.99 3.59 4.31 3.97V21h3v-2.14c2.28-.45 3.8-1.98 3.8-3.89 0-2.5-2-3.69-5-4.38-2.65-.65-2.65-1.72-2.65-2.4 0-.75.61-1.29 1.64-1.29z" /></svg>
+                                </div>
+                                <h3 className="text-2xl font-black text-[#E31E24] uppercase italic mb-6 relative z-10">Best Pricing</h3>
+                                <ul className="space-y-4 relative z-10 mb-8">
+                                    <li className="flex items-start gap-3">
+                                        <svg className="w-5 h-5 fill-[#E31E24] mt-1 shrink-0" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" /></svg>
+                                        <p className="text-gray-400 text-sm leading-relaxed"><strong className="text-white">Direct Brand Partnerships</strong> – We source directly, cutting out middlemen costs</p>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <svg className="w-5 h-5 fill-[#E31E24] mt-1 shrink-0" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" /></svg>
+                                        <p className="text-gray-400 text-sm leading-relaxed"><strong className="text-white">Price Match Guarantee</strong> – Find it cheaper? We'll match it + 5% off</p>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <svg className="w-5 h-5 fill-[#E31E24] mt-1 shrink-0" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" /></svg>
+                                        <p className="text-gray-400 text-sm leading-relaxed"><strong className="text-white">Free Installation</strong> – On select audio systems worth ₹10,000+</p>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <svg className="w-5 h-5 fill-[#E31E24] mt-1 shrink-0" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" /></svg>
+                                        <p className="text-gray-400 text-sm leading-relaxed"><strong className="text-white">EMI Available</strong> – 0% EMI options on major credit cards</p>
+                                    </li>
+                                </ul>
+                                <div className="bg-[#E31E24]/10 border border-[#E31E24]/30 p-4 rounded-xl text-center relative z-10">
+                                    <p className="text-[#E31E24] font-bold text-lg uppercase tracking-wider">Save up to 30%</p>
+                                    <p className="text-xs text-gray-500">compared to authorized showrooms</p>
+                                </div>
+                            </div>
+
+                            {/* Card 3: Premium Quality */}
+                            <div className="bg-[#0a0a0a] border border-white/10 p-8 rounded-3xl hover:border-[#E31E24] transition-all duration-300 group">
+                                <div className="w-14 h-14 rounded-full bg-[#E31E24]/10 border border-[#E31E24] flex items-center justify-center mb-8 group-hover:bg-[#E31E24] transition-colors">
+                                    <svg className="w-6 h-6 fill-[#E31E24] group-hover:fill-white transition-colors" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" /></svg>
+                                </div>
+                                <h3 className="text-2xl font-black text-[#E31E24] uppercase italic mb-6">Premium Quality</h3>
+                                <ul className="space-y-4">
+                                    <li className="flex items-start gap-3">
+                                        <svg className="w-5 h-5 fill-[#E31E24] mt-1 shrink-0" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" /></svg>
+                                        <p className="text-gray-400 text-sm leading-relaxed"><strong className="text-white">100% Genuine Products</strong> – Authorized dealer for all major brands</p>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <svg className="w-5 h-5 fill-[#E31E24] mt-1 shrink-0" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" /></svg>
+                                        <p className="text-gray-400 text-sm leading-relaxed"><strong className="text-white">1-3 Year Warranty</strong> – Full manufacturer warranty on all products</p>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <svg className="w-5 h-5 fill-[#E31E24] mt-1 shrink-0" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z" /></svg>
+                                        <p className="text-gray-400 text-sm leading-relaxed"><strong className="text-white">No Duplicate/Refurbished</strong> – We never sell fake or second-hand items</p>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <svg className="w-5 h-5 fill-[#E31E24] mt-1 shrink-0" viewBox="0 0 24 24"><path d="M14 2H6c-1.11 0-2 .89-2 2v16c0 1.11.89 2 2 2h12c1.11 0 2-.89 2-2V8l-6-6zm-1 9l-2.5 2.5-1.5-1.5-1.42 1.42L10.5 16.83 15.92 11.41 14.5 9.99z" /></svg>
+                                        <p className="text-gray-400 text-sm leading-relaxed"><strong className="text-white">GST Invoice</strong> – Proper billing with valid warranty claims</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </ScrollReveal>
+
                 {/* Bottom Call to Action Strip */}
                 <ScrollReveal direction="up" delay={400}>
                     <div className="border-t border-white/10 pt-16 flex flex-col md:flex-row items-center justify-between gap-8">
