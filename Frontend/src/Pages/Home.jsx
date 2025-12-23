@@ -157,6 +157,38 @@ const Home = () => {
                 </div>
             </div>
 
+            {/* ================= MARQUEE (Brands) ================= */}
+            {/* ================= MARQUEE (Brands) ================= */}
+            <div className="py-10 bg-black overflow-hidden relative border-t border-b border-white/10">
+                <div className="container mx-auto px-6 mb-8 text-center relative z-10">
+                    <h3 className="text-[#E31E24] font-bold uppercase tracking-[0.3em] text-sm md:text-lg glow-text">We Work For</h3>
+                </div>
+
+                <div className="relative">
+                    {/* Gradient Mask for "Center Visible, Edges Hidden" effect */}
+                    <div className="absolute inset-0 z-20 pointer-events-none bg-gradient-to-r from-black via-transparent to-black w-full h-full" />
+
+                    <div className="flex whitespace-nowrap overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_45%,black_55%,transparent)]">
+                        <div className="animate-marquee flex gap-24 items-center">
+                            {[1, 2, 3].map((i) => (
+                                <React.Fragment key={i}>
+                                    {['MARUTI SUZUKI', 'HYUNDAI', 'MAHINDRA THAR', 'TATA MOTORS', 'HONDA', 'TOYOTA', 'RANGE ROVER', 'KIA', 'MG', 'SKODA'].map((brand, idx) => (
+                                        <span key={`${i}-${idx}`} className="text-4xl md:text-6xl font-black text-white uppercase italic tracking-tighter mx-4">
+                                            {brand}
+                                        </span>
+                                    ))}
+                                </React.Fragment>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+                <style>{`
+                    .animate-marquee { animation: marquee 20s linear infinite; }
+                    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+                    .glow-text { text-shadow: 0 0 20px rgba(227, 30, 36, 0.5); }
+                `}</style>
+            </div>
+
             {/* ================= SERVICES SLIDER (Horizontal) ================= */}
             <div className="py-12 bg-black relative">
                 <div className="container mx-auto px-6 mb-8 flex items-end justify-between">
@@ -223,28 +255,6 @@ const Home = () => {
                     .animate-marquee-slow { animation: marquee-scroll 60s linear infinite; }
                     /* Slower animation for larger images */
                     @keyframes marquee-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-33.33%); } }
-                `}</style>
-            </div>
-
-            {/* ================= MARQUEE (Brands) ================= */}
-            <div className="py-2 bg-brand-red overflow-hidden relative border-t border-b border-black"> {/* Reduced padding */}
-                <div className="absolute inset-0 bg-[url('/assets/figma-img/bg-pattern.png')] opcode-10 mix-blend-multiply" />
-                <div className="flex whitespace-nowrap overflow-hidden">
-                    <div className="animate-marquee flex gap-16 items-center">
-                        {[1, 2, 3].map((i) => (
-                            <React.Fragment key={i}>
-                                {['AUDI', 'BMW', 'MERCEDES', 'PORSCHE', 'JAGUAR', 'LAND ROVER', 'VOLVO', 'LEXUS', 'TOYOTA', 'HONDA'].map((brand, idx) => (
-                                    <span key={`${i}-${idx}`} className="text-5xl md:text-7xl font-black text-black/20 uppercase italic tracking-tighter">
-                                        {brand}
-                                    </span>
-                                ))}
-                            </React.Fragment>
-                        ))}
-                    </div>
-                </div>
-                <style>{`
-                    .animate-marquee { animation: marquee 30s linear infinite; }
-                    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
                 `}</style>
             </div>
 
@@ -357,7 +367,7 @@ const Home = () => {
                         <h4 className="text-[#E31E24] font-bold uppercase tracking-widest mb-6">Explore</h4>
                         <ul className="space-y-4 text-gray-400 font-medium">
                             <li><Link to="/services" className="hover:text-white transition-colors flex items-center gap-2"><span className="text-[#E31E24]">›</span> Our Services</Link></li>
-                            <li><Link to="/why-us" className="hover:text-white transition-colors flex items-center gap-2"><span className="text-[#E31E24]">›</span> About Us</Link></li>
+                            <li><Link to="/why-us" className="hover:text-white transition-colors flex items-center gap-2"><span className="text-[#E31E24]">›</span> Why Us</Link></li>
                             <li><Link to="/contact" className="hover:text-white transition-colors flex items-center gap-2"><span className="text-[#E31E24]">›</span> Contact</Link></li>
                         </ul>
                     </div>
