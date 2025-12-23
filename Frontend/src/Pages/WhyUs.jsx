@@ -3,115 +3,94 @@ import ScrollReveal from '../Components/ScrollReveal';
 
 const WhyUs = () => {
     return (
-        <div className="bg-premium-black text-white min-h-screen pt-24 pb-12 font-sans selection:bg-brand-red selection:text-white">
+        <div className="bg-black text-white min-h-screen pt-32 pb-20 font-sans selection:bg-[#E31E24] selection:text-white overflow-x-hidden">
 
-            {/* Header */}
-            <div className="container mx-auto px-6 mb-20 text-center">
-                <ScrollReveal direction="down">
-                    <h1 className="text-5xl md:text-7xl font-black uppercase italic tracking-tighter mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">
-                        Why Choose <br /><span className="text-brand-red">Captain Car?</span>
-                    </h1>
-                    <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto border-t border-white/10 pt-6">
-                        Your vehicle is an investment. Don't compromise its safety and style with subpar local modifications.
-                        See the difference professional craftsmanship makes.
-                    </p>
-                </ScrollReveal>
-            </div>
+            <div className="container mx-auto px-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
 
-            {/* Comparison Section */}
-            <div className="container mx-auto px-6 mb-24">
-                <ScrollReveal direction="up">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
+                    {/* Left: Text Content */}
+                    <ScrollReveal direction="left">
+                        <div>
+                            <h1 className="text-5xl md:text-8xl font-black uppercase italic tracking-tighter mb-8 leading-none">
+                                Why Choose <span className="text-[#E31E24]">Captain?</span>
+                            </h1>
+                            <p className="text-gray-400 text-lg md:text-xl leading-relaxed mb-10 border-l-4 border-[#E31E24] pl-6">
+                                At Captain Car Audio & Accessories, we are committed to enhancing your driving experience with premium products and professional service. Our team of experts ensures every installation is perfect.
+                            </p>
 
-                        {/* The Local Way (Bad) */}
-                        <div className="relative group">
-                            <div className="absolute inset-0 bg-red-900/10 blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-700 pointer-events-none" />
-                            <div className="bg-[#111] p-8 md:p-12 rounded-3xl border border-red-900/30 relative overflow-hidden">
-                                <h3 className="text-3xl font-black text-gray-500 uppercase italic mb-8 flex items-center gap-4">
-                                    <span className="text-4xl">❌</span> Local Mechanics
-                                </h3>
-                                <ul className="space-y-6">
-                                    <li className="flex items-start gap-4 text-gray-400">
-                                        <span className="text-red-500 font-bold text-xl">x</span>
-                                        <p>Use generic, ill-fitting universal parts.</p>
-                                    </li>
-                                    <li className="flex items-start gap-4 text-gray-400">
-                                        <span className="text-red-500 font-bold text-xl">x</span>
-                                        <p>Temporary fixes with no warranty support.</p>
-                                    </li>
-                                    <li className="flex items-start gap-4 text-gray-400">
-                                        <span className="text-red-500 font-bold text-xl">x</span>
-                                        <p>Risk of electrical damage due to cutting wires.</p>
-                                    </li>
-                                    <li className="flex items-start gap-4 text-gray-400">
-                                        <span className="text-red-500 font-bold text-xl">x</span>
-                                        <p>Zero after-sales service or guidance.</p>
-                                    </li>
-                                </ul>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
+                                {[
+                                    "Genuine Products with Warranty",
+                                    "Expert Installation Team",
+                                    "15+ Years of Experience",
+                                    "Competitive Pricing",
+                                    "After-Sales Support",
+                                    "Wide Range of Brands"
+                                ].map((item, index) => (
+                                    <div key={index} className="flex items-center gap-4 group">
+                                        <div className="w-8 h-8 rounded-full bg-[#E31E24]/10 border border-[#E31E24] flex items-center justify-center group-hover:bg-[#E31E24] transition-all duration-300">
+                                            <svg className="w-4 h-4 fill-[#E31E24] group-hover:fill-white transition-colors" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>
+                                        </div>
+                                        <span className="font-bold text-gray-200 group-hover:text-white transition-colors">{item}</span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
+                    </ScrollReveal>
 
-                        {/* The Captain Car Way (Good) */}
-                        <div className="relative group">
-                            <div className="absolute inset-0 bg-brand-red/20 blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-700 pointer-events-none" />
-                            <div className="bg-[#0f0f0f] p-8 md:p-12 rounded-3xl border-2 border-brand-red relative overflow-hidden shadow-[0_0_50px_rgba(220,20,60,0.15)] transform md:-translate-y-4">
-                                <div className="absolute top-0 right-0 bg-brand-red text-white text-xs font-bold px-4 py-2 uppercase tracking-widest rounded-bl-xl">
-                                    The Premium Choice
+                    {/* Right: Stat Card & Testimonial */}
+                    <div className="relative">
+                        {/* 5000+ Stat Card */}
+                        <ScrollReveal direction="right" delay={200}>
+                            <div className="bg-gradient-to-br from-[#1a0505] to-black border border-[#E31E24]/30 rounded-[3rem] p-12 text-center relative overflow-hidden group hover:border-[#E31E24] transition-all duration-500 shadow-[0_0_60px_-20px_rgba(227,30,36,0.3)] hover:shadow-[0_0_80px_-20px_rgba(227,30,36,0.5)]">
+                                <div className="absolute top-0 right-0 w-64 h-64 bg-[#E31E24]/10 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/2" />
+
+                                <h2 className="text-7xl md:text-9xl font-black text-[#E31E24] mb-2 tracking-tighter group-hover:scale-105 transition-transform duration-500">
+                                    5000+
+                                </h2>
+                                <p className="text-2xl font-bold text-white uppercase tracking-[0.2em] mb-12">Happy Customers</p>
+
+                                {/* Divider */}
+                                <div className="w-full h-px bg-gradient-to-r from-transparent via-[#E31E24]/50 to-transparent mb-12" />
+
+                                {/* Testimonial */}
+                                <div className="relative">
+                                    <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-6xl text-[#E31E24]/20 font-serif">"</div>
+                                    <p className="text-gray-300 italic text-lg mb-6 leading-relaxed relative z-10">
+                                        Best car audio installation in town! The team at Captain transformed my car's interior completely. Highly recommended!
+                                    </p>
+                                    <div className="flex items-center justify-center gap-3">
+                                        <div className="w-10 h-1 bg-[#E31E24] rounded-full" />
+                                        <span className="text-[#E31E24] font-bold uppercase text-sm tracking-widest">Rajesh Kumar, Delhi</span>
+                                    </div>
                                 </div>
-                                <h3 className="text-3xl font-black text-white uppercase italic mb-8 flex items-center gap-4">
-                                    <span className="text-4xl">✅</span> Captain Car
-                                </h3>
-                                <ul className="space-y-6">
-                                    <li className="flex items-start gap-4 text-white">
-                                        <span className="text-brand-red font-bold text-xl">✓</span>
-                                        <p><strong>OEM-Fit Accessories</strong> designed specifically for your model.</p>
-                                    </li>
-                                    <li className="flex items-start gap-4 text-white">
-                                        <span className="text-brand-red font-bold text-xl">✓</span>
-                                        <p><strong>Coupler-to-Coupler</strong> wiring (No wire cutting, warranty safe).</p>
-                                    </li>
-                                    <li className="flex items-start gap-4 text-white">
-                                        <span className="text-brand-red font-bold text-xl">✓</span>
-                                        <p><strong>Verified Warranty</strong> on products and installation.</p>
-                                    </li>
-                                    <li className="flex items-start gap-4 text-white">
-                                        <span className="text-brand-red font-bold text-xl">✓</span>
-                                        <p><strong>Expert Consultation</strong> to match your personal style.</p>
-                                    </li>
-                                </ul>
+
+                                {/* Modern Arrow Icon (Bottom Right) */}
+                                <div className="absolute bottom-8 right-8 w-12 h-12 border border-white/10 rounded-full flex items-center justify-center group-hover:bg-[#E31E24] group-hover:border-[#E31E24] transition-all duration-300">
+                                    <svg className="w-5 h-5 fill-current transform -rotate-45 group-hover:rotate-0 transition-transform duration-500" viewBox="0 0 24 24"><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" /></svg>
+                                </div>
                             </div>
-                        </div>
+                        </ScrollReveal>
 
+                        {/* Decor Elements */}
+                        <div className="absolute -z-10 top-1/2 -right-20 w-80 h-80 bg-[#E31E24]/5 rounded-full blur-[100px]" />
+                        <div className="absolute -z-10 -bottom-20 -left-20 w-80 h-80 bg-white/5 rounded-full blur-[100px]" />
+                    </div>
+                </div>
+
+                {/* Bottom Call to Action Strip */}
+                <ScrollReveal direction="up" delay={400}>
+                    <div className="border-t border-white/10 pt-16 flex flex-col md:flex-row items-center justify-between gap-8">
+                        <div>
+                            <h3 className="text-2xl font-black text-white uppercase italic tracking-tighter mb-2">Ready to Upgrade?</h3>
+                            <p className="text-gray-500">Visit our workshop for a free consultation.</p>
+                        </div>
+                        <button className="bg-[#E31E24] text-white px-10 py-4 font-bold uppercase tracking-widest hover:bg-white hover:text-[#E31E24] transition-all transform hover:-translate-y-1 skew-x-[-10deg]">
+                            <span className="skew-x-[10deg] inline-block">Get Directions</span>
+                        </button>
                     </div>
                 </ScrollReveal>
             </div>
-
-            {/* Quality Promise */}
-            <div className="container mx-auto px-6 py-16 text-center bg-zinc-900/30 rounded-3xl border border-white/5 mx-6">
-                <ScrollReveal direction="up" delay={200}>
-                    <h2 className="text-3xl md:text-5xl font-black uppercase italic mb-8 text-white">
-                        Our <span className="text-brand-red">Guarantee</span>
-                    </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="p-6">
-                            <div className="text-5xl mb-4">🛡️</div>
-                            <h4 className="text-xl font-bold uppercase mb-2">100% Genuine</h4>
-                            <p className="text-gray-400 text-sm">We only stock branded, verified accessories.</p>
-                        </div>
-                        <div className="p-6">
-                            <div className="text-5xl mb-4">⚡</div>
-                            <h4 className="text-xl font-bold uppercase mb-2">Pro Installation</h4>
-                            <p className="text-gray-400 text-sm">Technicians with 15+ years of experience.</p>
-                        </div>
-                        <div className="p-6">
-                            <div className="text-5xl mb-4">🤝</div>
-                            <h4 className="text-xl font-bold uppercase mb-2">Lifetime Support</h4>
-                            <p className="text-gray-400 text-sm">We are always just a phone call away.</p>
-                        </div>
-                    </div>
-                </ScrollReveal>
-            </div>
-
         </div>
     );
 };
