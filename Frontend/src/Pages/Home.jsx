@@ -163,19 +163,39 @@ const Home = () => {
             </div>
 
             {/* ================= SERVICES SLIDER (Horizontal) ================= */}
-            <div className="py-0 bg-black relative"> {/* Removed padding to kill gap */}
+            <div className="py-12 bg-black relative">
                 <div className="container mx-auto px-6 mb-8 flex items-end justify-between">
                     <ScrollReveal direction="down">
                         <h2 className="text-4xl md:text-7xl font-black text-white uppercase italic tracking-tighter">
                             Premium <span className="text-brand-red">Accessories</span><br />& Styling
                         </h2>
                     </ScrollReveal>
-                    {/* Horizontal Infinite Loop Scroll - Full Screen Style */}
                 </div>
 
-                {/* Horizontal Infinite Loop Scroll - Full Screen Style */}
-                <div className="relative w-full overflow-hidden pb-4">
-                    <div className="flex gap-0 animate-marquee-slow hover:[animation-play-state:paused] w-max">
+                {/* Mobile View: Manual Horizontal Scroll (Snap) */}
+                <div className="md:hidden w-full overflow-x-auto pb-8 px-6 flex gap-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
+                    {[
+                        { title: 'Bespoke Interiors', desc: 'Hand-stitched leather tailored to perfection.', img: '/seatcover8.png', color: 'from-red-900' },
+                        { title: 'Concert Audio', desc: 'High-fidelity sound systems that shake the ground.', img: '/bossaudiosystem.png', color: 'from-blue-900' },
+                        { title: 'Privacy Films', desc: 'Advanced heat rejection and UV protection.', img: '/suntekwindowfilm.png', color: 'from-yellow-900' },
+                        { title: 'Tech Upgrades', desc: 'Android players, mood lighting, & security.', img: '/cardisplay2.png', color: 'from-purple-900' },
+                        { title: 'Exterior Accessories', desc: 'Roof carriers, wheel caps, and detailing.', img: '/roofcarrier.png', color: 'from-green-900' },
+                    ].map((service, idx) => (
+                        <div key={idx} className="flex-shrink-0 w-[85vw] snap-center h-[500px] relative rounded-3xl overflow-hidden border border-white/10 group">
+                            <div className={`absolute inset-0 bg-gradient-to-b ${service.color} to-black opacity-30`} />
+                            <img src={service.img} alt={service.title} className="absolute inset-0 w-full h-full object-contain p-8" />
+                            <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black via-black/80 to-transparent">
+                                <h3 className="text-3xl font-black text-white uppercase italic mb-2">{service.title}</h3>
+                                <p className="text-gray-400 text-sm mb-4">{service.desc}</p>
+                                <span className="text-brand-red font-bold uppercase tracking-widest text-xs flex items-center gap-2">Explore <span>→</span></span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Desktop View: Auto Marquee */}
+                <div className="hidden md:block relative w-full overflow-hidden pb-4">
+                    <div className="flex gap-8 animate-marquee-slow hover:[animation-play-state:paused] w-max">
                         {/* Duplicate the array 3 times for seamless looping */}
                         {[...Array(3)].map((_, i) => (
                             <React.Fragment key={i}>
@@ -186,14 +206,14 @@ const Home = () => {
                                     { title: 'Tech Upgrades', desc: 'Android players, mood lighting, & security.', img: '/cardisplay2.png', color: 'from-purple-900' },
                                     { title: 'Exterior Accessories', desc: 'Roof carriers, wheel caps, and detailing.', img: '/roofcarrier.png', color: 'from-green-900' },
                                 ].map((service, idx) => (
-                                    <div key={`${i}-${idx}`} className="w-screen md:w-[60vw] flex-shrink-0 relative h-[80vh] overflow-hidden group border-r border-white/10">
-                                        <div className={`absolute inset-0 bg-gradient-to-b ${service.color} to-black opacity-60 group-hover:opacity-30 transition-opacity duration-500`} />
-                                        <img src={service.img} alt={service.title} className="absolute inset-0 w-full h-full object-cover p-12 group-hover:scale-110 transition-transform duration-700" />
+                                    <div key={`${i}-${idx}`} className="w-[400px] flex-shrink-0 relative h-[500px] rounded-3xl overflow-hidden group border border-white/10 bg-white/5">
+                                        <div className={`absolute inset-0 bg-gradient-to-b ${service.color} to-black opacity-30 group-hover:opacity-20 transition-opacity duration-500`} />
+                                        <img src={service.img} alt={service.title} className="absolute inset-0 w-full h-full object-contain p-8 group-hover:scale-105 transition-transform duration-700" />
 
-                                        <div className="absolute bottom-0 left-0 right-0 p-12 bg-gradient-to-t from-black via-black/80 to-transparent">
-                                            <h3 className="text-5xl md:text-7xl font-black text-white uppercase italic mb-4 tracking-tighter">{service.title}</h3>
-                                            <p className="text-gray-300 mb-8 font-medium text-xl max-w-xl">{service.desc}</p>
-                                            <span className="inline-flex items-center gap-4 text-brand-red font-bold uppercase tracking-widest text-lg group-hover:gap-6 transition-all">
+                                        <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black via-black/80 to-transparent">
+                                            <h3 className="text-3xl font-black text-white uppercase italic mb-2 tracking-tighter">{service.title}</h3>
+                                            <p className="text-gray-300 mb-6 font-medium text-sm leading-relaxed">{service.desc}</p>
+                                            <span className="inline-flex items-center gap-2 text-brand-red font-bold uppercase tracking-widest text-xs group-hover:gap-4 transition-all">
                                                 Explore Service <span>→</span>
                                             </span>
                                         </div>
