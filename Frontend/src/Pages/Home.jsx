@@ -34,6 +34,13 @@ const Home = () => {
         };
     }, []);
 
+    const services = [
+        { title: 'Bespoke Interiors', desc: 'Hand-stitched leather tailored to perfection.', img: '/seatcover8.png' },
+        { title: 'Concert Audio', desc: 'High-fidelity sound systems that shake the ground.', img: '/bossaudiosystem.png' },
+        { title: 'Privacy Films', desc: 'Advanced heat rejection and UV protection.', img: '/suntekwindowfilm.png' },
+        { title: 'Tech Upgrades', desc: 'Android players, mood lighting, & security.', img: '/cardisplay2.png' },
+    ];
+
     return (
         <div className="bg-premium-black text-white font-sans overflow-x-hidden selection:bg-brand-red selection:text-white">
 
@@ -158,7 +165,6 @@ const Home = () => {
             </div>
 
             {/* ================= MARQUEE (Brands) ================= */}
-            {/* ================= MARQUEE (Brands) ================= */}
             <div className="py-10 bg-black overflow-hidden relative border-t border-b border-white/10">
                 <div className="container mx-auto px-6 mb-8 text-center relative z-10">
                     <h3 className="text-[#E31E24] font-bold uppercase tracking-[0.3em] text-sm md:text-lg glow-text">We Work For</h3>
@@ -201,13 +207,7 @@ const Home = () => {
 
                 {/* Mobile View: Manual Horizontal Scroll (Snap) */}
                 <div className="md:hidden w-full overflow-x-auto pb-8 px-6 flex gap-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
-                    {[
-                        { title: 'Bespoke Interiors', desc: 'Hand-stitched leather tailored to perfection.', img: '/seatcover8.png' },
-                        { title: 'Concert Audio', desc: 'High-fidelity sound systems that shake the ground.', img: '/bossaudiosystem.png' },
-                        { title: 'Privacy Films', desc: 'Advanced heat rejection and UV protection.', img: '/suntekwindowfilm.png' },
-                        { title: 'Tech Upgrades', desc: 'Android players, mood lighting, & security.', img: '/cardisplay2.png' },
-                        { title: 'Exterior Accessories', desc: 'Roof carriers, wheel caps, and detailing.', img: '/roofcarrier.png' },
-                    ].map((service, idx) => (
+                    {services.map((service, idx) => (
                         <div key={idx} className="flex-shrink-0 w-[85vw] snap-center h-[380px] relative rounded-3xl overflow-hidden border border-white/10 group">
                             <div className="absolute inset-0 bg-gradient-to-b from-[#1a0505] to-black opacity-60" />
                             <img src={service.img} alt={service.title} className="absolute inset-0 w-full h-full object-contain" />
@@ -226,13 +226,7 @@ const Home = () => {
                         {/* Duplicate the array 3 times for seamless looping */}
                         {[...Array(3)].map((_, i) => (
                             <React.Fragment key={i}>
-                                {[
-                                    { title: 'Bespoke Interiors', desc: 'Hand-stitched leather tailored to perfection.', img: '/seatcover8.png' },
-                                    { title: 'Concert Audio', desc: 'High-fidelity sound systems that shake the ground.', img: '/bossaudiosystem.png' },
-                                    { title: 'Privacy Films', desc: 'Advanced heat rejection and UV protection.', img: '/suntekwindowfilm.png' },
-                                    { title: 'Tech Upgrades', desc: 'Android players, mood lighting, & security.', img: '/cardisplay2.png' },
-                                    { title: 'Exterior Accessories', desc: 'Roof carriers, wheel caps, and detailing.', img: '/roofcarrier.png' },
-                                ].map((service, idx) => (
+                                {services.map((service, idx) => (
                                     <div key={`${i}-${idx}`} className="w-[350px] flex-shrink-0 relative h-[400px] rounded-3xl overflow-hidden group border border-white/10 bg-white/5">
                                         <div className="absolute inset-0 bg-gradient-to-b from-[#1a0505] to-black opacity-50 group-hover:opacity-40 transition-opacity duration-500" />
                                         <img src={service.img} alt={service.title} className="absolute inset-0 w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
