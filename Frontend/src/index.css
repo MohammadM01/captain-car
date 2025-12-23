@@ -55,3 +55,9 @@ body {
 #root {
   min-height: 100vh;
 }
+
+/* Global Selection Style */
+::selection {
+  background-color: #E31E24;
+  color: white;
+}
