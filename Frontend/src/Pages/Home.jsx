@@ -86,14 +86,19 @@ const Home = () => {
                             Experience the pinnacle of automotive interior design. We don't just modify cars; we forge identities.
                         </p>
 
-                        <div className={`flex justify-center w-full transition-all duration-1000 delay-[300ms] transform ${showBottomContent ? 'translate-y-0 opacity-100' : 'translate-y-[20px] opacity-0'}`}>
-                            <Link to="/services">
-                                <Button variant="custom" className="mt-32 px-12 py-5 bg-[#E31E24] hover:bg-white hover:text-[#E31E24] text-white text-xl font-black rounded-none skew-x-[-10deg] transition-all duration-300 uppercase tracking-widest shadow-[0_0_30px_rgba(227,30,36,0.4)] hover:shadow-[0_0_50px_rgba(255,255,255,0.4)]">
-                                    <span className="skew-x-[10deg] inline-block">Discover More</span>
-                                </Button>
-                            </Link>
+
+                        <div className={`flex justify-center w-full transition-all duration-1000 delay-[300ms] transform opacity-0 hidden`}>
+                            {/* Placeholder to keep layout shift minimal if needed, or just remove fully. I will remove the code block fully in TargetContent */}
                         </div>
                     </ScrollReveal>
+                </div>
+
+                <div className={`absolute bottom-40 left-0 w-full flex justify-center z-30 transition-all duration-1000 delay-[300ms] transform ${showBottomContent ? 'translate-y-0 opacity-100' : 'translate-y-[20px] opacity-0'}`}>
+                    <Link to="/services">
+                        <Button variant="custom" className="px-12 py-5 bg-[#E31E24] hover:bg-white hover:text-[#E31E24] text-white text-xl font-black rounded-none skew-x-[-10deg] transition-all duration-300 uppercase tracking-widest shadow-[0_0_30px_rgba(227,30,36,0.4)] hover:shadow-[0_0_50px_rgba(255,255,255,0.4)]">
+                            <span className="skew-x-[10deg] inline-block">Discover More</span>
+                        </Button>
+                    </Link>
                 </div>
 
                 <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce">
