@@ -6,19 +6,53 @@ const WhyUs = () => {
         <div className="bg-black text-white min-h-screen pt-24 pb-16 font-sans selection:bg-[#E31E24] selection:text-white overflow-x-hidden">
 
             <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
 
-                    {/* Left: Text Content */}
-                    <ScrollReveal direction="left">
-                        <div>
-                            <h1 className="text-5xl md:text-7xl font-black uppercase italic tracking-tighter mb-8 leading-none">
-                                Why Choose <span className="text-[#E31E24]">Captain?</span>
-                            </h1>
-                            <p className="text-gray-400 text-lg md:text-xl leading-relaxed mb-10 border-l-4 border-[#E31E24] pl-6">
-                                At Captain Car Audio & Accessories, we are committed to enhancing your driving experience with premium products and professional service. Our team of experts ensures every installation is perfect.
-                            </p>
+                {/* 1. TOP STAT HERO (User's request: First at the top) */}
+                <div className="mb-24">
+                    <ScrollReveal direction="down" delay={100}>
+                        <div className="relative max-w-6xl mx-auto">
+                            <div className="bg-gradient-to-br from-[#1a0505] to-black border border-[#E31E24]/30 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden group hover:border-[#E31E24] transition-all duration-500 shadow-[0_0_80px_-20px_rgba(227,30,36,0.4)]">
+                                <div className="absolute top-0 right-0 w-96 h-96 bg-[#E31E24]/10 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/2" />
+                                <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-[100px] pointer-events-none translate-y-1/2 -translate-x-1/2" />
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
+                                <h2 className="text-8xl md:text-[12rem] font-black text-[#E31E24] mb-2 tracking-tighter leading-none group-hover:scale-105 transition-transform duration-700">
+                                    5000+
+                                </h2>
+                                <p className="text-2xl md:text-4xl font-black text-white uppercase tracking-[0.3em] mb-12">Happy Customers</p>
+
+                                {/* Divider */}
+                                <div className="max-w-md mx-auto h-px bg-gradient-to-r from-transparent via-[#E31E24]/50 to-transparent mb-12" />
+
+                                {/* Testimonial */}
+                                <div className="relative max-w-3xl mx-auto">
+                                    <div className="absolute -top-10 left-1/2 -translate-x-1/2 text-8xl text-[#E31E24]/20 font-serif">"</div>
+                                    <p className="text-gray-300 italic text-xl md:text-3xl leading-relaxed mb-8 relative z-10">
+                                        Best car audio installation in town! The team at Captain transformed my car's interior completely. Highly recommended!
+                                    </p>
+                                    <div className="flex items-center justify-center gap-4">
+                                        <div className="w-12 h-1 bg-[#E31E24] rounded-full" />
+                                        <span className="text-[#E31E24] font-black uppercase text-base md:text-lg tracking-widest italic">Rajesh Kumar, Bhiwandi</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ScrollReveal>
+                </div>
+
+                {/* 2. MAIN HEADER (Why Choose Captain?) sitting below the stat */}
+                <div className="mb-24 pt-20 border-t border-white/5">
+                    <ScrollReveal direction="up">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                            <div>
+                                <h1 className="text-6xl md:text-8xl font-black uppercase italic tracking-tighter mb-8 leading-none">
+                                    Why Choose <span className="text-[#E31E24]">Captain?</span>
+                                </h1>
+                                <p className="text-gray-400 text-xl leading-relaxed mb-12 border-l-4 border-[#E31E24] pl-8">
+                                    At Captain Car Audio & Accessories, we are committed to enhancing your driving experience with premium products and professional service. Our team of experts ensures every installation is perfect.
+                                </p>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12">
                                 {[
                                     "Genuine Products with Warranty",
                                     "Expert Installation Team",
@@ -27,110 +61,23 @@ const WhyUs = () => {
                                     "After-Sales Support",
                                     "Wide Range of Brands"
                                 ].map((item, index) => (
-                                    <div key={index} className="flex items-center gap-4 group">
-                                        <div className="w-8 h-8 rounded-full bg-[#E31E24]/10 border border-[#E31E24] flex items-center justify-center group-hover:bg-[#E31E24] transition-all duration-300">
-                                            <svg className="w-4 h-4 fill-[#E31E24] group-hover:fill-white transition-colors" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>
+                                    <div key={index} className="flex items-center gap-5 group">
+                                        <div className="w-10 h-10 rounded-full bg-[#E31E24]/10 border border-[#E31E24] flex items-center justify-center group-hover:bg-[#E31E24] transition-all duration-300 shadow-[0_0_15px_-5px_#E31E24]">
+                                            <svg className="w-5 h-5 fill-[#E31E24] group-hover:fill-white transition-colors" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>
                                         </div>
-                                        <span className="font-bold text-gray-200 group-hover:text-white transition-colors">{item}</span>
+                                        <span className="font-black text-gray-200 group-hover:text-white transition-colors text-lg uppercase italic tracking-tighter">{item}</span>
                                     </div>
                                 ))}
                             </div>
                         </div>
                     </ScrollReveal>
-
-                    {/* Right: Stat Card & Testimonial */}
-                    <div className="relative">
-                        {/* 5000+ Stat Card */}
-                        <ScrollReveal direction="right" delay={200}>
-                            <div className="bg-gradient-to-br from-[#1a0505] to-black border border-[#E31E24]/30 rounded-[3rem] p-12 text-center relative overflow-hidden group hover:border-[#E31E24] transition-all duration-500 shadow-[0_0_60px_-20px_rgba(227,30,36,0.3)] hover:shadow-[0_0_80px_-20px_rgba(227,30,36,0.5)]">
-                                <div className="absolute top-0 right-0 w-64 h-64 bg-[#E31E24]/10 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/2" />
-
-                                <h2 className="text-6xl md:text-8xl font-black text-[#E31E24] mb-2 tracking-tighter group-hover:scale-105 transition-transform duration-500">
-                                    5000+
-                                </h2>
-                                <p className="text-2xl font-bold text-white uppercase tracking-[0.2em] mb-12">Happy Customers</p>
-
-                                {/* Divider */}
-                                <div className="w-full h-px bg-gradient-to-r from-transparent via-[#E31E24]/50 to-transparent mb-12" />
-
-                                {/* Testimonial */}
-                                <div className="relative">
-                                    <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-6xl text-[#E31E24]/20 font-serif">"</div>
-                                    <p className="text-gray-300 italic text-lg mb-6 leading-relaxed relative z-10">
-                                        Best car audio installation in town! The team at Captain transformed my car's interior completely. Highly recommended!
-                                    </p>
-                                    <div className="flex items-center justify-center gap-3">
-                                        <div className="w-10 h-1 bg-[#E31E24] rounded-full" />
-                                        <span className="text-[#E31E24] font-bold uppercase text-sm tracking-widest">Rajesh Kumar, Delhi</span>
-                                    </div>
-                                </div>
-
-                                {/* Modern Arrow Icon (Bottom Right) */}
-                                <div className="absolute bottom-8 right-8 w-12 h-12 border border-white/10 rounded-full flex items-center justify-center group-hover:bg-[#E31E24] group-hover:border-[#E31E24] transition-all duration-300">
-                                    <svg className="w-5 h-5 fill-current transform -rotate-45 group-hover:rotate-0 transition-transform duration-500" viewBox="0 0 24 24"><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" /></svg>
-                                </div>
-                            </div>
-                        </ScrollReveal>
-
-                        {/* Decor Elements */}
-                        <div className="absolute -z-10 top-1/2 -right-20 w-80 h-80 bg-[#E31E24]/5 rounded-full blur-[100px]" />
-                        <div className="absolute -z-10 -bottom-20 -left-20 w-80 h-80 bg-white/5 rounded-full blur-[100px]" />
-                    </div>
                 </div>
-
-
-                {/* ================= COMPARISON TABLE ================= */}
-                <ScrollReveal direction="up" delay={300}>
-                    <div className="mb-20">
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl md:text-5xl font-black uppercase italic tracking-tighter mb-4">
-                                Captain vs <span className="text-gray-500">Others</span>
-                            </h2>
-                            <p className="text-[#E31E24] font-bold tracking-widest uppercase text-sm">See the Difference</p>
-                        </div>
-
-                        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0a0a0a] shadow-2xl">
-                            {/* Table Container for horizontal scroll on very small mobile */}
-                            <div className="overflow-x-auto">
-                                <table className="w-full min-w-[600px] md:min-w-full text-left border-collapse">
-                                    <thead>
-                                        <tr className="border-b border-white/10 bg-white/5">
-                                            <th className="p-6 md:p-8 font-black uppercase italic tracking-wider text-xl md:text-2xl text-white w-1/3">Feature</th>
-                                            <th className="p-6 md:p-8 font-black uppercase italic tracking-wider text-xl md:text-2xl text-[#E31E24] w-1/3 bg-[#E31E24]/5">Captain Car Audio</th>
-                                            <th className="p-6 md:p-8 font-black uppercase italic tracking-wider text-xl md:text-2xl text-gray-500 w-1/3">Other Shops</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="divide-y divide-white/5">
-                                        {[
-                                            { feature: "Same Day Installation", captain: "✓ Yes", other: "2-3 Days Wait" },
-                                            { feature: "Installation Warranty", captain: "✓ Lifetime", other: "30 Days / None" },
-                                            { feature: "Price Match Guarantee", captain: "✓ Yes + 5% Off", other: "No" },
-                                            { feature: "Free Sound Tuning", captain: "✓ Unlimited", other: "Paid / Once" },
-                                            { feature: "Genuine Products", captain: "✓ Authorized", other: "Mixed / Unknown" },
-                                            { feature: "After-Sales Support", captain: "✓ 24/7 WhatsApp", other: "Limited / None" }
-                                        ].map((row, idx) => (
-                                            <tr key={idx} className="group hover:bg-white/5 transition-colors">
-                                                <td className="p-6 md:p-8 font-bold text-gray-300 text-sm md:text-lg">{row.feature}</td>
-                                                <td className="p-6 md:p-8 font-black text-[#E31E24] text-lg md:text-xl bg-[#E31E24]/5 group-hover:bg-[#E31E24]/10 transition-colors">
-                                                    {row.captain}
-                                                </td>
-                                                <td className="p-6 md:p-8 font-medium text-gray-500 text-sm md:text-lg">
-                                                    {row.other}
-                                                </td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </ScrollReveal>
 
                 {/* ================= WHY CAPTAIN IS BETTER (Cards) ================= */}
                 <ScrollReveal direction="up" delay={300}>
-                    <div className="mb-20 pt-20 border-t border-white/5">
+                    <div className="mb-24 pt-20 border-t border-white/5">
                         <div className="text-center mb-16">
-                            <h2 className="text-3xl md:text-6xl font-black text-white uppercase italic tracking-tighter mb-6">
+                            <h2 className="text-4xl md:text-7xl font-black text-white uppercase italic tracking-tighter mb-6 text-center">
                                 Why <span className="text-[#E31E24]">Captain</span> is Better?
                             </h2>
                             <p className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
@@ -221,6 +168,53 @@ const WhyUs = () => {
                                         <p className="text-gray-400 text-sm leading-relaxed"><strong className="text-white">GST Invoice</strong> – Proper billing with valid warranty claims</p>
                                     </li>
                                 </ul>
+                            </div>
+                        </div>
+                    </div>
+                </ScrollReveal>
+
+                {/* ================= COMPARISON TABLE ================= */}
+                <ScrollReveal direction="up" delay={300}>
+                    <div className="mb-24 pt-20 border-t border-white/5">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl md:text-5xl font-black uppercase italic tracking-tighter mb-4 text-center">
+                                Captain vs <span className="text-gray-500">Others</span>
+                            </h2>
+                            <p className="text-[#E31E24] font-bold tracking-widest uppercase text-sm text-center">See the Difference</p>
+                        </div>
+
+                        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0a0a0a] shadow-2xl">
+                            {/* Table Container for horizontal scroll on very small mobile */}
+                            <div className="overflow-x-auto">
+                                <table className="w-full min-w-[600px] md:min-w-full text-left border-collapse">
+                                    <thead>
+                                        <tr className="border-b border-white/10 bg-white/5">
+                                            <th className="p-6 md:p-8 font-black uppercase italic tracking-wider text-xl md:text-2xl text-white w-1/3">Feature</th>
+                                            <th className="p-6 md:p-8 font-black uppercase italic tracking-wider text-xl md:text-2xl text-[#E31E24] w-1/3 bg-[#E31E24]/5">Captain Car Audio</th>
+                                            <th className="p-6 md:p-8 font-black uppercase italic tracking-wider text-xl md:text-2xl text-gray-500 w-1/3">Other Shops</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-white/5">
+                                        {[
+                                            { feature: "Same Day Installation", captain: "✓ Yes", other: "2-3 Days Wait" },
+                                            { feature: "Installation Warranty", captain: "✓ Lifetime", other: "30 Days / None" },
+                                            { feature: "Price Match Guarantee", captain: "✓ Yes + 5% Off", other: "No" },
+                                            { feature: "Free Sound Tuning", captain: "✓ Unlimited", other: "Paid / Once" },
+                                            { feature: "Genuine Products", captain: "✓ Authorized", other: "Mixed / Unknown" },
+                                            { feature: "After-Sales Support", captain: "✓ 24/7 WhatsApp", other: "Limited / None" }
+                                        ].map((row, idx) => (
+                                            <tr key={idx} className="group hover:bg-white/5 transition-colors">
+                                                <td className="p-6 md:p-8 font-bold text-gray-300 text-sm md:text-lg">{row.feature}</td>
+                                                <td className="p-6 md:p-8 font-black text-[#E31E24] text-lg md:text-xl bg-[#E31E24]/5 group-hover:bg-[#E31E24]/10 transition-colors">
+                                                    {row.captain}
+                                                </td>
+                                                <td className="p-6 md:p-8 font-medium text-gray-500 text-sm md:text-lg">
+                                                    {row.other}
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
