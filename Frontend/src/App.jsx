@@ -6,6 +6,8 @@ import Services from './Pages/Services';
 import Products from './Pages/Products';
 import ContactUs from './Pages/ContactUs';
 
+import WhyUs from './Pages/WhyUs';
+
 function App() {
   return (
     <Router>
@@ -15,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/why-us" element={<WhyUs />} />
           <Route path="/contact" element={<ContactUs />} />
         </Routes>
       </div>

@@ -1,19 +1,32 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../Components/Button';
 import ScrollReveal from '../Components/ScrollReveal';
 
 const Home = () => {
     const [showHeroText, setShowHeroText] = useState(false);
     const [showBottomContent, setShowBottomContent] = useState(false);
+    const [openFaq, setOpenFaq] = useState(null);
+
+    const toggleFaq = (index) => {
+        setOpenFaq(openFaq === index ? null : index);
+    };
+
+    const faqs = [
+        { q: "Do you provide warranty on modifications?", a: "Yes! All our products come with a verified manufacturer warranty, and we provide a lifetime installation guarantee on our wiring work." },
+        { q: "Will installing accessories affect my car's warranty?", a: "We use coupler-to-coupler installation methods which do not cut any original wires, ensuring your car's manufacturer warranty remains intact." },
+        { q: "How long does a full interior customization take?", a: "Seat covers usually take 3-4 hours. A complete interior overhaul (audio + lights + seats) might take a full day. We value precision over speed." },
+        { q: "Do you have options for all car brands?", a: "Absolutely. From Maruti to Mercedes, we have specific accessories tailored for every make and model." }
+    ];
 
     useEffect(() => {
         const timer1 = setTimeout(() => {
             setShowHeroText(true);
-        }, 3000); // 3-second delay for Title
+        }, 3000);
 
         const timer2 = setTimeout(() => {
             setShowBottomContent(true);
-        }, 5500); // 5.5-second delay for Subtitle & Buttons
+        }, 5500);
 
         return () => {
             clearTimeout(timer1);
@@ -26,11 +39,7 @@ const Home = () => {
 
             {/* ================= HERO SECTION ================= */}
             <div className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden">
-
-                {/* Video Background with Cinematic Overlay */}
-                {/* Video Background with Cinematic Overlay */}
                 <div className="absolute inset-0 z-0">
-                    {/* Overlays removed for maximum brightness */}
                     <video
                         autoPlay
                         loop
@@ -42,7 +51,6 @@ const Home = () => {
                     </video>
                 </div>
 
-                {/* Hero Content - Left to Right Animation */}
                 <div className="relative z-20 container mx-auto px-6 h-full flex flex-col justify-center items-start">
                     <ScrollReveal direction="left" delay={500} className="max-w-4xl">
                         <div className={`glass-panel inline-block px-6 py-2 rounded-full mb-6 border-l-4 border-brand-red transition-all duration-1000 ${showHeroText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -66,22 +74,25 @@ const Home = () => {
                                 </span>
                             </div>
                         </h1>
-                        <p className={`text-gray-300 text-lg md:text-2xl font-light tracking-wide max-w-2xl mb-10 border-l border-white/20 pl-6 transition-all duration-1000 delay-0 transform ${showBottomContent ? 'translate-y-0 opacity-100' : 'translate-y-[20px] opacity-0'}`}>
+                        <p className={`text-gray-100 text-lg md:text-2xl font-light tracking-wide max-w-2xl mb-10 border-l border-white/50 pl-6 transition-all duration-1000 delay-0 transform ${showBottomContent ? 'translate-y-0 opacity-100' : 'translate-y-[20px] opacity-0'}`}>
                             Experience the pinnacle of automotive interior design. We don't just modify cars; we forge identities.
                         </p>
 
                         <div className={`flex flex-col sm:flex-row gap-6 transition-all duration-1000 delay-[300ms] transform ${showBottomContent ? 'translate-y-0 opacity-100' : 'translate-y-[20px] opacity-0'}`}>
-                            <Button variant="custom" className="px-10 py-4 bg-brand-red hover:bg-white hover:text-brand-red text-white font-black rounded-none skew-x-[-10deg] transition-all duration-300 uppercase tracking-widest shadow-[5px_5px_0px_rgba(255,255,255,0.1)] hover:shadow-[5px_5px_0px_#B22222]">
-                                <span className="skew-x-[10deg] inline-block">Start Project</span>
-                            </Button>
-                            <button className="px-10 py-4 border border-white/30 hover:border-brand-red text-white font-bold uppercase tracking-widest hover:bg-brand-red/10 transition-all duration-300 skew-x-[-10deg] backdrop-blur-sm">
-                                <span className="skew-x-[10deg] inline-block">View Gallery</span>
-                            </button>
+                            <Link to="/contact">
+                                <Button variant="custom" className="px-10 py-4 bg-brand-red hover:bg-white hover:text-brand-red text-white font-black rounded-none skew-x-[-10deg] transition-all duration-300 uppercase tracking-widest shadow-[5px_5px_0px_rgba(255,255,255,0.1)] hover:shadow-[5px_5px_0px_#B22222]">
+                                    <span className="skew-x-[10deg] inline-block">Start Project</span>
+                                </Button>
+                            </Link>
+                            <Link to="/services">
+                                <button className="px-10 py-4 border border-white/50 hover:border-brand-red text-white font-bold uppercase tracking-widest hover:bg-brand-red/10 transition-all duration-300 skew-x-[-10deg] backdrop-blur-sm">
+                                    <span className="skew-x-[10deg] inline-block">View Gallery</span>
+                                </button>
+                            </Link>
                         </div>
                     </ScrollReveal>
                 </div>
 
-                {/* Scroll Indicator */}
                 <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce">
                     <div className="w-[1px] h-20 bg-gradient-to-b from-transparent via-brand-red to-transparent"></div>
                 </div>
@@ -89,31 +100,28 @@ const Home = () => {
 
             {/* ================= THE EXPERIENCE (About) ================= */}
             <div className="relative py-24 px-6 bg-[#080808] overflow-hidden">
-                {/* Decorative Elements */}
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-red/5 rounded-full blur-[120px] pointer-events-none" />
 
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-                    {/* Left: Image Grid (simulated generated assets for now) */}
+                    {/* Left: Image Grid */}
                     <ScrollReveal direction="right" delay={200}>
                         <div className="relative">
                             <div className="absolute inset-0 bg-brand-red blur-[60px] opacity-20" />
                             <div className="relative grid grid-cols-2 gap-4">
                                 <div className="space-y-4 pt-12">
                                     <div className="h-64 bg-neutral-900 rounded-2xl border border-white/5 overflow-hidden group">
-                                        {/* Placeholder for leather seat image */}
-                                        <div className="w-full h-full bg-[url('/seatcover1.png')] bg-cover bg-center opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 grayscale group-hover:grayscale-0" />
+                                        <img src="/seatcover1.png" alt="Seat Cover" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700" />
                                     </div>
                                     <div className="h-48 bg-neutral-900 rounded-2xl border border-white/5 overflow-hidden group">
-                                        <div className="w-full h-full bg-[url('/seatcover4.png')] bg-cover bg-center opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 grayscale group-hover:grayscale-0" />
+                                        <img src="/seatcover4.png" alt="Seat Cover" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700" />
                                     </div>
                                 </div>
                                 <div className="space-y-4">
                                     <div className="h-48 bg-neutral-900 rounded-2xl border border-white/5 overflow-hidden group">
-                                        <div className="w-full h-full bg-[url('/seatcover6.png')] bg-cover bg-center opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 grayscale group-hover:grayscale-0" />
+                                        <img src="/seatcover6.png" alt="Seat Cover" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700" />
                                     </div>
                                     <div className="h-64 bg-neutral-900 rounded-2xl border border-white/5 overflow-hidden group">
-                                        <div className="w-full h-full bg-[url('/seatcover9.png')] bg-cover bg-center opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 grayscale group-hover:grayscale-0" />
+                                        <img src="/seatcover9.png" alt="Seat Cover" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700" />
                                     </div>
                                 </div>
                             </div>
@@ -144,12 +152,13 @@ const Home = () => {
                                 </div>
                             </div>
 
-                            <Button variant="custom" className="bg-transparent border border-white text-white hover:bg-white hover:text-black px-8 py-3 rounded-full uppercase font-bold tracking-widest transition-all">
-                                Meet The Team
-                            </Button>
+                            <Link to="/why-us">
+                                <Button variant="custom" className="bg-transparent border border-white text-white hover:bg-white hover:text-black px-8 py-3 rounded-full uppercase font-bold tracking-widest transition-all">
+                                    Why Choose Us?
+                                </Button>
+                            </Link>
                         </div>
                     </ScrollReveal>
-
                 </div>
             </div>
 
@@ -168,19 +177,20 @@ const Home = () => {
                     </ScrollReveal>
                 </div>
 
-                {/* Horizontal Snap Scroll */}
                 <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 px-6 pb-12 scrollbar-hide">
                     {[
-                        { title: 'Bespoke Interiors', desc: 'Hand-stitched leather tailored to perfection.', img: '/seatcover1.png', color: 'from-red-900' },
+                        { title: 'Bespoke Interiors', desc: 'Hand-stitched leather tailored to perfection.', img: '/seatcover8.png', color: 'from-red-900' },
                         { title: 'Concert Audio', desc: 'High-fidelity sound systems that shake the ground.', img: '/bossaudiosystem.png', color: 'from-blue-900' },
                         { title: 'Privacy Films', desc: 'Advanced heat rejection and UV protection.', img: '/suntekwindowfilm.png', color: 'from-yellow-900' },
-                        { title: 'Tech Upgrades', desc: 'Android players, mood lighting, & security.', img: '/sonymakebelive.png', color: 'from-purple-900' },
+                        { title: 'Tech Upgrades', desc: 'Android players, mood lighting, & security.', img: '/cardisplay2.png', color: 'from-purple-900' },
+                        { title: 'Exterior Accessories', desc: 'Roof carriers, wheel caps, and detailing.', img: '/roofcarrier.png', color: 'from-green-900' },
                     ].map((service, idx) => (
                         <div key={idx} className="min-w-[85vw] md:min-w-[400px] snap-center relative h-[500px] rounded-3xl overflow-hidden group border border-white/10">
-                            <div className={`absolute inset-0 bg-gradient-to-b ${service.color} to-black opacity-60 group-hover:opacity-80 transition-opacity duration-500`} />
-                            <img src={service.img} alt={service.title} className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50 group-hover:scale-110 transition-transform duration-700" />
+                            <div className={`absolute inset-0 bg-gradient-to-b ${service.color} to-black opacity-60 group-hover:opacity-40 transition-opacity duration-500`} />
+                            {/* Removed Mix-Blend-Overlay and Grayscale filters as requested */}
+                            <img src={service.img} alt={service.title} className="absolute inset-0 w-full h-full object-contain p-8 group-hover:scale-110 transition-transform duration-700" />
 
-                            <div className="absolute bottom-0 left-0 right-0 p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black via-black/80 to-transparent">
                                 <h3 className="text-3xl font-black text-white uppercase italic mb-2">{service.title}</h3>
                                 <p className="text-gray-300 mb-6 font-medium">{service.desc}</p>
                                 <span className="inline-flex items-center gap-2 text-brand-red font-bold uppercase tracking-widest text-xs group-hover:gap-4 transition-all">
@@ -214,57 +224,102 @@ const Home = () => {
                 `}</style>
             </div>
 
-            {/* ================= CONTACT / FOOTER ================= */}
-            <footer className="bg-[#050505] pt-24 pb-12 px-6 border-t border-white/5 relative">
-                <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-16">
+            {/* ================= FAQ SECTION ================= */}
+            <div className="bg-[#0a0a0a] py-20 px-6">
+                <div className="max-w-4xl mx-auto">
+                    <ScrollReveal direction="up">
+                        <div className="text-center mb-16">
+                            <h2 className="text-4xl md:text-6xl font-black text-white uppercase italic tracking-tighter mb-4">You Asked, <span className="text-brand-red">We Answered</span></h2>
+                        </div>
+                    </ScrollReveal>
 
-                    {/* Brand Info */}
-                    <div className="md:w-1/3">
-                        <h2 className="text-4xl font-black text-white italic tracking-tighter mb-6 relative inline-block">
-                            CAPTAIN CAR
-                            <div className="absolute -top-4 -right-4 w-8 h-8 bg-brand-red rounded-full blur-xl opacity-50"></div>
-                        </h2>
-                        <p className="text-gray-500 leading-relaxed mb-8">
-                            Modifying ordinary into extraordinary. We are the architects of your dream drive.
-                        </p>
-                        <div className="flex gap-4">
-                            {/* Social Icons Placeholder */}
-                            <div className="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-brand-red hover:border-brand-red transition-all text-white cursor-pointer">IG</div>
-                            <div className="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-brand-red hover:border-brand-red transition-all text-white cursor-pointer">YT</div>
-                            <div className="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-brand-red hover:border-brand-red transition-all text-white cursor-pointer">FB</div>
+                    <div className="space-y-4">
+                        {faqs.map((faq, idx) => (
+                            <ScrollReveal key={idx} direction="up" delay={idx * 100}>
+                                <div className="border border-white/10 rounded-2xl bg-white/5 overflow-hidden">
+                                    <button
+                                        onClick={() => toggleFaq(idx)}
+                                        className="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors"
+                                    >
+                                        <span className="text-xl font-bold text-gray-200">{faq.q}</span>
+                                        <span className={`text-2xl text-brand-red transition-transform duration-300 ${openFaq === idx ? 'rotate-45' : ''}`}>+</span>
+                                    </button>
+                                    <div className={`overflow-hidden transition-all duration-300 ${openFaq === idx ? 'max-h-48 opacity-100 p-6 pt-0' : 'max-h-0 opacity-0'}`}>
+                                        <p className="text-gray-400 leading-relaxed">{faq.a}</p>
+                                    </div>
+                                </div>
+                            </ScrollReveal>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* ================= CONTACT / FOOTER ================= */}
+            <footer className="bg-black pt-20 pb-10 border-t border-white/10 text-white">
+                <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+
+                    {/* Brand */}
+                    <div className="col-span-1">
+                        <Link to="/" className="inline-block mb-6">
+                            <img src="/assets/figma-img/logo.png" alt="Captain Car" className="h-16 w-auto object-contain" />
+                        </Link>
+                        <div className="flex gap-4 mt-6">
+                            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-red transition-all">FB</a>
+                            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-red transition-all">IG</a>
+                            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-red transition-all">YT</a>
                         </div>
                     </div>
 
-                    {/* Contact Info */}
-                    <div className="md:w-1/3">
-                        <h4 className="text-white font-bold uppercase tracking-widest mb-8 border-b border-white/10 pb-4 inline-block">Visit The Workshop</h4>
-                        <div className="space-y-6">
-                            <div className="flex gap-4">
-                                <span className="text-brand-red text-xl">📍</span>
-                                <p className="text-gray-400">Next to Greenland Hotel,<br />Chavindra, Bhiwandi - 421 302</p>
-                            </div>
-                            <div className="flex gap-4">
-                                <span className="text-brand-red text-xl">📞</span>
+                    {/* Quick Links */}
+                    <div>
+                        <h4 className="text-brand-red font-bold uppercase tracking-widest mb-6">Quick Links</h4>
+                        <ul className="space-y-4 text-gray-400 font-medium">
+                            <li><Link to="/" className="hover:text-white transition-colors">Get In Touch</Link></li>
+                            <li><Link to="/services" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+                            <li><Link to="/products" className="hover:text-white transition-colors">Returns</Link></li>
+                            <li><Link to="/why-us" className="hover:text-white transition-colors">Shipping Policy</Link></li>
+                            <li><Link to="/contact" className="hover:text-white transition-colors">Terms of Service</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Business */}
+                    <div>
+                        <h4 className="text-brand-red font-bold uppercase tracking-widest mb-6">Business</h4>
+                        <ul className="space-y-4 text-gray-400 font-medium">
+                            <li><Link to="/why-us" className="hover:text-white transition-colors">About Us</Link></li>
+                            <li><Link to="/contact" className="hover:text-white transition-colors">Bulk Orders</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Contact Us */}
+                    <div>
+                        <h4 className="text-brand-red font-bold uppercase tracking-widest mb-6">Contact Us</h4>
+                        <div className="space-y-6 text-gray-400">
+                            <div className="flex items-start gap-4">
+                                <span className="text-2xl">📞</span>
                                 <div>
-                                    <p className="text-white font-bold text-lg">9822119832</p>
-                                    <p className="text-gray-500">9323567097</p>
+                                    <p className="text-white font-bold">We're available by phone:</p>
+                                    <p className="text-xl text-brand-red font-black">9822119832</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    {/* Map / Image Area */}
-                    <div className="md:w-1/3 h-64 bg-white/5 rounded-2xl overflow-hidden relative group">
-                        <div className="absolute inset-0 bg-brand-red/10 group-hover:bg-transparent transition-colors duration-500" />
-                        <div className="flex items-center justify-center h-full">
-                            <span className="text-gray-500 uppercase tracking-widest font-bold">Map Location View</span>
+                            <div className="flex items-center gap-4">
+                                <span className="text-2xl">✉️</span>
+                                <p>contact@captaincar.in</p>
+                            </div>
+                            <div className="flex items-center gap-4">
+                                <span className="text-2xl">🕒</span>
+                                <p>Monday to Saturday 10 AM to 9 PM</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="mt-24 pt-8 border-t border-white/5 text-center text-gray-600 text-xs uppercase tracking-widest flex flex-col md:flex-row justify-between items-center">
-                    <p>&copy; 2025 Captain Car Styling. All Rights Reserved.</p>
-                    <p>Designed for Excellence.</p>
+                <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 uppercase tracking-widest">
+                    <p>Copyright © 2025 Captain Car. All rights reserved.</p>
+                    <div className="flex items-center gap-2 mt-4 md:mt-0">
+                        <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                        <span className="text-green-500 font-bold">Chat with us</span>
+                    </div>
                 </div>
             </footer>
 
