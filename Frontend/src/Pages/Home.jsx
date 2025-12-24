@@ -173,19 +173,19 @@ const Home = () => {
 
                             <div className="space-y-6 text-gray-400 text-lg leading-relaxed mb-10">
                                 <p className="border-l-2 border-brand-red pl-6">
-                                    Founded by <strong>Tanveer Farooqui</strong>, Captain Car has evolved from a passionate vision into Bhiwandi's most trusted sanctuary for automotive excellence. With over 15 years of hands-on experience, Tanveer has personally overseen thousands of transformations, ensuring that every vehicle leaving our workshop carries a signature of perfection.
+                                    Founded by <strong>Tanveer Farooqui</strong>, Captain Car has evolved from a passionate vision into Bhiwandi's <strong>architectural sanctuary</strong> for automotive excellence. With over 15 years of personal expertise, Tanveer treats every vehicle not as a machine, but as a canvas for <strong>exquisite</strong> art, ensuring that every transformation carries a signature of <strong>integrity</strong>.
                                 </p>
 
                                 <p>
-                                    Our philosophy is simple: your car is an extension of your personality. Whether it's the tactile feel of premium Nappa leather, the crystalline clarity of a high-end audio system, or the sleek sophistication of advanced window films, we believe in a holistic approach to car modification. We don't just "install" products; we "integrate" them into the very soul of your vehicle.
+                                    Our philosophy is simple: your car is an extension of your personality. Whether it's the tactile feel of premium Nappa leather or the crystalline clarity of a high-end audio system, we take a <strong>holistic</strong> approach. We don't just "install" products; we <strong>integrate</strong> them into the very soul of your vehicle with a <strong>bespoke</strong> mindset.
                                 </p>
 
                                 <p>
-                                    In an era of mass-produced, off-the-shelf solutions, we take pride in our <span className="text-white font-bold">"Bespoke" mindset</span>. Every seat cover is hand-stitched by master craftsmen with decades of experience. Every audio system is tuned using precision instruments to match the acoustics of your specific car model. We understand that our clients expect nothing but the best, and we are here to exceed those expectations every single time.
+                                    We remain at the <strong>pioneering</strong> edge of technology and style. From <strong>intuitive</strong> Android hubs that turn your dashboard into a futuristic cockpit to <strong>sophisticated</strong> leather interiors that provide a sense of <strong>grandeur</strong>, our work is defined by <strong>pristine</strong> quality. We believe that exclusive luxury and comfort are the ultimate measures of success.
                                 </p>
 
                                 <p>
-                                    Located conveniently in <span className="text-white font-bold">Chavindra, Bhiwandi</span>, our facility is equipped with state-of-the-art tools and a dedicated team of specialists. We serve a discerning clientele who travel from across the region because they know that at Captain Car, quality is never compromised for speed. We invite you to experience the difference that true dedication makes.
+                                    Located in <span className="text-white font-bold">Chavindra, Bhiwandi</span>, our state-of-the-art facility serves a discerning clientele who value <strong>authenticity</strong> over speed. Trust is the foundation of our <strong>legacy</strong>, and we promise a <strong>meticulous</strong> transformation that is both <strong>radical and timeless</strong>.
                                 </p>
                             </div>
 
