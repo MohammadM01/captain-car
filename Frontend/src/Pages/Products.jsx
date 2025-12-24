@@ -75,7 +75,7 @@ const Products = () => {
             id: "sun-control",
             items: [
                 { id: 44, name: "Premium Car Washing", img: "/carwashing4.png" },
-                
+
                 { id: 46, name: "Deep Clean Wash", img: "/windowwash2.png" },
                 { id: 47, name: "Quick Wash Service", img: "/carwashing3.png" },
             ]
@@ -201,16 +201,25 @@ const Products = () => {
                                                     {product.name}
                                                 </h3>
                                                 <div className="flex justify-between items-end mt-4">
-                                                    <Link to="/contact">
-                                                        <span className="text-brand-red text-sm font-bold uppercase tracking-widest border-b border-transparent hover:border-brand-red transition-all cursor-pointer">
+                                                    <a
+                                                        href={`https://wa.me/919822119832?text=${encodeURIComponent(`Hey, I want to know more about ${product.name}. Kindly share more details.`)}`}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="group/btn"
+                                                    >
+                                                        <span className="text-brand-red text-sm font-bold uppercase tracking-widest border-b border-transparent group-hover/btn:border-brand-red transition-all cursor-pointer">
                                                             Enquire Now
                                                         </span>
-                                                    </Link>
-                                                    <Link to="/contact">
-                                                        <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-brand-red group-hover:text-white transition-all duration-300">
+                                                    </a>
+                                                    <a
+                                                        href={`https://wa.me/919822119832?text=${encodeURIComponent(`Hey, I want to know more about ${product.name}. Kindly share more details.`)}`}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                    >
+                                                        <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-red hover:text-white transition-all duration-300">
                                                             <span className="text-lg">→</span>
                                                         </div>
-                                                    </Link>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
