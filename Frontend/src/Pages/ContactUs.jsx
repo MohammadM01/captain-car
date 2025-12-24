@@ -58,7 +58,7 @@ const ContactUs = () => {
                                     <h3 className="text-2xl font-black uppercase italic mb-1">Visit Us</h3>
                                     <p className="text-gray-400 mb-2">Come see our work in person.</p>
                                     <p className="text-white text-lg font-medium max-w-xs">
-                                        Next to Greenland Hotel, Chavindra, Bhiwandi, Maharashtra 421302
+                                        Captain Car Audio, Next to Greenland Hotel, Chavindra, Bhiwandi, Maharashtra 421302
                                     </p>
                                 </div>
                             </div>
@@ -104,7 +104,7 @@ const ContactUs = () => {
             {/* Map Section (Full Width) */}
             <div className="h-[500px] w-full relative">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.986877524957!2d73.0534!3d19.2829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDE2JzU4LjQiTiA3M8KwMDMnMTIuMiJF!5e0!3m2!1sen!2sin!4v1634567890123!5m2!1sen!2sin&q=Captain+Car+Accessories,+Next+to+Greenland+Hotel,+Chavindra,+Bhiwandi"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83194.4788254592!2d73.05857195929217!3d19.274098379261684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bd0bd3ab28a7%3A0x9a04787bb35296c9!2sCaptain%20Car%20Audio!5e0!3m2!1sen!2sin!4v1766560019806!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     className="w-full h-full transition-all duration-700"
@@ -113,8 +113,6 @@ const ContactUs = () => {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
-                {/* Overlay Text on Desktop Map */}
-                <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black via-transparent to-transparent opacity-50"></div>
             </div>
 
         </div>

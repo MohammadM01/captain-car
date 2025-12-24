@@ -345,7 +345,7 @@ const Home = () => {
                             <div className="absolute inset-0 pointer-events-none z-10 border-[10px] border-white/5 rounded-[3rem]" />
 
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.986877524957!2d73.0534!3d19.2829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDE2JzU4LjQiTiA3M8KwMDMnMTIuMiJF!5e0!3m2!1sen!2sin!4v1634567890123!5m2!1sen!2sin&q=Captain+Car+Accessories,+Next+to+Greenland+Hotel,+Chavindra,+Bhiwandi"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83194.4788254592!2d73.05857195929217!3d19.274098379261684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bd0bd3ab28a7%3A0x9a04787bb35296c9!2sCaptain%20Car%20Audio!5e0!3m2!1sen!2sin!4v1766560019806!5m2!1sen!2sin"
                                 width="100%"
                                 height="100%"
                                 className="w-full h-full transition-all duration-700"
@@ -354,13 +354,6 @@ const Home = () => {
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
                             ></iframe>
-
-                            {/* Address Card Overlay */}
-                            <div className="absolute bottom-8 left-8 bg-black/80 backdrop-blur-md border border-white/10 p-6 rounded-2xl max-w-sm z-20 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                                <h4 className="text-[#E31E24] font-bold uppercase tracking-widest mb-2 text-xs">Headquarters</h4>
-                                <p className="text-white font-bold text-lg mb-1">Captain Car Accessories</p>
-                                <p className="text-gray-400 text-sm leading-relaxed">Next to Greenland Hotel, Chavindra, Bhiwandi, Maharashtra 421302</p>
-                            </div>
                         </div>
                     </ScrollReveal>
                 </div>
