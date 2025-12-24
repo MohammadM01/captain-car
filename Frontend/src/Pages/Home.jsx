@@ -138,18 +138,24 @@ const Home = () => {
                             <div className="relative grid grid-cols-2 gap-4">
                                 <div className="space-y-4 pt-12">
                                     <div className="h-64 bg-neutral-900 rounded-2xl border border-white/5 overflow-hidden group">
-                                        <img src="/seatcover1.png" alt="Seat Cover" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700" />
+                                        <img src="/bumper3.jpg" alt="Professional Styling" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700" />
                                     </div>
                                     <div className="h-48 bg-neutral-900 rounded-2xl border border-white/5 overflow-hidden group">
-                                        <img src="/seatcover4.png" alt="Seat Cover" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700" />
+                                        <img src="/cardisplay1.png" alt="Android Interface" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700" />
+                                    </div>
+                                    <div className="h-56 bg-neutral-900 rounded-2xl border border-white/5 overflow-hidden group">
+                                        <img src="/carrier5.png" alt="Travel Gear" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700" />
                                     </div>
                                 </div>
                                 <div className="space-y-4">
                                     <div className="h-48 bg-neutral-900 rounded-2xl border border-white/5 overflow-hidden group">
-                                        <img src="/seatcover6.png" alt="Seat Cover" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700" />
+                                        <img src="/bossaudiosystem.png" alt="Sound System" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700" />
                                     </div>
                                     <div className="h-64 bg-neutral-900 rounded-2xl border border-white/5 overflow-hidden group">
-                                        <img src="/seatcover9.png" alt="Seat Cover" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700" />
+                                        <img src="/seatcover1.png" alt="Bespoke Stitching" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700" />
+                                    </div>
+                                    <div className="h-48 bg-neutral-900 rounded-2xl border border-white/5 overflow-hidden group">
+                                        <img src="/keylessentrysystem.png" alt="Advanced Tech" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700" />
                                     </div>
                                 </div>
                             </div>
