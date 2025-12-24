@@ -20,6 +20,7 @@ const Home = () => {
     ];
 
     const [hoveredImg, setHoveredImg] = useState(null);
+    const [selectedService, setSelectedService] = useState(null);
 
     useEffect(() => {
         const heroTimer = setTimeout(() => setShowHeroText(true), 1860);
@@ -34,28 +35,38 @@ const Home = () => {
     const services = [
         {
             title: 'Bespoke Interiors',
-            desc: 'Transform your cabin into a luxury lounge. We offer hand-stitched leather upholstery, custom headliners, and floor laminations tailored to your exact taste.',
-            img: '/seatcover-hero.png'
+            desc: 'Transform your cabin into a luxury sanctuary. We offer hand-stitched leather upholstery, custom headliners, and premium floor laminations tailored to your exact style and comfort.',
+            img: '/seat cover/seatcover-hero.png',
+            longDesc: "Our bespoke interior service is where comfort meets character. We don't just redo seats; we re-engineer the entire tactile experience of your vehicle. Using premium Nappa leather, Alcantara, and high-density foam, our craftsmen hand-stitch every panel to perfection. From starry-night headliners to moisture-resistant floor lamination, every detail is a testament to our founder Tanveer's vision of 'Automotive Grandeur'.",
+            features: ['Custom Layouts', 'Double Diamond Stitching', 'Starry Headliners', 'Premium Nappa Leather']
         },
         {
             title: 'Concert Audio',
-            desc: 'Audiophile-grade sound engineering. From high-fidelity speakers and powerful subwoofers to precision DSP tuning for a studio-quality experience on wheels.',
-            img: '/bossaudiosystem.png'
+            desc: 'Experience audiophile-grade sound engineering. From high-fidelity speakers and powerful subwoofers to precision DSP tuning for a studio-quality live performance on every drive.',
+            img: '/new photos/Screenshot 2025-12-24 173110.png',
+            longDesc: "Sound is an emotion, not just a frequency. At Captain Car, our 'Concert Audio' setups are tuned specifically for the acoustics of your vehicle. We integrate high-resolution Digital Signal Processors (DSP), components from global leaders like Pioneer and Sony, and custom-built subwoofer enclosures. Our signature 'Deep Stage' tuning ensures you feel every beat and hear every whisper as if you're in the front row of a live performance.",
+            features: ['3D Sound Staging', 'DSP Time Alignment', 'Damping & Isolation', 'Bespoke Audio Racks']
         },
         {
             title: 'Privacy Films',
-            desc: 'Stay cool and protected. Our premium window films provide up to 99% UV rejection and significant heat reduction without compromising visibility or style.',
-            img: '/suntekwindowfilm.png'
+            desc: 'Stay cool and protected with premium window films. Our nano-ceramic technology blocks up to 99% of UV rays for significant heat reduction without compromising night visibility.',
+            img: '/suntekwindowfilm.png',
+            longDesc: "Protection meets sophistication. Our heat-shielding films utilize nano-ceramic technology to block 99% of harmful UV rays while maintaining crystal clear night-time visibility. This isn't just about privacy; it's about preserving your interior's life and significantly reducing the load on your AC system. Available in various tints, our films are installed in a dust-free environment for a factory-perfect finish.",
+            features: ['99% UV Rejection', 'Nano-Ceramic Tech', 'Anti-Glare Shield', 'Scratch Resistant']
         },
         {
             title: 'Tech Upgrades',
-            desc: 'The latest in automotive intelligence. High-resolution Android displays, 360-degree cameras, and ambient mood lighting controlled right from your smartphone.',
-            img: '/cardisplay2.png'
+            desc: 'Equip your vehicle with the latest intelligence. From 4K Android hubs and 360-degree cameras to custom ambient lighting that provides a futuristic digital cockpit for every journey.',
+            img: '/car-display/cardisplay2-hero.png',
+            longDesc: "Modernize your drive with cutting-edge intelligence. We replace outdated head units with high-performance Android systems featuring seamless CarPlay and Android Auto integration. Our 360-degree bird's eye view camera systems eliminate blind spots, while our smartphone-controlled ambient lighting allows you to set the mood of your cabin with over 16 million colors. It's not just technology; it's a digital cockpit.",
+            features: ['4K Android Hubs', '360° Vision System', 'App-Controlled Glow', 'Smart Dashcams']
         },
         {
             title: 'Exterior Styling',
-            desc: "Command the road with presence. Custom body kits, premium alloy wheels, and professional chrome deletions that give your vehicle a distinct, aggressive edge.",
-            img: '/tyremiddle.png'
+            desc: "Command the road with ultimate presence. We install custom modular body kits, premium alloy wheels, and professional chrome deletions that give your car a distinct, aggressive edge.",
+            img: '/tyremiddle.png',
+            longDesc: "Make a statement before you even start the engine. Our exterior styling wing focuses on 'Presence Engineering'. Whether it's a complete chrome deletion (gloss black wrap), aggressive body kit installations, or selecting the perfect offset for your new alloy wheels, we ensure every mod enhances the vehicle's natural lines. We don't just build cars; we build icons.",
+            features: ['Chrome Deletions', 'Modular Body Kits', 'Aero Enhancements', 'Custom Wheel Sets']
         },
     ];
 
@@ -356,16 +367,19 @@ const Home = () => {
                         {[...Array(3)].map((_, i) => (
                             <React.Fragment key={i}>
                                 {services.map((service, idx) => (
-                                    <div key={`${i}-${idx}`} className="w-[350px] flex-shrink-0 relative h-[400px] rounded-3xl overflow-hidden group border border-white/10 bg-white/5">
+                                    <div key={`${i}-${idx}`} className="w-[450px] flex-shrink-0 relative h-[320px] rounded-[2.5rem] overflow-hidden group border border-white/10 bg-white/5">
                                         <div className="absolute inset-0 bg-gradient-to-b from-[#1a0505] to-black opacity-50 group-hover:opacity-40 transition-opacity duration-500" />
-                                        <img src={service.img} alt={service.title} className="absolute inset-0 w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
+                                        <img src={service.img} alt={service.title} className="absolute inset-0 w-full h-full object-contain group-hover:scale-110 transition-transform duration-700" />
 
-                                        <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black via-black/90 to-transparent">
-                                            <h3 className="text-2xl font-black text-white uppercase italic mb-2 tracking-tighter">{service.title}</h3>
-                                            <p className="text-gray-300 mb-4 font-medium text-xs leading-relaxed">{service.desc}</p>
-                                            <span className="inline-flex items-center gap-2 text-brand-red font-bold uppercase tracking-widest text-xs group-hover:gap-4 transition-all">
+                                        <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black via-black/95 to-transparent">
+                                            <h3 className="text-2xl font-black text-white uppercase italic mb-1 tracking-tighter">{service.title}</h3>
+                                            <p className="text-gray-300 mb-4 font-medium text-[10px] leading-relaxed line-clamp-2">{service.desc}</p>
+                                            <button
+                                                onClick={() => setSelectedService(service)}
+                                                className="inline-flex items-center gap-2 text-brand-red font-bold uppercase tracking-widest text-[10px] group-hover:gap-4 transition-all"
+                                            >
                                                 Explore <span>→</span>
-                                            </span>
+                                            </button>
                                         </div>
                                     </div>
                                 ))}
@@ -543,6 +557,56 @@ const Home = () => {
                         <div className="absolute inset-x-0 h-1 bg-gradient-to-r from-transparent via-brand-red to-transparent z-20 animate-scan pointer-events-none" style={{
                             animation: 'scanLine 4s infinite linear'
                         }} />
+                    </div>
+                )}
+            </div>
+            {/* Service Detail Modal */}
+            <div className={`fixed inset-0 z-[300] flex items-center justify-center p-4 md:p-10 transition-all duration-500 ${selectedService ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                <div className="absolute inset-0 bg-black/90 backdrop-blur-2xl" onClick={() => setSelectedService(null)} />
+
+                {selectedService && (
+                    <div className="bg-neutral-900 border border-white/10 w-full max-w-6xl max-h-[90vh] rounded-[3rem] overflow-hidden flex flex-col md:flex-row relative z-10 animate-in zoom-in-95 duration-500 shadow-[0_0_100px_-20px_rgba(227,30,36,0.2)]">
+                        <button
+                            onClick={() => setSelectedService(null)}
+                            className="absolute top-8 right-8 w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-brand-red hover:border-brand-red transition-all z-20 group"
+                        >
+                            <span className="text-2xl group-hover:rotate-90 transition-transform">✕</span>
+                        </button>
+
+                        {/* Image Left */}
+                        <div className="w-full md:w-[45%] h-[300px] md:h-auto bg-black relative flex items-center justify-center p-12">
+                            <div className="absolute inset-0 bg-brand-red/5 animate-pulse" />
+                            <img
+                                src={selectedService.img}
+                                alt={selectedService.title}
+                                className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_40px_rgba(227,30,36,0.3)]"
+                            />
+                        </div>
+
+                        {/* Content Right */}
+                        <div className="flex-1 p-8 md:p-16 overflow-y-auto">
+                            <h4 className="text-brand-red font-bold uppercase tracking-[0.3em] text-xs mb-4">Service Details</h4>
+                            <h3 className="text-4xl md:text-6xl font-black text-white uppercase italic italic mb-8 tracking-tighter decoration-brand-red underline underline-offset-8">
+                                {selectedService.title}
+                            </h3>
+
+                            <p className="text-xl text-white font-medium mb-10 leading-relaxed border-l-4 border-brand-red pl-8 italic">
+                                "{selectedService.desc}"
+                            </p>
+
+                            <div className="space-y-6 text-gray-400 text-lg leading-relaxed mb-12">
+                                <p>{selectedService.longDesc}</p>
+                            </div>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                {selectedService.features.map((feature, idx) => (
+                                    <div key={idx} className="flex items-center gap-3 bg-white/5 p-4 rounded-2xl border border-white/5 hover:border-brand-red/30 transition-colors">
+                                        <div className="w-2 h-2 rounded-full bg-brand-red shadow-[0_0_10px_#E31E24]" />
+                                        <span className="text-white font-bold uppercase text-xs tracking-widest">{feature}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 )}
             </div>
