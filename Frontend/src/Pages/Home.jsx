@@ -19,18 +19,15 @@ const Home = () => {
         { q: "Do you have options for all car brands?", a: "Absolutely. From Maruti to Mercedes, we have specific accessories tailored for every make and model." }
     ];
 
-    useEffect(() => {
-        const timer1 = setTimeout(() => {
-            setShowHeroText(true);
-        }, 1860);
+    const [hoveredImg, setHoveredImg] = useState(null);
 
-        const timer2 = setTimeout(() => {
-            setShowBottomContent(true);
-        }, 3500);
+    useEffect(() => {
+        const heroTimer = setTimeout(() => setShowHeroText(true), 1860);
+        const bottomTimer = setTimeout(() => setShowBottomContent(true), 3500);
 
         return () => {
-            clearTimeout(timer1);
-            clearTimeout(timer2);
+            clearTimeout(heroTimer);
+            clearTimeout(bottomTimer);
         };
     }, []);
 
@@ -38,7 +35,7 @@ const Home = () => {
         {
             title: 'Bespoke Interiors',
             desc: 'Transform your cabin into a luxury lounge. We offer hand-stitched leather upholstery, custom headliners, and floor laminations tailored to your exact taste.',
-            img: '/seatcover8.png'
+            img: '/seatcover-hero.png'
         },
         {
             title: 'Concert Audio',
@@ -140,14 +137,19 @@ const Home = () => {
                             <div className="relative grid grid-cols-2 gap-6 md:gap-8 lg:gap-12">
                                 {/* Uniform Showroom Grid */}
                                 {[
-                                    { src: "/bumper/bumper4.jpg", alt: "Pro Bumper" },
-                                    { src: "/cardisplay1.png", alt: "Tech Interface" },
-                                    { src: "/carrier5.png", alt: "Roof Rack" },
-                                    { src: "/speaker/speaker-1.png", alt: "Pro Audio" },
-                                    { src: "/seat cover/seatcover2.png", alt: "Luxury Seating" },
-                                    { src: "/key-less-entry/key-less-entry-system-1.png", alt: "Car Tech" }
+                                    { src: "/bumper/bumper4-hero.png", alt: "Pro Bumper" },
+                                    { src: "/car-display/cardisplay2-hero.png", alt: "Tech Interface" },
+                                    { src: "/carrier/carrier5-removebg-hero.png", alt: "Roof Rack" },
+                                    { src: "/speaker/speaker-1-hero.png", alt: "Pro Audio" },
+                                    { src: "/seat cover/seatcover-hero.png", alt: "Luxury Seating" },
+                                    { src: "/key-less-entry/key-less-entry-system-1-hero.png", alt: "Car Tech" }
                                 ].map((img, idx) => (
-                                    <div key={idx} className="group relative h-48 md:h-64 flex items-center justify-center">
+                                    <div
+                                        key={idx}
+                                        onMouseEnter={() => setHoveredImg(img.src)}
+                                        onMouseLeave={() => setHoveredImg(null)}
+                                        className="group relative h-48 md:h-64 flex items-center justify-center cursor-crosshair"
+                                    >
                                         {/* Red Type Effect: Scanning Line - Clipped to the image height */}
                                         <div className="absolute inset-0 overflow-hidden pointer-events-none z-20">
                                             <div className="scan-line opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -159,7 +161,7 @@ const Home = () => {
                                         <img
                                             src={img.src}
                                             alt={img.alt}
-                                            className="w-full h-full object-contain group-hover:scale-110 transition-all duration-700 relative z-10"
+                                            className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 relative z-10"
                                         />
                                     </div>
                                 ))}
@@ -314,6 +316,11 @@ const Home = () => {
                     .animate-marquee { animation: marquee 40s linear infinite; }
                     @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
                     .glow-text { text-shadow: 0 0 20px rgba(227, 30, 36, 0.5); }
+                    @keyframes scanLine {
+                        0% { transform: translateY(-100%); }
+                        50% { transform: translateY(100%); }
+                        100% { transform: translateY(-100%); }
+                    }
                 `}</style>
             </div>
 
@@ -515,7 +522,31 @@ const Home = () => {
                 </div>
             </footer>
 
-        </div >
+            {/* Cinema Hover Preview Overlay */}
+            <div
+                className={`fixed inset-0 z-[200] pointer-events-none transition-all duration-700 flex items-center justify-center p-8 md:p-24 ${hoveredImg ? 'opacity-100' : 'opacity-0'}`}
+            >
+                <div className={`absolute inset-0 bg-black/60 backdrop-blur-md transition-opacity duration-700 ${hoveredImg ? 'opacity-100' : 'opacity-0'}`} />
+
+                {hoveredImg && (
+                    <div className="relative w-full max-w-5xl aspect-square md:aspect-video flex items-center justify-center animate-in zoom-in-75 fade-in duration-500">
+                        {/* Dramatic Red Glow behind the big image */}
+                        <div className="absolute inset-0 bg-brand-red/20 blur-[150px] rounded-full animate-pulse" />
+
+                        <img
+                            src={hoveredImg}
+                            alt="Quick Preview"
+                            className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_50px_rgba(227,30,36,0.4)]"
+                        />
+
+                        {/* Decorative Scanner Effect on Big Preview */}
+                        <div className="absolute inset-x-0 h-1 bg-gradient-to-r from-transparent via-brand-red to-transparent z-20 animate-scan pointer-events-none" style={{
+                            animation: 'scanLine 4s infinite linear'
+                        }} />
+                    </div>
+                )}
+            </div>
+        </div>
     );
 };
 
