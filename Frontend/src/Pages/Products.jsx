@@ -76,8 +76,18 @@ const Products = () => {
             items: [
                 { id: 44, name: "Premium Car Washing", img: "/carwashing4.png" },
                 { id: 45, name: "Window Washing", img: "/windowwash.png" },
-                
+                { id: 46, name: "Deep Clean Wash", img: "/windowwash2.png" },
                 { id: 47, name: "Quick Wash Service", img: "/carwashing3.png" },
+            ]
+        },
+        {
+            title: "LED Lights & Ambience",
+            id: "led-lights",
+            items: [
+                { id: 48, name: "Premium LED Strip", img: "/ledlight1.jpg" },
+                { id: 49, name: "Ambience Kit", img: "/ledlight2.png" },
+                { id: 50, name: "Underbody Light", img: "/ledlight3.png" },
+                { id: 51, name: "Interior Mood Light", img: "/assets/new photos/ledlight2.jpg" },
             ]
         },
         {
@@ -146,7 +156,7 @@ const Products = () => {
 
                     // Special logic for categories expanding from 3 items
                     // 'wheel-caps' needs to show only 3 but view all expands to custom view
-                    if (['air-fresheners', 'wheel-caps', 'floor-mats', 'seat-covers', 'speakers', 'audio-video', 'sun-control'].includes(category.id)) {
+                    if (['air-fresheners', 'wheel-caps', 'floor-mats', 'seat-covers', 'speakers', 'audio-video', 'sun-control', 'led-lights'].includes(category.id)) {
                         visibleItems = isExpanded ? category.items : category.items.slice(0, 3);
                         hasMore = category.items.length > 3;
                     }
@@ -157,7 +167,7 @@ const Products = () => {
                     }
 
                     return (
-                        <div key={category.id} className="mb-24 last:mb-0">
+                        <div key={category.id} id={category.id} className="mb-24 last:mb-0 scroll-mt-32">
                             <ScrollReveal direction="left" delay={100}>
                                 <div className="flex items-center gap-4 mb-10 border-b border-white/10 pb-4">
                                     <h2 className="text-3xl md:text-5xl font-black uppercase italic tracking-tighter text-white">
@@ -173,10 +183,10 @@ const Products = () => {
                                         <div className="group relative bg-[#0f0f0f] rounded-3xl overflow-hidden border border-white/5 hover:border-brand-red/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(227,30,36,0.15)] hover:-translate-y-2">
                                             {/* Image Container */}
                                             <div
-                                                className="relative h-64 md:h-80 w-full bg-gradient-to-b from-[#151515] to-[#0a0a0a] p-6 flex items-center justify-center overflow-hidden cursor-zoom-in group-hover:bg-[#1a1a1a] transition-colors"
+                                                className="relative h-64 md:h-72 w-full bg-[#111] p-4 flex items-center justify-center overflow-hidden cursor-zoom-in group-hover:bg-[#161616] transition-colors outline-none"
                                                 onClick={() => setSelectedImage(product.img)}
                                             >
-                                                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-red/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                                                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                                                 <img
                                                     src={product.img}
                                                     alt={product.name}
