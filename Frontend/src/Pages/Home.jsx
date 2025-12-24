@@ -20,7 +20,6 @@ const Home = () => {
     ];
 
     const [hoveredImg, setHoveredImg] = useState(null);
-    const [selectedService, setSelectedService] = useState(null);
 
     useEffect(() => {
         const heroTimer = setTimeout(() => setShowHeroText(true), 1860);
@@ -35,38 +34,28 @@ const Home = () => {
     const services = [
         {
             title: 'Bespoke Interiors',
-            desc: 'Transform your cabin into a luxury sanctuary. We offer hand-stitched leather upholstery, custom headliners, and premium floor laminations tailored to your exact style and comfort.',
-            img: '/seat cover/seatcover-hero.png',
-            longDesc: "Our bespoke interior service is where comfort meets character. We don't just redo seats; we re-engineer the entire tactile experience of your vehicle. Using premium Nappa leather, Alcantara, and high-density foam, our craftsmen hand-stitch every panel to perfection. From starry-night headliners to moisture-resistant floor lamination, every detail is a testament to our founder Tanveer's vision of 'Automotive Grandeur'.",
-            features: ['Custom Layouts', 'Double Diamond Stitching', 'Starry Headliners', 'Premium Nappa Leather']
+            desc: 'Transform your cabin into a luxury lounge. We offer hand-stitched leather upholstery, custom headliners, and floor laminations tailored to your exact taste.',
+            img: '/seatcover-hero.png'
         },
         {
             title: 'Concert Audio',
-            desc: 'Experience audiophile-grade sound engineering. From high-fidelity speakers and powerful subwoofers to precision DSP tuning for a studio-quality live performance on every drive.',
-            img: '/new photos/Screenshot 2025-12-24 173110.png',
-            longDesc: "Sound is an emotion, not just a frequency. At Captain Car, our 'Concert Audio' setups are tuned specifically for the acoustics of your vehicle. We integrate high-resolution Digital Signal Processors (DSP), components from global leaders like Pioneer and Sony, and custom-built subwoofer enclosures. Our signature 'Deep Stage' tuning ensures you feel every beat and hear every whisper as if you're in the front row of a live performance.",
-            features: ['3D Sound Staging', 'DSP Time Alignment', 'Damping & Isolation', 'Bespoke Audio Racks']
+            desc: 'Audiophile-grade sound engineering. From high-fidelity speakers and powerful subwoofers to precision DSP tuning for a studio-quality experience on wheels.',
+            img: '/bossaudiosystem.png'
         },
         {
             title: 'Privacy Films',
-            desc: 'Stay cool and protected with premium window films. Our nano-ceramic technology blocks up to 99% of UV rays for significant heat reduction without compromising night visibility.',
-            img: '/suntekwindowfilm.png',
-            longDesc: "Protection meets sophistication. Our heat-shielding films utilize nano-ceramic technology to block 99% of harmful UV rays while maintaining crystal clear night-time visibility. This isn't just about privacy; it's about preserving your interior's life and significantly reducing the load on your AC system. Available in various tints, our films are installed in a dust-free environment for a factory-perfect finish.",
-            features: ['99% UV Rejection', 'Nano-Ceramic Tech', 'Anti-Glare Shield', 'Scratch Resistant']
+            desc: 'Stay cool and protected. Our premium window films provide up to 99% UV rejection and significant heat reduction without compromising visibility or style.',
+            img: '/suntekwindowfilm.png'
         },
         {
             title: 'Tech Upgrades',
-            desc: 'Equip your vehicle with the latest intelligence. From 4K Android hubs and 360-degree cameras to custom ambient lighting that provides a futuristic digital cockpit for every journey.',
-            img: '/car-display/cardisplay2-hero.png',
-            longDesc: "Modernize your drive with cutting-edge intelligence. We replace outdated head units with high-performance Android systems featuring seamless CarPlay and Android Auto integration. Our 360-degree bird's eye view camera systems eliminate blind spots, while our smartphone-controlled ambient lighting allows you to set the mood of your cabin with over 16 million colors. It's not just technology; it's a digital cockpit.",
-            features: ['4K Android Hubs', '360° Vision System', 'App-Controlled Glow', 'Smart Dashcams']
+            desc: 'The latest in automotive intelligence. High-resolution Android displays, 360-degree cameras, and ambient mood lighting controlled right from your smartphone.',
+            img: '/cardisplay2.png'
         },
         {
             title: 'Exterior Styling',
-            desc: "Command the road with ultimate presence. We install custom modular body kits, premium alloy wheels, and professional chrome deletions that give your car a distinct, aggressive edge.",
-            img: '/tyremiddle.png',
-            longDesc: "Make a statement before you even start the engine. Our exterior styling wing focuses on 'Presence Engineering'. Whether it's a complete chrome deletion (gloss black wrap), aggressive body kit installations, or selecting the perfect offset for your new alloy wheels, we ensure every mod enhances the vehicle's natural lines. We don't just build cars; we build icons.",
-            features: ['Chrome Deletions', 'Modular Body Kits', 'Aero Enhancements', 'Custom Wheel Sets']
+            desc: "Command the road with presence. Custom body kits, premium alloy wheels, and professional chrome deletions that give your vehicle a distinct, aggressive edge.",
+            img: '/tyremiddle.png'
         },
     ];
 
@@ -139,43 +128,39 @@ const Home = () => {
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-red/5 rounded-full blur-[120px] pointer-events-none" />
 
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    {/* Left: Image Grid */}
+                    {/* Left: The Visionary Feature */}
                     <ScrollReveal direction="right" delay={200}>
-                        <div className="relative">
-                            {/* Subtle background glow behind images */}
-                            <div className="absolute inset-0 bg-brand-red blur-[100px] opacity-10 pointer-events-none" />
+                        <div className="relative h-[600px] md:h-[850px] rounded-[4rem] overflow-hidden border border-white/10 shadow-[0_0_80px_-20px_rgba(227,30,36,0.2)] group">
+                            {/* Cinematic Overlay Gradients */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent z-10 opacity-80" />
+                            <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent z-10" />
 
-                            <div className="relative grid grid-cols-2 gap-6 md:gap-8 lg:gap-12">
-                                {/* Uniform Showroom Grid */}
-                                {[
-                                    { src: "/bumper/bumper4-hero.png", alt: "Pro Bumper" },
-                                    { src: "/car-display/cardisplay2-hero.png", alt: "Tech Interface" },
-                                    { src: "/carrier/carrier5-removebg-hero.png", alt: "Roof Rack" },
-                                    { src: "/speaker/speaker-1-hero.png", alt: "Pro Audio" },
-                                    { src: "/seat cover/seatcover-hero.png", alt: "Luxury Seating" },
-                                    { src: "/key-less-entry/key-less-entry-system-1-hero.png", alt: "Car Tech" }
-                                ].map((img, idx) => (
-                                    <div
-                                        key={idx}
-                                        onMouseEnter={() => setHoveredImg(img.src)}
-                                        onMouseLeave={() => setHoveredImg(null)}
-                                        className="group relative h-48 md:h-64 flex items-center justify-center cursor-crosshair"
-                                    >
-                                        {/* Red Type Effect: Scanning Line - Clipped to the image height */}
-                                        <div className="absolute inset-0 overflow-hidden pointer-events-none z-20">
-                                            <div className="scan-line opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                                        </div>
+                            {/* Pulse Glow Effect */}
+                            <div className="absolute bottom-0 left-0 w-full h-[300px] bg-brand-red/10 blur-[120px] rounded-full pointer-events-none z-0" />
 
-                                        {/* Red Type Effect: Core Glow */}
-                                        <div className="absolute inset-0 bg-brand-red/5 blur-[60px] rounded-full opacity-40 group-hover:opacity-100 group-hover:bg-brand-red/15 transition-all duration-700 pointer-events-none" />
+                            <img
+                                src="/contact/owner.png"
+                                alt="Tanveer Farooqui - Founder"
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[3s] relative z-0"
+                            />
 
-                                        <img
-                                            src={img.src}
-                                            alt={img.alt}
-                                            className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 relative z-10"
-                                        />
-                                    </div>
-                                ))}
+                            {/* Identifier Badge Overlay */}
+                            <div className="absolute bottom-12 left-12 right-12 z-20">
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="w-16 h-[2px] bg-brand-red shadow-[0_0_10px_#E31E24]" />
+                                    <span className="text-white font-black uppercase italic tracking-widest text-sm md:text-base">Founder & Master Craftsman</span>
+                                </div>
+                                <h3 className="text-4xl md:text-6xl font-black text-white uppercase italic tracking-tighter mb-2 leading-none">
+                                    Tanveer <span className="text-brand-red">Farooqui</span>
+                                </h3>
+                                <p className="text-gray-400 text-xs md:text-sm font-bold uppercase tracking-[0.4em]">The Heart of Captain Car Audio</p>
+                            </div>
+
+                            {/* Tech HUD Detail */}
+                            <div className="absolute top-10 left-10 w-24 h-24 border-t-2 border-l-2 border-brand-red/20 z-20 pointer-events-none" />
+                            <div className="absolute top-10 right-10 flex flex-col items-end opacity-40 z-20">
+                                <span className="text-[10px] font-mono text-brand-red">Est. 2008</span>
+                                <span className="text-[10px] font-mono text-white">Precision Certified</span>
                             </div>
                         </div>
                     </ScrollReveal>
@@ -190,21 +175,21 @@ const Home = () => {
                                 <span className="text-[#E31E24]">Captain Car.</span>
                             </h2>
 
-                            <div className="space-y-6 text-gray-400 text-lg leading-relaxed mb-10">
+                            <div className="space-y-6 text-gray-400 text-lg leading-relaxed mb-10 text-justify">
                                 <p className="border-l-4 border-brand-red pl-6">
-                                    Founded by <strong className="text-white">Tanveer Farooqui</strong>, Captain Car has evolved from a passionate vision into Bhiwandi's <strong className="text-red-500">architectural sanctuary</strong> for automotive excellence. With over 15 years of personal expertise, Tanveer treats every vehicle not as a machine, but as a canvas for <strong className="text-red-500">exquisite</strong> art.
+                                    Founded by <strong className="text-white">Tanveer Farooqui</strong>, Captain Car has evolved from a passionate vision into Bhiwandi's architectural sanctuary for automotive excellence. With over 15 years of personal expertise, Tanveer treats every vehicle not as a machine, but as a canvas for exquisite art.
                                 </p>
 
                                 <p>
-                                    Our philosophy is simple: your car is an extension of your personality. Whether it's the tactile feel of premium <strong className="text-red-500">Nappa leather</strong> or the crystalline clarity of a high-end audio system, we take a <strong className="text-red-500">holistic</strong> approach, ensuring every project carries our signature of <strong className="text-red-500">integrity</strong>.
+                                    Our philosophy is simple: your car is an extension of your personality. Whether it's the tactile feel of premium Nappa leather or the crystalline clarity of a high-end audio system, we take a holistic approach, ensuring every project carries our signature of integrity.
                                 </p>
 
                                 <p>
-                                    We remain at the <strong className="text-red-500">pioneering</strong> edge of technology and style. From <strong className="text-red-500">intuitive</strong> Android hubs that turn your dashboard into a futuristic cockpit to <strong className="text-red-500">sophisticated</strong> interiors that provide a sense of <strong className="text-red-500">grandeur</strong>, our work is defined by <strong className="text-red-500">pristine</strong> quality.
+                                    We remain at the pioneering edge of technology and style. From intuitive Android hubs that turn your dashboard into a futuristic cockpit to sophisticated interiors that provide a sense of grandeur, our work is defined by pristine quality.
                                 </p>
 
                                 <p>
-                                    Located in <span className="text-white font-bold">Chavindra, Bhiwandi</span>, our state-of-the-art facility serves a discerning clientele who value <strong className="text-red-500">authenticity</strong> over speed. Trust is the foundation of our <strong className="text-red-500">legacy</strong>, and we promise a <strong className="text-red-500">meticulous</strong> transformation that is both <strong className="text-red-500">radical and timeless</strong>.
+                                    Located in <strong className="text-white">Chavindra, Bhiwandi</strong>, our state-of-the-art facility serves a discerning clientele who value authenticity over speed. Trust is the foundation of our legacy, and we promise a meticulous transformation that is both radical and timeless.
                                 </p>
                             </div>
 
@@ -367,19 +352,16 @@ const Home = () => {
                         {[...Array(3)].map((_, i) => (
                             <React.Fragment key={i}>
                                 {services.map((service, idx) => (
-                                    <div key={`${i}-${idx}`} className="w-[450px] flex-shrink-0 relative h-[320px] rounded-[2.5rem] overflow-hidden group border border-white/10 bg-white/5">
+                                    <div key={`${i}-${idx}`} className="w-[350px] flex-shrink-0 relative h-[400px] rounded-3xl overflow-hidden group border border-white/10 bg-white/5">
                                         <div className="absolute inset-0 bg-gradient-to-b from-[#1a0505] to-black opacity-50 group-hover:opacity-40 transition-opacity duration-500" />
-                                        <img src={service.img} alt={service.title} className="absolute inset-0 w-full h-full object-contain group-hover:scale-110 transition-transform duration-700" />
+                                        <img src={service.img} alt={service.title} className="absolute inset-0 w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
 
-                                        <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black via-black/95 to-transparent">
-                                            <h3 className="text-2xl font-black text-white uppercase italic mb-1 tracking-tighter">{service.title}</h3>
-                                            <p className="text-gray-300 mb-4 font-medium text-[10px] leading-relaxed line-clamp-2">{service.desc}</p>
-                                            <button
-                                                onClick={() => setSelectedService(service)}
-                                                className="inline-flex items-center gap-2 text-brand-red font-bold uppercase tracking-widest text-[10px] group-hover:gap-4 transition-all"
-                                            >
+                                        <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black via-black/90 to-transparent">
+                                            <h3 className="text-2xl font-black text-white uppercase italic mb-2 tracking-tighter">{service.title}</h3>
+                                            <p className="text-gray-300 mb-4 font-medium text-xs leading-relaxed">{service.desc}</p>
+                                            <span className="inline-flex items-center gap-2 text-brand-red font-bold uppercase tracking-widest text-xs group-hover:gap-4 transition-all">
                                                 Explore <span>→</span>
-                                            </button>
+                                            </span>
                                         </div>
                                     </div>
                                 ))}
@@ -557,56 +539,6 @@ const Home = () => {
                         <div className="absolute inset-x-0 h-1 bg-gradient-to-r from-transparent via-brand-red to-transparent z-20 animate-scan pointer-events-none" style={{
                             animation: 'scanLine 4s infinite linear'
                         }} />
-                    </div>
-                )}
-            </div>
-            {/* Service Detail Modal */}
-            <div className={`fixed inset-0 z-[300] flex items-center justify-center p-4 md:p-10 transition-all duration-500 ${selectedService ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
-                <div className="absolute inset-0 bg-black/90 backdrop-blur-2xl" onClick={() => setSelectedService(null)} />
-
-                {selectedService && (
-                    <div className="bg-neutral-900 border border-white/10 w-full max-w-6xl max-h-[90vh] rounded-[3rem] overflow-hidden flex flex-col md:flex-row relative z-10 animate-in zoom-in-95 duration-500 shadow-[0_0_100px_-20px_rgba(227,30,36,0.2)]">
-                        <button
-                            onClick={() => setSelectedService(null)}
-                            className="absolute top-8 right-8 w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-brand-red hover:border-brand-red transition-all z-20 group"
-                        >
-                            <span className="text-2xl group-hover:rotate-90 transition-transform">✕</span>
-                        </button>
-
-                        {/* Image Left */}
-                        <div className="w-full md:w-[45%] h-[300px] md:h-auto bg-black relative flex items-center justify-center p-12">
-                            <div className="absolute inset-0 bg-brand-red/5 animate-pulse" />
-                            <img
-                                src={selectedService.img}
-                                alt={selectedService.title}
-                                className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_40px_rgba(227,30,36,0.3)]"
-                            />
-                        </div>
-
-                        {/* Content Right */}
-                        <div className="flex-1 p-8 md:p-16 overflow-y-auto">
-                            <h4 className="text-brand-red font-bold uppercase tracking-[0.3em] text-xs mb-4">Service Details</h4>
-                            <h3 className="text-4xl md:text-6xl font-black text-white uppercase italic italic mb-8 tracking-tighter decoration-brand-red underline underline-offset-8">
-                                {selectedService.title}
-                            </h3>
-
-                            <p className="text-xl text-white font-medium mb-10 leading-relaxed border-l-4 border-brand-red pl-8 italic">
-                                "{selectedService.desc}"
-                            </p>
-
-                            <div className="space-y-6 text-gray-400 text-lg leading-relaxed mb-12">
-                                <p>{selectedService.longDesc}</p>
-                            </div>
-
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                {selectedService.features.map((feature, idx) => (
-                                    <div key={idx} className="flex items-center gap-3 bg-white/5 p-4 rounded-2xl border border-white/5 hover:border-brand-red/30 transition-colors">
-                                        <div className="w-2 h-2 rounded-full bg-brand-red shadow-[0_0_10px_#E31E24]" />
-                                        <span className="text-white font-bold uppercase text-xs tracking-widest">{feature}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
                     </div>
                 )}
             </div>
