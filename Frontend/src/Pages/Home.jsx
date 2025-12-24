@@ -84,7 +84,7 @@ const Home = () => {
                         <h1 className="text-5xl md:text-7xl font-black mb-6 leading-[0.9] uppercase italic tracking-tighter drop-shadow-2xl flex flex-col gap-2">
                             <div className="flex gap-4 overflow-hidden">
                                 <span className={`block text-white transition-all duration-700 delay-[0ms] transform ${showHeroText ? 'translate-y-0 opacity-100' : 'translate-y-[100%] opacity-0'}`}>
-                                    REDEFINE
+                                    CRAFT
                                 </span>
                                 <span className={`block text-white transition-all duration-700 delay-[200ms] transform ${showHeroText ? 'translate-y-0 opacity-100' : 'translate-y-[100%] opacity-0'}`}>
                                     YOUR
@@ -95,12 +95,12 @@ const Home = () => {
                                     DRIVING
                                 </span>
                                 <span className={`block text-transparent bg-clip-text bg-gradient-to-r from-[#DC143C] to-[#FF6B6B] filter drop-shadow-[0_0_20px_rgba(220,20,60,0.5)] transition-all duration-700 delay-[600ms] transform ${showHeroText ? 'translate-y-0 opacity-100' : 'translate-y-[100%] opacity-0'}`}>
-                                    IMPACT
+                                    LEGACY
                                 </span>
                             </div>
                         </h1>
-                        <p className={`text-gray-100 text-base md:text-xl font-light tracking-wide max-w-2xl mb-10 border-l border-white/50 pl-6 transition-all duration-1000 delay-0 transform ${showBottomContent ? 'translate-y-0 opacity-100' : 'translate-y-[20px] opacity-0'}`}>
-                            Experience the pinnacle of automotive interior design. We don't just modify cars; we forge identities.
+                        <p className={`text-gray-100 text-base md:text-xl font-bold tracking-wide max-w-2xl mb-10 border-l border-white/50 pl-6 transition-all duration-1000 delay-0 transform ${showBottomContent ? 'translate-y-0 opacity-100' : 'translate-y-[20px] opacity-0'}`}>
+                            Experience the pinnacle of automotive interior design. We don't just modify cars: we forge identities...
                         </p>
 
 
@@ -230,6 +230,7 @@ const Home = () => {
                     </ScrollReveal>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {/* Diagnostic Grid Style Cards */}
                         {[
                             {
                                 step: "01",
@@ -244,7 +245,7 @@ const Home = () => {
                             {
                                 step: "03",
                                 title: "Precision Craft",
-                                desc: "This is where the magic happens. Our technicians use specialized tools and traditional craftsmanship to install your upgrades. We use coupler-to-coupler wiring to protect your car's electrical integrity and warranty."
+                                desc: "The transition from blueprint to reality. Our technicians use high-precision tools and hand-crafted techniques to install your chosen components, ensuring a factory-perfect fit and finish that is both durable and beautiful."
                             },
                             {
                                 step: "04",
@@ -253,10 +254,16 @@ const Home = () => {
                             }
                         ].map((item, idx) => (
                             <ScrollReveal key={idx} direction="up" delay={idx * 150}>
-                                <div className="p-8 bg-neutral-900/50 border border-white/5 rounded-[2rem] hover:border-[#E31E24]/50 transition-all group h-full">
-                                    <span className="text-5xl font-black text-[#E31E24]/20 group-hover:text-[#E31E24]/40 transition-colors block mb-6">{item.step}</span>
-                                    <h3 className="text-xl font-bold text-white mb-4 uppercase italic tracking-tight">{item.title}</h3>
-                                    <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                                <div className="group relative p-8 bg-black border border-white/5 rounded-[2.5rem] overflow-hidden hover:border-brand-red/50 transition-all duration-500 h-full">
+                                    {/* HUD Background Scan Line */}
+                                    <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-red to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-scan-down pointer-events-none" />
+
+                                    <span className="text-6xl font-black text-brand-red/10 group-hover:text-brand-red/20 transition-all duration-700 block mb-6 italic">{item.step}</span>
+                                    <h3 className="text-2xl font-black text-white mb-4 uppercase italic tracking-tighter group-hover:text-brand-red transition-colors duration-500">{item.title}</h3>
+                                    <p className="text-gray-400 text-sm leading-relaxed text-justify font-medium">{item.desc}</p>
+
+                                    {/* Corner Accent */}
+                                    <div className="absolute top-6 right-6 w-8 h-8 border-t border-r border-white/5 group-hover:border-brand-red/30 transition-colors duration-500" />
                                 </div>
                             </ScrollReveal>
                         ))}
@@ -317,6 +324,12 @@ const Home = () => {
                         50% { transform: translateY(100%); }
                         100% { transform: translateY(-100%); }
                     }
+                    @keyframes scan-down {
+                        0% { transform: translateY(0); opacity: 0; }
+                        50% { opacity: 1; }
+                        100% { transform: translateY(300px); opacity: 0; }
+                    }
+                    .animate-scan-down { animation: scan-down 3s infinite linear; }
                 `}</style>
             </div>
 
@@ -352,15 +365,19 @@ const Home = () => {
                         {[...Array(3)].map((_, i) => (
                             <React.Fragment key={i}>
                                 {services.map((service, idx) => (
-                                    <div key={`${i}-${idx}`} className="w-[350px] flex-shrink-0 relative h-[400px] rounded-3xl overflow-hidden group border border-white/10 bg-white/5">
-                                        <div className="absolute inset-0 bg-gradient-to-b from-[#1a0505] to-black opacity-50 group-hover:opacity-40 transition-opacity duration-500" />
-                                        <img src={service.img} alt={service.title} className="absolute inset-0 w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
+                                    <div key={`${i}-${idx}`} className="w-[450px] flex-shrink-0 relative h-[320px] rounded-[3.5rem] overflow-hidden group border border-white/10 bg-black hover:border-brand-red/50 transition-all duration-500">
+                                        {/* Digital Corner Accents */}
+                                        <div className="absolute top-8 right-8 w-10 h-10 border-t border-r border-brand-red/20 group-hover:border-brand-red transition-all duration-500 z-20" />
+                                        <div className="absolute bottom-8 left-8 w-10 h-10 border-b border-l border-brand-red/20 group-hover:border-brand-red transition-all duration-500 z-20" />
 
-                                        <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black via-black/90 to-transparent">
-                                            <h3 className="text-2xl font-black text-white uppercase italic mb-2 tracking-tighter">{service.title}</h3>
-                                            <p className="text-gray-300 mb-4 font-medium text-xs leading-relaxed">{service.desc}</p>
-                                            <span className="inline-flex items-center gap-2 text-brand-red font-bold uppercase tracking-widest text-xs group-hover:gap-4 transition-all">
-                                                Explore <span>→</span>
+                                        <div className="absolute inset-0 bg-gradient-to-b from-[#1a0505] to-black opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+                                        <img src={service.img} alt={service.title} className="absolute inset-0 w-full h-full object-contain group-hover:scale-110 transition-transform duration-1000 px-12" />
+
+                                        <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black via-black/95 to-transparent z-10">
+                                            <h3 className="text-3xl font-black text-white uppercase italic mb-1 tracking-tighter">{service.title}</h3>
+                                            <p className="text-gray-300 mb-4 font-medium text-[11px] leading-relaxed line-clamp-2 max-w-[85%]">{service.desc}</p>
+                                            <span className="inline-flex items-center gap-2 text-brand-red font-bold uppercase tracking-widest text-[10px] group-hover:gap-4 transition-all">
+                                                Explore Full Catalogue <span>→</span>
                                             </span>
                                         </div>
                                     </div>
@@ -439,15 +456,19 @@ const Home = () => {
                     </ScrollReveal>
 
                     <ScrollReveal direction="up" delay={200}>
-                        <div className="relative w-full h-[500px] rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl group">
-                            {/* Map Overlay Gradient (for style) */}
-                            <div className="absolute inset-0 pointer-events-none z-10 border-[10px] border-white/5 rounded-[3rem]" />
+                        <div className="relative w-full h-[550px] rounded-[4rem] overflow-hidden border border-white/10 shadow-[0_0_100px_-30px_rgba(227,30,36,0.15)] group">
+                            {/* HUD Detail Accent Framing */}
+                            <div className="absolute top-10 left-10 w-20 h-20 border-t-2 border-l-2 border-brand-red/40 z-20 pointer-events-none group-hover:w-24 group-hover:h-24 transition-all duration-700" />
+                            <div className="absolute bottom-10 right-10 w-20 h-20 border-b-2 border-r-2 border-brand-red/40 z-20 pointer-events-none group-hover:w-24 group-hover:h-24 transition-all duration-700" />
+
+                            {/* Diagnostic Scan Line Overlay */}
+                            <div className="absolute inset-0 pointer-events-none z-10 opacity-[0.03] bg-[linear-gradient(rgba(255,255,255,1)_1px,transparent_1px)] bg-[length:100%_3px]" />
 
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83194.4788254592!2d73.05857195929217!3d19.274098379261684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bd0bd3ab28a7%3A0x9a04787bb35296c9!2sCaptain%20Car%20Audio!5e0!3m2!1sen!2sin!4v1766560019806!5m2!1sen!2sin"
                                 width="100%"
                                 height="100%"
-                                className="w-full h-full transition-all duration-700"
+                                className="w-full h-full grayscale-[0.8] contrast-[1.2] invert brightness-[0.8] animate-in fade-in duration-1000"
                                 style={{ border: 0 }}
                                 allowFullScreen=""
                                 loading="lazy"
