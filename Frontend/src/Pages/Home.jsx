@@ -112,18 +112,20 @@ const Home = () => {
                             <span className="text-brand-red font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs">Premium Car Accessories</span>
                         </div>
                         <h1 className="text-3xl md:text-5xl lg:text-6xl font-black mb-6 leading-[1.1] md:leading-[1.2] uppercase italic tracking-tighter drop-shadow-2xl">
-                            <div className="flex flex-nowrap whitespace-nowrap gap-x-3 gap-y-2 overflow-hidden p-8 -m-8">
+                            <div className="flex gap-4 overflow-hidden">
                                 <span className={`block text-white transition-all duration-700 delay-[0ms] transform ${showHeroText ? 'translate-y-0 opacity-100' : 'translate-y-[100%] opacity-0'}`}>
-                                    Premium
+                                    CRAFT
                                 </span>
-                                <span className={`block text-transparent bg-clip-text bg-gradient-to-r from-[#DC143C] to-[#FF6B6B] filter drop-shadow-[0_0_20px_rgba(220,20,60,0.5)] transition-all duration-700 delay-[200ms] transform ${showHeroText ? 'translate-y-0 opacity-100' : 'translate-y-[100%] opacity-0'}`}>
-                                    Accessories
+                                <span className={`block text-white transition-all duration-700 delay-[200ms] transform ${showHeroText ? 'translate-y-0 opacity-100' : 'translate-y-[100%] opacity-0'}`}>
+                                    YOUR
                                 </span>
+                            </div>
+                            <div className="flex gap-4 overflow-hidden">
                                 <span className={`block text-transparent bg-clip-text bg-gradient-to-r from-[#DC143C] to-[#FF6B6B] filter drop-shadow-[0_0_20px_rgba(220,20,60,0.5)] transition-all duration-700 delay-[400ms] transform ${showHeroText ? 'translate-y-0 opacity-100' : 'translate-y-[100%] opacity-0'}`}>
-                                    &
+                                    DRIVING
                                 </span>
                                 <span className={`block text-transparent bg-clip-text bg-gradient-to-r from-[#DC143C] to-[#FF6B6B] filter drop-shadow-[0_0_20px_rgba(220,20,60,0.5)] transition-all duration-700 delay-[600ms] transform ${showHeroText ? 'translate-y-0 opacity-100' : 'translate-y-[100%] opacity-0'}`}>
-                                    Styling
+                                    LEGACY
                                 </span>
                             </div>
                         </h1>
