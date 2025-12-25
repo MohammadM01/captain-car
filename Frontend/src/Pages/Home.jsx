@@ -409,15 +409,20 @@ const Home = () => {
                         {[...Array(3)].map((_, i) => (
                             <React.Fragment key={i}>
                                 {services.map((service, idx) => (
-                                    <div key={`${i}-${idx}`} className="w-[450px] flex-shrink-0 relative h-[320px] rounded-[3.5rem] overflow-hidden group border border-white/10 bg-black hover:border-brand-red/50 transition-all duration-500">
-                                        {/* Digital Corner Accents */}
-                                        <div className="absolute inset-0 bg-gradient-to-b from-[#1a0505] to-black opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
-                                        <img src={service.img} alt={service.title} className="absolute inset-0 w-full h-full object-contain group-hover:scale-110 transition-transform duration-1000 px-12 pb-14" />
+                                    <div key={`${i}-${idx}`} className="w-[450px] flex-shrink-0 relative h-auto min-h-[450px] rounded-[3.5rem] overflow-hidden group border border-white/10 bg-black hover:border-brand-red/50 transition-all duration-500 flex flex-col">
 
-                                        <div className="absolute bottom-0 left-0 right-0 px-8 pb-5 pt-12 bg-gradient-to-t from-black via-black/95 to-transparent z-10">
-                                            <h3 className="text-2xl font-black text-white uppercase italic mb-2 tracking-tighter">{service.title}</h3>
-                                            <p className="text-gray-300 mb-6 font-medium text-sm leading-relaxed line-clamp-3 max-w-[90%]">{service.desc}</p>
-                                            <Link to={service.link} className="inline-flex items-center gap-2 text-brand-red font-bold uppercase tracking-widest text-xs group-hover:gap-4 transition-all hover:text-white">
+                                        {/* Image Section */}
+                                        <div className="relative h-64 w-full bg-gradient-to-b from-[#1a0505] to-black p-6 flex items-center justify-center flex-shrink-0">
+                                            <img src={service.img} alt={service.title} className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-1000" />
+                                        </div>
+
+                                        {/* Text Section */}
+                                        <div className="relative flex-grow w-full px-8 pb-8 pt-4 bg-black z-10 flex flex-col justify-between">
+                                            <div>
+                                                <h3 className="text-2xl font-black text-white uppercase italic mb-2 tracking-tighter">{service.title}</h3>
+                                                <p className="text-gray-300 mb-6 font-medium text-sm leading-relaxed text-justify">{service.desc}</p>
+                                            </div>
+                                            <Link to={service.link} className="inline-flex items-center gap-2 text-brand-red font-bold uppercase tracking-widest text-xs group-hover:gap-4 transition-all hover:text-white mt-auto">
                                                 Explore Full Catalogue <span>→</span>
                                             </Link>
                                         </div>
