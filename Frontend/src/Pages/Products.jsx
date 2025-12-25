@@ -80,6 +80,9 @@ const Products = () => {
                 { id: 22, name: "Sport Ring Velocity", img: "/car-tyre-cap/car-wheel_cap-removebg-preview.png" },
                 { id: 34, name: "Matte Black Stealth", img: "/car-tyre-cap/car-wheel_cap2-removebg-preview.png" },
                 { id: 35, name: "Silver Star Radiant", img: "/car-tyre-cap/car-wheel_cap-3-removebg-preview.png" },
+                { id: 601, name: "Car Universal Wheel Cover HubCaps VELOCITY", img: "/newwheelcap/nobgCar Universal Wheel Cover HubCaps Red and Black Colour (VELOCITY_RED_BLACK_13).png" },
+                { id: 602, name: "PRIGAN 16 Inch Matte Black Wheel Cover", img: "/newwheelcap/nobgPRIGAN 16 Inch Matte Black Wheel Cover (Available in 12,13,14,15,16 Inch).png" },
+                { id: 603, name: "Favmoto Blue Color", img: "/newwheelcap/nobgfavmoto blue color.png" },
             ]
         },
         {
@@ -173,15 +176,9 @@ const Products = () => {
                     let hasMore = category.items.length > 6;
 
                     // Special logic for categories expanding from 3 items
-                    // 'wheel-caps' needs to show only 3 but view all expands to custom view
                     if (['air-fresheners', 'wheel-caps', 'floor-mats', 'seat-covers', 'speakers', 'audio-video', 'sun-control', 'led-lights', 'electronics'].includes(category.id)) {
                         visibleItems = isExpanded ? category.items : category.items.slice(0, 3);
                         hasMore = category.items.length > 3;
-                    }
-
-                    // Special Override for Wheel Caps logic: Always allow 'View All' even if items <= 3 (to show full image)
-                    if (category.id === 'wheel-caps' && !isExpanded) {
-                        hasMore = true;
                     }
 
                     return (
@@ -245,26 +242,7 @@ const Products = () => {
                                 ))}
                             </div>
 
-                            {/* Special Full Image for Wheel Caps when expanded */}
-                            {category.id === 'wheel-caps' && isExpanded && (
-                                <ScrollReveal direction="up" delay={200}>
-                                    <div className="mt-8 relative w-full bg-[#111] rounded-3xl overflow-hidden border border-white/5 group">
-                                        <div
-                                            className="relative h-[500px] w-full bg-[#1a1a1a] p-0 flex items-center justify-center overflow-hidden cursor-zoom-in"
-                                            onClick={() => setSelectedImage("/assets/car-wheel cap-ful.png")}
-                                        >
-                                            <img
-                                                src="/assets/car-wheel cap-ful.png"
-                                                alt="Full Wheel Cap Collection"
-                                                className="w-full h-full object-contain md:object-cover filter drop-shadow-2xl"
-                                            />
-                                            <div className="absolute bottom-8 left-8 bg-black/50 backdrop-blur-md px-6 py-2 rounded-full border border-white/10">
-                                                <span className="text-white font-bold uppercase tracking-widest text-sm">Full Collection View</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </ScrollReveal>
-                            )}
+
 
                             {hasMore && (
                                 <div className="flex justify-center mt-12">
