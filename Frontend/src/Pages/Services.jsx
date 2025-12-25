@@ -226,7 +226,7 @@ const Services = () => {
 const services = [
     {
         title: "Concert Audio",
-        description: "High-fidelity sound systems that shake the ground.",
+        description: "Experience high-fidelity sound with deep bass and crystal clear vocals. We turn every drive into a live concert performance.",
         image: "/bossaudiosystem.png",
         detailImgTop: "/speaker/bossaudiosystem-removebg-preview.png",
         localPitch: "Boss Bass, Pura Hall Hila Denge!",
@@ -239,7 +239,7 @@ const services = [
     },
     {
         title: "Interior Accessories",
-        description: "Luxury meets comfort. Our custom seat covers, 7D mats, and dashboard kits are crafted to give your vehicle a showroom-fresh interior feel.",
+        description: "Luxury meets comfort with custom seat covers and 7D mats. We give your vehicle a showroom-fresh interior feel.",
         image: "/seatcover1.png",
         detailImgTop: "/seat cover/seatcover2-removebg-preview.png",
         localPitch: "Interiors Jo Dil Jeet Le!",
@@ -252,7 +252,7 @@ const services = [
     },
     {
         title: "Ambient Lighting",
-        description: "Set the mood. App-controlled LED strips and starlights.",
+        description: "Set the mood with app-controlled LED strips and starlights. Create a vibrant atmosphere that matches your style.",
         image: "/cardisplay2.png",
         detailImgTop: "/ledlight2.png",
         localPitch: "Gaadi Hai Ya Disco?",
@@ -265,7 +265,7 @@ const services = [
     },
     {
         title: "Privacy Films",
-        description: "Advanced heat rejection and UV protection.",
+        description: "Stay cool with advanced sun control films. Block harmful UV rays and heat, ensuring privacy and comfort on every ride.",
         image: "/suntekwindowfilm.png",
         detailImgTop: "/windowwash.png",
         localPitch: "Dhoop Ka Tension Khatam!",
@@ -278,7 +278,7 @@ const services = [
     },
     {
         title: "Security Systems",
-        description: "GPS trackers, central locking, and alarms.",
+        description: "Protect your car with GPS trackers and central locking. We ensure your vehicle stays safe from theft and intrusion.",
         image: "/keylessentrysystem.png",
         detailImgTop: "/key-less-entry/key-less-entry-system-1-hero.png",
         localPitch: "Chori Ka Koi Chance Nahi!",
@@ -291,7 +291,7 @@ const services = [
     },
     {
         title: "Exterior Styling",
-        description: "Body kits, chrome detailing, and bold alloy wheels.",
+        description: "Make a statement with custom body kits and stylish alloys. We give your car a commanding and unique road presence.",
         image: "/tyremiddle.png",
         detailImgTop: "/carrier/carrier5-removebg-hero.png",
         localPitch: "Road Pe Sirf Aap Dikhenge!",
