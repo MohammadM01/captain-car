@@ -214,24 +214,24 @@ const Home = () => {
 
                             <h2 className="text-3xl md:text-5xl font-black text-white italic uppercase tracking-tighter mb-8 leading-[0.8]">
                                 We Are <br />
-                                <span className="text-[#E31E24]">Captain Car.</span>
+                                <span className="text-[#E31E24]">Captain Car...</span>
                             </h2>
 
-                            <div className="space-y-6 text-gray-400 text-base leading-relaxed mb-10 text-left">
+                            <div className="space-y-6 text-gray-400 text-base leading-relaxed mb-10 text-justify hyphens-auto tracking-tight break-words">
                                 <p>
-                                    Founded by <strong className="text-white">Tanveer Farooqui</strong>, Captain Car began with a simple dream and has grown into one of Bhiwandi’s trusted destinations for car customization. With more than 15 years of hands-on experience, Tanveer believes every car has its own character and deserves personal attention, not just routine work.
+                                    Started by <strong className="text-white">Tanveer Farooqui</strong>, Captain Car isn't just a shop; it's a place for car lovers. We have become very popular in Bhiwandi because we truly love what we do. With over 15 years of experience, Tanveer is ambitious about every project. He treats your vehicle like his own, giving it full attention to make sure the work is neat, unique, and truly professional.
                                 </p>
 
                                 <p>
-                                    Our belief is clear: your car reflects who you are. From the comfort of premium Nappa leather seat covers to the rich sound of advanced audio systems, we focus on every small detail. We don’t rush work we make sure each upgrade feels right, looks premium, and lasts long.
+                                    We believe your car shows your personality. Whether it is fitting premium seat covers that feel luxurious or installing a heavy sound system that booms, we focus on every single detail. We are professional in work—we never rush. We take our time to ensure every fitting is perfect, giving your car that rich, classy look you always wanted.
                                 </p>
 
                                 <p>
-                                    We stay updated with the latest trends and technology in car accessories. Whether it’s smart Android systems that modernize your dashboard or elegant interior upgrades that enhance comfort, our work stands for quality, durability, and clean finishing.
+                                    We always stay updated with the new trends and fashion in cars. From installing smart Android players to designing luxury interiors, our work is known for being durable and stylish. We are dedicated to quality. We don't just add accessories; we upgrade your lifestyle, making your driving experience comfortable and elite.
                                 </p>
 
                                 <p>
-                                    Based in <strong className="text-white">Chavindra, Bhiwandi</strong>, our modern workshop welcomes customers who value honest work and long term reliability. Trust is what we’ve built over the years, and every car that leaves our workshop carries our promise of quality, care, and satisfaction.
+                                    Located in <strong className="text-white">Chavindra, Bhiwandi</strong>, our workshop is open for everyone who values honest service and good relations. We have earned a strong reputation because we treat customers like family. When you come to us, you get our promise of excellence and complete customer satisfaction.
                                 </p>
                             </div>
 
@@ -419,8 +419,8 @@ const Home = () => {
                                         {/* Text Section */}
                                         <div className="relative flex-grow w-full px-8 pb-8 pt-4 bg-black z-10 flex flex-col justify-between">
                                             <div>
-                                                <h3 className="text-2xl font-black text-white uppercase italic mb-2 tracking-tighter">{service.title}</h3>
-                                                <p className="text-gray-300 mb-6 font-medium text-sm leading-relaxed text-left">{service.desc}</p>
+                                                <h3 className="text-xl font-black text-white uppercase italic mb-2 tracking-tighter whitespace-nowrap">{service.title}</h3>
+                                                <p className="text-gray-300 mb-6 font-medium text-sm leading-relaxed text-justify hyphens-auto tracking-tight break-words">{service.desc}</p>
                                             </div>
                                             <Link to={service.link} className="inline-flex items-center gap-2 text-brand-red font-bold uppercase tracking-widest text-xs group-hover:gap-4 transition-all hover:text-white mt-auto">
                                                 Explore Full Catalogue <span>→</span>
