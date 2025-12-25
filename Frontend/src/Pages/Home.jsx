@@ -95,9 +95,15 @@ const Home = () => {
                                 </span>
                             </div>
                         </h1>
-                        <p className={`text-gray-100 text-sm md:text-base font-bold tracking-wide max-w-2xl mb-10 border-l border-white/50 pl-6 transition-all duration-1000 delay-0 transform ${showBottomContent ? 'translate-y-0 opacity-100' : 'translate-y-[20px] opacity-0'}`}>
-                            Experience the pinnacle of automotive interior design. We don't just modify cars: we forge identities...
-                        </p>
+                        <div className="relative mb-10 max-w-2xl pl-6">
+                            {/* Animated Line */}
+                            <div className={`absolute left-0 top-0 bottom-0 w-[1px] bg-white/50 origin-top transition-transform duration-700 ease-out delay-[800ms] ${showBottomContent ? 'scale-y-100' : 'scale-y-0'}`} />
+
+                            {/* Animated Text */}
+                            <p className={`text-gray-100 text-sm md:text-base font-bold tracking-wide transition-all duration-1000 delay-[1200ms] transform ${showBottomContent ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
+                                Experience the pinnacle of automotive interior design. We don't just modify cars: we forge identities...
+                            </p>
+                        </div>
 
 
                         <div className={`flex justify-center w-full transition-all duration-1000 delay-[300ms] transform opacity-0 hidden`}>
