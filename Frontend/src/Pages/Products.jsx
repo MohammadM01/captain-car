@@ -6,6 +6,13 @@ import Button from '../Components/Button';
 const Products = () => {
     const [expandedCategories, setExpandedCategories] = React.useState({});
     const [selectedImage, setSelectedImage] = React.useState(null);
+    const [isDesktop, setIsDesktop] = React.useState(window.innerWidth >= 1024); // lg breakpoint
+
+    React.useEffect(() => {
+        const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const toggleCategory = (categoryId) => {
         setExpandedCategories(prev => ({
@@ -19,12 +26,12 @@ const Products = () => {
             title: "Seat Covers",
             id: "seat-covers",
             items: [
-                { id: 5, name: "Charcoal Black Ergonomic", img: "/seat cover/seatcover5-removebg-preview.png" },
-                { id: 4, name: "Grey Ribbed Performance", img: "/seat cover/seatcover4-removebg-preview.png" },
-                { id: 1, name: "Cerulean Mesh Fabric", img: "/seat cover/seatcover1-removebg-preview.png" },
-                { id: 2, name: "Arctic Beige Comfort", img: "/seat cover/seatcover2-removebg-preview.png" },
-                { id: 6, name: "Dual-Tone Mahogany", img: "/seatcover6.png" },
-                { id: 8, name: "Signature Diamond Stitch", img: "/seatcover8.png" },
+                { id: 5, name: "Premium Brown & Black Leather Seat Cover", img: "/seat cover/seatcover5-removebg-preview.png" },
+                { id: 4, name: "Luxury Cream Quilted Seat Cover", img: "/seat cover/seatcover4-removebg-preview.png" },
+                { id: 1, name: "Sporty Blue & Black Seat Cover", img: "/seat cover/seatcover1-removebg-preview.png" },
+                { id: 2, name: "Classic Beige & Black Leatherette Cover", img: "/seat cover/seatcover2-removebg-preview.png" },
+                { id: 6, name: "Rich Brown Leather Custom Upholstery", img: "/seatcover6.png" },
+                { id: 8, name: "Premium Beige Diamond Stitch Seat Cover", img: "/seatcover8.png" },
             ]
         },
         {
@@ -34,12 +41,12 @@ const Products = () => {
                 { id: 10, name: "Android Precision Touch", img: "/car-display/cardisplay1-removebg-preview.png" },
                 { id: 11, name: "Wide Dynamic Dashboard", img: "/car-display/cardisplay2-removebg-preview.png" },
                 { id: 12, name: "OEM Intelligent Interface", img: "/car-display/cardisplay3-removebg-preview.png" },
-                { id: 41, name: "Bluetooth Command Center", img: "/car-audio-player/car-audio-1-removebg-preview.png" },
-                { id: 42, name: "Classic Single-DIN Hub", img: "/car-audio-player/car-audio-2-removebg-preview.png" },
-                { id: 43, name: "LED Symphony Display", img: "/car-audio-player/car-audio-3-removebg-preview.png" },
+                { id: 41, name: "Premium Single DIN Bluetooth Receiver", img: "/car-audio-player/car-audio-1-removebg-preview.png" },
+                { id: 42, name: "Sony Style Single DIN Media Player", img: "/car-audio-player/car-audio-2-removebg-preview.png" },
+                { id: 43, name: "Standard Single DIN MP3 Player", img: "/car-audio-player/car-audio-3-removebg-preview.png" },
                 { id: 201, name: "Gemstone 10.1'' 2K QLED Android", img: "/newandroidsystem/nobgGemstone 10.1'' 2K QLED Android Car System.png" },
-                { id: 202, name: "ONCORD+ 9 inch Android", img: "/newandroidsystem/nobgONCORD+ 9 inch android system.png" },
-                { id: 203, name: "Power Acoustik CP-71W Single DIN", img: "/newandroidsystem/nobgPower Acoustik CP-71W Single DIN Car Stereo with 6.5” Touchscreen, Wireless Apple CarPlay & Android Auto.png" },
+                { id: 202, name: "Oncord+ 9-inch Android Multimedia System", img: "/newandroidsystem/nobgONCORD+ 9 inch android system.png" },
+                { id: 203, name: "Power Acoustik CP-71W Single DIN Player", img: "/newandroidsystem/nobgPower Acoustik CP-71W Single DIN Car Stereo with 6.5” Touchscreen, Wireless Apple CarPlay & Android Auto.png" },
                 { id: 204, name: "Sansui SAM-5350 Pro Smart Infotainment", img: "/newandroidsystem/nobgsansuisam5350prosmartinfotainmentsystem1000x1000.png" },
             ]
         },
@@ -47,16 +54,16 @@ const Products = () => {
             title: "Performance Speakers",
             id: "speakers",
             items: [
-                { id: 16, name: "Boss Audio Masterpiece", img: "/speaker/bossaudiosystem-removebg-preview.png" },
-                { id: 38, name: "Pro Series Acoustic", img: "/speaker/car-speaker-removebg-preview.png" },
-                { id: 39, name: "Component Precision Pair", img: "/speaker/car-speaker-2-removebg-preview.png" },
-                { id: 40, name: "Coaxial Harmony Set", img: "/speaker/car-speaker-3-removebg-preview.png" },
-                { id: 301, name: "Ampere Audio AA-8K 8000W Mono Block", img: "/newspeakers/nobgAmpere Audio AA-8K 8,000W Mono Block Car Amplifier.png" },
-                { id: 302, name: "Blaupunkt ICx 402 4,2-Way Coaxial", img: "/newspeakers/nobgBlaupunkt ICx 402 4,2-Way Coaxial Car Speakers.png" },
-                { id: 303, name: "Infinity REF-6532EX Reference 6.5", img: "/newspeakers/nobgInfinity REF-6532EX Reference 6.5 Inch Two-Way Coaxial.png" },
+                { id: 16, name: "Sony Mega Bass Coaxial Speakers", img: "/speaker/bossaudiosystem-removebg-preview.png" },
+                { id: 38, name: "Pioneer TS Series Oval Speakers", img: "/speaker/car-speaker-removebg-preview.png" },
+                { id: 39, name: "JBL Coaxial Car Speakers", img: "/speaker/car-speaker-2-removebg-preview.png" },
+                { id: 40, name: "4-inch Dashboard Speakers", img: "/speaker/car-speaker-3-removebg-preview.png" },
+                { id: 301, name: "Ampere Audio AA-8K 8000W Mono Block Amplifier", img: "/newspeakers/nobgAmpere Audio AA-8K 8,000W Mono Block Car Amplifier.png" },
+                { id: 302, name: "Blaupunkt ICx 402 4-Way Coaxial Speakers", img: "/newspeakers/nobgBlaupunkt ICx 402 4,2-Way Coaxial Car Speakers.png" },
+                { id: 303, name: "Infinity REF-6532EX Reference 6.5 Coaxial", img: "/newspeakers/nobgInfinity REF-6532EX Reference 6.5 Inch Two-Way Coaxial.png" },
                 { id: 304, name: "JBL Car Speakers", img: "/newspeakers/nobgJBL Car Speakers.png" },
-                { id: 305, name: "Pioneer TS-A1671F 6.5 3-Way", img: "/newspeakers/nobgPioneer TS-A1671F 6.5 3-Way Coaxial Car Speakers.png" },
-                { id: 306, name: "Sony 3-Way Mica Reinforced", img: "/newspeakers/nobgSony - 6-12 3Way Car Speakers with Mica Reinforced.png" },
+                { id: 305, name: "Pioneer TS-A1671F 6.5 3-Way Coaxial", img: "/newspeakers/nobgPioneer TS-A1671F 6.5 3-Way Coaxial Car Speakers.png" },
+                { id: 306, name: "Sony 3-Way Mica Reinforced Speakers", img: "/newspeakers/nobgSony - 6-12 3Way Car Speakers with Mica Reinforced.png" },
                 { id: 307, name: "Under-Seat Active Subwoofer 850W", img: "/newspeakers/nobgUnder-Seat Active Subwoofer 850W.png" },
                 { id: 308, name: "Pioneer DEQ-S1000A DSP", img: "/newspeakers/nobgpioneerdeq-s1000a-universal-sound-processor-dsp-pioneer-original.png" },
             ]
@@ -65,24 +72,24 @@ const Products = () => {
             title: "Armor & Carriers",
             id: "carriers",
             items: [
-                { id: 17, name: "Heavy Duty Roof Frame", img: "/carrier/carrier5-removebg-hero.png" },
-                { id: 26, name: "Front Guard Precision", img: "/bumper/bumper1-removebg-preview.png" },
-                { id: 27, name: "Rear Shell Protection", img: "/bumper/bumper2-removebg-preview.png" },
-                { id: 28, name: "Off-Road Tactical Bumper", img: "/bumper/bumper3-removebg-preview.png" },
-                { id: 24, name: "Aerodynamic Carrier", img: "/assets/nobgcarrier2.png" },
-                { id: 25, name: "Luggage Rack Horizon", img: "/assets/nobgcarrier3.png" },
+                { id: 17, name: "Aluminum Roof Luggage Carrier", img: "/carrier/carrier5-removebg-hero.png" },
+                { id: 26, name: "Heavy Duty Front Bumper Guard", img: "/bumper/bumper1-removebg-preview.png" },
+                { id: 27, name: "Rear Steel Bumper Protector", img: "/bumper/bumper2-removebg-preview.png" },
+                { id: 28, name: "Custom Painted Front Bumpers", img: "/bumper/bumper3-removebg-preview.png" },
+                { id: 24, name: "ABS Front Bumper Guard", img: "/assets/nobgcarrier2.png" },
+                { id: 25, name: "Rear Bumper Diffuser / Guard", img: "/assets/nobgcarrier3.png" },
             ]
         },
         {
             title: "Wheel Precision Caps",
             id: "wheel-caps",
             items: [
-                { id: 22, name: "Sport Ring Velocity", img: "/car-tyre-cap/car-wheel_cap-removebg-preview.png" },
-                { id: 34, name: "Matte Black Stealth", img: "/car-tyre-cap/car-wheel_cap2-removebg-preview.png" },
-                { id: 35, name: "Silver Star Radiant", img: "/car-tyre-cap/car-wheel_cap-3-removebg-preview.png" },
                 { id: 601, name: "Car Universal Wheel Cover HubCaps VELOCITY", img: "/newwheelcap/nobgCar Universal Wheel Cover HubCaps Red and Black Colour (VELOCITY_RED_BLACK_13).png" },
                 { id: 602, name: "PRIGAN 16 Inch Matte Black Wheel Cover", img: "/newwheelcap/nobgPRIGAN 16 Inch Matte Black Wheel Cover (Available in 12,13,14,15,16 Inch).png" },
                 { id: 603, name: "Favmoto Blue Color", img: "/newwheelcap/nobgfavmoto blue color.png" },
+                { id: 22, name: "Sport Ring Velocity", img: "/car-tyre-cap/car-wheel_cap-removebg-preview.png" },
+                { id: 34, name: "Matte Black Stealth", img: "/car-tyre-cap/car-wheel_cap2-removebg-preview.png" },
+                { id: 35, name: "Silver Star Radiant", img: "/car-tyre-cap/car-wheel_cap-3-removebg-preview.png" },
             ]
         },
         {
@@ -100,13 +107,13 @@ const Products = () => {
             title: "Elite Air Fragrances",
             id: "air-fresheners",
             items: [
-                { id: 101, name: "Royal Oudh Essence", img: "/car-air-freshner/airfreshner-removebg-preview.png" },
-                { id: 102, name: "Oceanic Breeze Mist", img: "/car-air-freshner/airfreshner2-removebg-preview.png" },
-                { id: 103, name: "Lavender Mist Aura", img: "/car-air-freshner/airfreshner3-removebg-preview.png" },
-                { id: 104, name: "Citrus Burst Energy", img: "/car-air-freshner/airfreshner4-removebg-preview.png" },
-                { id: 105, name: "Musk Intense Noir", img: "/car-air-freshner/airfreshner5-removebg-preview.png" },
-                { id: 106, name: "Vanilla Velvet Cloud", img: "/car-air-freshner/airfreshner6-removebg-preview.png" },
-                { id: 107, name: "Sandalwood Pure Grain", img: "/car-air-freshner/airfreshner7-removebg-preview.png" },
+                { id: 101, name: "My Shaldan Gel Perfume (Lime)", img: "/car-air-freshner/airfreshner-removebg-preview.png" },
+                { id: 102, name: "Areon Ken Gel Fragrance", img: "/car-air-freshner/airfreshner2-removebg-preview.png" },
+                { id: 103, name: "Godrej Aer Twist", img: "/car-air-freshner/airfreshner3-removebg-preview.png" },
+                { id: 104, name: "Aromahpure Hanging Car Perfume - Musk", img: "/car-air-freshner/airfreshner4-removebg-preview.png" },
+                { id: 105, name: "Lavender Lush Car Diffuser", img: "/car-air-freshner/airfreshner5-removebg-preview.png" },
+                { id: 106, name: "Aromahpure Hanging Pod - Lavender", img: "/car-air-freshner/airfreshner6-removebg-preview.png" },
+                { id: 107, name: "Premium Sandalwood Grain Perfume", img: "/car-air-freshner/airfreshner7-removebg-preview.png" },
             ]
         },
         {
@@ -172,13 +179,21 @@ const Products = () => {
             <div className="max-w-7xl mx-auto px-6 pb-32">
                 {categories.map((category, idx) => {
                     const isExpanded = expandedCategories[category.id];
-                    let visibleItems = isExpanded ? category.items : category.items.slice(0, 6);
-                    let hasMore = category.items.length > 6;
+                    let visibleItems;
+                    let hasMore;
 
-                    // Special logic for categories expanding from 3 items
-                    if (['air-fresheners', 'wheel-caps', 'floor-mats', 'seat-covers', 'speakers', 'audio-video', 'sun-control', 'led-lights', 'electronics'].includes(category.id)) {
-                        visibleItems = isExpanded ? category.items : category.items.slice(0, 3);
-                        hasMore = category.items.length > 3;
+                    if (isDesktop) {
+                        visibleItems = category.items;
+                        hasMore = false;
+                    } else {
+                        visibleItems = isExpanded ? category.items : category.items.slice(0, 6);
+                        hasMore = category.items.length > 6;
+
+                        // Special logic for categories expanding from 3 items (Mobile Only)
+                        if (['air-fresheners', 'wheel-caps', 'floor-mats', 'seat-covers', 'speakers', 'audio-video', 'sun-control', 'led-lights', 'electronics'].includes(category.id)) {
+                            visibleItems = isExpanded ? category.items : category.items.slice(0, 3);
+                            hasMore = category.items.length > 3;
+                        }
                     }
 
                     return (
