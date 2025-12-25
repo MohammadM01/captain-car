@@ -220,14 +220,16 @@ const ContactUs = () => {
                     <span className="text-xs font-black uppercase tracking-[0.3em] text-[#E31E24]">Live Navigation</span>
                 </div>
                 <iframe
+                    title="Captain Car Audio & Accessories Location"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83194.4788254592!2d73.05857195929217!3d19.274098379261684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bd0bd3ab28a7%3A0x9a04787bb35296c9!2sCaptain%20Car%20Audio!5e0!3m2!1sen!2sin!4v1766560019806!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     className="w-full h-full grayscale-[0.2] contrast-[1.1] brightness-[0.8] group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000"
                     style={{ border: 0 }}
                     allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
+                    loading="eager"
+                    sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+                    referrerPolicy="no-referrer"
                 ></iframe>
             </div>
 
