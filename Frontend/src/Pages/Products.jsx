@@ -37,6 +37,10 @@ const Products = () => {
                 { id: 41, name: "Bluetooth Command Center", img: "/car-audio-player/car-audio-1-removebg-preview.png" },
                 { id: 42, name: "Classic Single-DIN Hub", img: "/car-audio-player/car-audio-2-removebg-preview.png" },
                 { id: 43, name: "LED Symphony Display", img: "/car-audio-player/car-audio-3-removebg-preview.png" },
+                { id: 201, name: "Gemstone 10.1'' 2K QLED Android", img: "/newandroidsystem/nobgGemstone 10.1'' 2K QLED Android Car System.png" },
+                { id: 202, name: "ONCORD+ 9 inch Android", img: "/newandroidsystem/nobgONCORD+ 9 inch android system.png" },
+                { id: 203, name: "Power Acoustik CP-71W Single DIN", img: "/newandroidsystem/nobgPower Acoustik CP-71W Single DIN Car Stereo with 6.5” Touchscreen, Wireless Apple CarPlay & Android Auto.png" },
+                { id: 204, name: "Sansui SAM-5350 Pro Smart Infotainment", img: "/newandroidsystem/nobgsansuisam5350prosmartinfotainmentsystem1000x1000.png" },
             ]
         },
         {
@@ -47,6 +51,14 @@ const Products = () => {
                 { id: 38, name: "Pro Series Acoustic", img: "/speaker/car-speaker-removebg-preview.png" },
                 { id: 39, name: "Component Precision Pair", img: "/speaker/car-speaker-2-removebg-preview.png" },
                 { id: 40, name: "Coaxial Harmony Set", img: "/speaker/car-speaker-3-removebg-preview.png" },
+                { id: 301, name: "Ampere Audio AA-8K 8000W Mono Block", img: "/newspeakers/nobgAmpere Audio AA-8K 8,000W Mono Block Car Amplifier.png" },
+                { id: 302, name: "Blaupunkt ICx 402 4,2-Way Coaxial", img: "/newspeakers/nobgBlaupunkt ICx 402 4,2-Way Coaxial Car Speakers.png" },
+                { id: 303, name: "Infinity REF-6532EX Reference 6.5", img: "/newspeakers/nobgInfinity REF-6532EX Reference 6.5 Inch Two-Way Coaxial.png" },
+                { id: 304, name: "JBL Car Speakers", img: "/newspeakers/nobgJBL Car Speakers.png" },
+                { id: 305, name: "Pioneer TS-A1671F 6.5 3-Way", img: "/newspeakers/nobgPioneer TS-A1671F 6.5 3-Way Coaxial Car Speakers.png" },
+                { id: 306, name: "Sony 3-Way Mica Reinforced", img: "/newspeakers/nobgSony - 6-12 3Way Car Speakers with Mica Reinforced.png" },
+                { id: 307, name: "Under-Seat Active Subwoofer 850W", img: "/newspeakers/nobgUnder-Seat Active Subwoofer 850W.png" },
+                { id: 308, name: "Pioneer DEQ-S1000A DSP", img: "/newspeakers/nobgpioneerdeq-s1000a-universal-sound-processor-dsp-pioneer-original.png" },
             ]
         },
         {
@@ -110,6 +122,23 @@ const Products = () => {
                 { id: 108, name: "RGB Ambient Strips", img: "/ledlight1.jpg" },
                 { id: 109, name: "Footwell Glow Kit", img: "/ledlight2.png" },
                 { id: 110, name: "Starry Roof Ambience", img: "/ledlight3.png" },
+                { id: 401, name: "300W LED Headlight Bulb H7 6000K", img: "/new lights/nobg300W LED Headlight Bulb, 6000K, 30000 Lumens, High Brightness Car Headlamp (H7).png" },
+                { id: 402, name: "Cool White 200W Hyper Beam", img: "/new lights/nobgCool_White_200_Watt_My_TVS_Hyper_Beam_Light-removebg-preview.png" },
+                { id: 403, name: "Hyundai 222W Alpha 1 LED", img: "/new lights/nobgHyundai_222W_Alpha_1_Car_LED__2857021663755-removebg-preview.png" },
+                { id: 404, name: "LIU HJG 300W H4 LED Headlight", img: "/new lights/nobgLIU_HJG_300W_H4_White_Car_LED_DC_12V-80V_Headlight_Bulb-removebg-preview.png" },
+                { id: 405, name: "Osram H4H19 LED Bulb 50W", img: "/new lights/nobgOsram_H4H19_LED_Headlight_Bulb_50W_6000K_White-removebg-preview.png" },
+                { id: 406, name: "IPHCAR M617 Bi-Xenon Fog Lamp", img: "/new lights/nobgiphcar-m617-be-xenon-led-fog-lamp-main-1500x1500.png" },
+            ]
+        },
+        {
+            title: "Electronics & Accessories",
+            id: "electronics",
+            items: [
+                { id: 501, name: "Car 16pin Wiring Harness Adapter", img: "/electronics/nobgCar 16pin Wiring Harness Adapter Canbus Box Decoder.png" },
+                { id: 502, name: "Car USB Charging Hubs", img: "/electronics/nobgCar USB Charging Hubs.png" },
+                { id: 503, name: "Car Fuse Relay", img: "/electronics/nobgcarfuserelay.png" },
+                { id: 504, name: "Horn Relay", img: "/electronics/nobghornrelay.png" },
+                { id: 505, name: "RCA Audio Cable", img: "/electronics/nobgrcaaudiocable.png" },
             ]
         }
     ];
@@ -145,7 +174,7 @@ const Products = () => {
 
                     // Special logic for categories expanding from 3 items
                     // 'wheel-caps' needs to show only 3 but view all expands to custom view
-                    if (['air-fresheners', 'wheel-caps', 'floor-mats', 'seat-covers', 'speakers', 'audio-video', 'sun-control', 'led-lights'].includes(category.id)) {
+                    if (['air-fresheners', 'wheel-caps', 'floor-mats', 'seat-covers', 'speakers', 'audio-video', 'sun-control', 'led-lights', 'electronics'].includes(category.id)) {
                         visibleItems = isExpanded ? category.items : category.items.slice(0, 3);
                         hasMore = category.items.length > 3;
                     }

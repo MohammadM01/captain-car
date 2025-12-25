@@ -7,5 +7,6 @@ export const productCategories = [
     { title: "LED Lights & Ambience", id: "led-lights" },
     { title: "Wheel Caps", id: "wheel-caps" },
     { title: "Floor Mats", id: "floor-mats" },
-    { title: "Premium Air Fresheners", id: "air-fresheners" }
+    { title: "Premium Air Fresheners", id: "air-fresheners" },
+    { title: "Electronics & Accessories", id: "electronics" }
 ];
