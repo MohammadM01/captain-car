@@ -8,9 +8,12 @@ import ContactUs from './Pages/ContactUs';
 
 import WhyUs from './Pages/WhyUs';
 
+import ScrollToTop from './Components/ScrollToTop';
+
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-black">
         <Navbar />
         <Routes>
