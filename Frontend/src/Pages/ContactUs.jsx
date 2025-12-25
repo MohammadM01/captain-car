@@ -41,14 +41,14 @@ const ContactUs = () => {
 
                 {/* Header Section */}
                 <ScrollReveal direction="down">
-                    <div className="text-center mb-24">
+                    <div className="text-left mb-24 md:pl-14 lg:pl-26">
                         <div className="inline-block px-4 py-1.5 rounded-full border border-[#E31E24]/30 bg-[#E31E24]/5 mb-6">
                             <span className="text-[#E31E24] text-xs font-black uppercase tracking-[0.3em]">Direct Connection</span>
                         </div>
-                        <h1 className="text-3xl md:text-5xl font-black uppercase italic tracking-tighter mb-8 leading-[0.8] flex flex-col items-center">
+                        <h1 className="text-3xl md:text-5xl font-black uppercase italic tracking-tighter mb-8 leading-[0.8] flex flex-col items-start">
                             Reach <span className="text-[#E31E24] skew-x-[-10deg]">Captain.</span>
                         </h1>
-                        <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto font-light leading-relaxed">
+                        <p className="text-gray-400 text-sm md:text-base max-w-2xl font-light leading-relaxed">
                             Have a vision for your ride? Let's discuss your transformation. Our experts are ready to turn your automotive dreams into reality.
                         </p>
                     </div>

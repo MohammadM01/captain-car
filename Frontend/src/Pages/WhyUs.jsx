@@ -10,8 +10,8 @@ const WhyUs = () => {
                 {/* 1. TOP STAT HERO (User's request: First at the top) */}
                 <div className="mb-24">
                     <ScrollReveal direction="down" delay={100}>
-                        <div className="relative max-w-6xl mx-auto">
-                            <div className="bg-gradient-to-br from-[#1a0505] to-black border border-[#E31E24]/30 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden group hover:border-[#E31E24] transition-all duration-500 shadow-[0_0_80px_-20px_rgba(227,30,36,0.4)]">
+                        <div className="relative max-w-6xl mx-auto md:pl-20 lg:pl-32">
+                            <div className="bg-gradient-to-br from-[#1a0505] to-black border border-[#E31E24]/30 rounded-[3rem] p-12 md:p-20 text-left relative overflow-hidden group hover:border-[#E31E24] transition-all duration-500 shadow-[0_0_80px_-20px_rgba(227,30,36,0.4)]">
                                 <div className="absolute top-0 right-0 w-96 h-96 bg-[#E31E24]/10 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/2" />
                                 <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-[100px] pointer-events-none translate-y-1/2 -translate-x-1/2" />
 
@@ -21,15 +21,15 @@ const WhyUs = () => {
                                 <p className="text-lg md:text-2xl font-black text-white uppercase tracking-[0.3em] mb-12">Happy Customers</p>
 
                                 {/* Divider */}
-                                <div className="max-w-md mx-auto h-px bg-gradient-to-r from-transparent via-[#E31E24]/50 to-transparent mb-12" />
+                                <div className="max-w-md mr-auto h-px bg-gradient-to-r from-transparent via-[#E31E24]/50 to-transparent mb-12" />
 
                                 {/* Testimonial */}
-                                <div className="relative max-w-3xl mx-auto">
-                                    <div className="absolute -top-10 left-1/2 -translate-x-1/2 text-7xl text-[#E31E24]/20 font-serif">"</div>
+                                <div className="relative max-w-3xl mr-auto">
+                                    <div className="absolute -top-10 left-0 text-7xl text-[#E31E24]/20 font-serif">"</div>
                                     <p className="text-gray-300 italic text-base md:text-xl leading-relaxed mb-8 relative z-10">
                                         Best car audio installation in town! The team at Captain transformed my car's interior completely. Highly recommended!
                                     </p>
-                                    <div className="flex items-center justify-center gap-4">
+                                    <div className="flex items-center justify-start gap-4">
                                         <div className="w-12 h-1 bg-[#E31E24] rounded-full" />
                                         <span className="text-[#E31E24] font-black uppercase text-base md:text-lg tracking-widest italic">Rajesh Kumar, Bhiwandi</span>
                                     </div>
@@ -76,11 +76,11 @@ const WhyUs = () => {
                 {/* ================= WHY CAPTAIN IS BETTER (Cards) ================= */}
                 <ScrollReveal direction="up" delay={300}>
                     <div className="mb-24 pt-20 border-t border-white/5">
-                        <div className="text-center mb-16">
-                            <h2 className="text-2xl md:text-4xl font-black text-white uppercase italic tracking-tighter mb-6 text-center">
+                        <div className="text-left mb-16 px-6 md:pl-20 lg:pl-32">
+                            <h2 className="text-2xl md:text-4xl font-black text-white uppercase italic tracking-tighter mb-6">
                                 Why <span className="text-[#E31E24]">Captain</span> is Better?
                             </h2>
-                            <p className="text-gray-400 text-sm max-w-3xl mx-auto leading-relaxed">
+                            <p className="text-gray-400 text-sm max-w-3xl leading-relaxed">
                                 We don't just sell car audio – we deliver an experience. Here's what makes Captain Car Audio the #1 choice in Bhiwandi.
                             </p>
                         </div>

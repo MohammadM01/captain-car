@@ -36,22 +36,22 @@ const Home = () => {
         {
             title: 'Concert Audio',
             desc: 'Audiophile-grade sound engineering. From high-fidelity speakers and powerful subwoofers to precision DSP tuning for a studio-quality experience on wheels.',
-            img: '/bossaudiosystem.png'
+            img: '/speaker/bossaudiosystem-removebg-preview.png'
         },
         {
-            title: 'Privacy Films',
-            desc: 'Stay cool and protected. Our premium window films provide up to 99% UV rejection and significant heat reduction without compromising visibility or style.',
-            img: '/suntekwindowfilm.png'
+            title: 'Premium Interiors',
+            desc: 'Luxury meets comfort. Hand-crafted Nappa leather seat covers and ergonomic fittings that transform your cabin into a first-class lounge.',
+            img: '/seat cover/seatcover1-removebg-preview.png'
         },
         {
             title: 'Tech Upgrades',
             desc: 'The latest in automotive intelligence. High-resolution Android displays, 360-degree cameras, and ambient mood lighting controlled right from your smartphone.',
-            img: '/cardisplay2.png'
+            img: '/car-display/cardisplay2-removebg-preview.png'
         },
         {
             title: 'Exterior Styling',
             desc: "Command the road with presence. Custom body kits, premium alloy wheels, and professional chrome deletions that give your vehicle a distinct, aggressive edge.",
-            img: '/tyremiddle.png'
+            img: '/car-tyre-cap/car-wheel_cap-removebg-preview.png'
         },
     ];
 
@@ -72,7 +72,7 @@ const Home = () => {
                     </video>
                 </div>
 
-                <div className="relative z-20 max-w-7xl w-full mx-auto px-6 h-full flex flex-col justify-center items-start">
+                <div className="relative z-20 w-full h-full flex flex-col justify-center items-start px-6 md:pl-20 lg:pl-32">
                     <ScrollReveal direction="left" delay={500} className="max-w-4xl">
                         <div className={`glass-panel inline-block px-6 py-2 rounded-full mb-6 border-l-4 border-brand-red transition-all duration-1000 ${showHeroText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                             <span className="text-brand-red font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs">Premium Car Accessories</span>
@@ -345,8 +345,8 @@ const Home = () => {
                     {services.map((service, idx) => (
                         <div key={idx} className="flex-shrink-0 w-[85vw] snap-center h-[380px] relative rounded-3xl overflow-hidden border border-white/10 group">
                             <div className="absolute inset-0 bg-gradient-to-b from-[#1a0505] to-black opacity-60" />
-                            <img src={service.img} alt={service.title} className="absolute inset-0 w-full h-full object-contain" />
-                            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-black/90 to-transparent">
+                            <img src={service.img} alt={service.title} className="absolute inset-0 w-full h-full object-contain pb-10" />
+                            <div className="absolute bottom-0 left-0 right-0 px-6 pb-4 pt-10 bg-gradient-to-t from-black via-black/90 to-transparent">
                                 <h3 className="text-xl font-black text-white uppercase italic mb-2">{service.title}</h3>
                                 <p className="text-gray-400 text-[10px] mb-3">{service.desc}</p>
                                 <span className="text-brand-red font-bold uppercase tracking-widest text-[10px] flex items-center gap-2">Explore <span>→</span></span>
@@ -368,9 +368,9 @@ const Home = () => {
                                         <div className="absolute bottom-8 left-8 w-10 h-10 border-b border-l border-brand-red/20 group-hover:border-brand-red transition-all duration-500 z-20" />
 
                                         <div className="absolute inset-0 bg-gradient-to-b from-[#1a0505] to-black opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
-                                        <img src={service.img} alt={service.title} className="absolute inset-0 w-full h-full object-contain group-hover:scale-110 transition-transform duration-1000 px-12" />
+                                        <img src={service.img} alt={service.title} className="absolute inset-0 w-full h-full object-contain group-hover:scale-110 transition-transform duration-1000 px-12 pb-14" />
 
-                                        <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black via-black/95 to-transparent z-10">
+                                        <div className="absolute bottom-0 left-0 right-0 px-8 pb-5 pt-12 bg-gradient-to-t from-black via-black/95 to-transparent z-10">
                                             <h3 className="text-2xl font-black text-white uppercase italic mb-1 tracking-tighter">{service.title}</h3>
                                             <p className="text-gray-300 mb-4 font-medium text-[11px] leading-relaxed line-clamp-2 max-w-[85%]">{service.desc}</p>
                                             <span className="inline-flex items-center gap-2 text-brand-red font-bold uppercase tracking-widest text-[10px] group-hover:gap-4 transition-all">

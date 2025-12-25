@@ -121,7 +121,7 @@ const Products = () => {
             <div className="relative pt-32 pb-20 px-6 bg-black overflow-hidden">
                 <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-brand-red/10 rounded-full blur-[120px] pointer-events-none" />
 
-                <div className="max-w-7xl mx-auto text-center relative z-10">
+                <div className="max-w-7xl w-full mx-auto px-6 md:pl-20 lg:pl-32 relative z-10 text-left">
                     <ScrollReveal direction="down">
                         <span className="text-brand-red font-bold tracking-[0.3em] uppercase text-xs md:text-sm mb-4 inline-block">
                             Store Catalogue
@@ -129,7 +129,7 @@ const Products = () => {
                         <h1 className="text-3xl md:text-5xl font-black mb-6 leading-[0.9] uppercase italic tracking-tighter">
                             Our Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DC143C] to-[#FF6B6B]">Collection</span>
                         </h1>
-                        <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto font-light">
+                        <p className="text-gray-400 text-sm md:text-base max-w-2xl font-light">
                             Explore our curated selection of high-end accessories designed to elevate your driving experience.
                         </p>
                     </ScrollReveal>

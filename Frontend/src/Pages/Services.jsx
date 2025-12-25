@@ -15,14 +15,14 @@ const Services = () => {
 
                 {/* Hero Section */}
                 <ScrollReveal>
-                    <div className="text-center mb-16 relative pt-10">
+                    <div className="text-left mb-16 relative pt-10 px-6 md:pl-20 lg:pl-32">
                         <div className="inline-block px-4 py-1.5 rounded-full border border-brand-red/30 bg-brand-red/5 text-brand-red text-xs font-bold uppercase tracking-[0.2em] mb-4 backdrop-blur-sm">
                             Expertise You Can Trust
                         </div>
                         <h1 className="text-3xl md:text-5xl font-black text-white italic tracking-tighter uppercase mb-6 leading-none drop-shadow-2xl">
                             Our <span className="text-[#E31E24]">Services</span>
                         </h1>
-                        <p className="text-sm md:text-base text-gray-400 max-w-3xl mx-auto leading-relaxed border-l-4 border-brand-red/50 pl-6 text-left md:text-center md:border-none md:pl-0">
+                        <p className="text-sm md:text-base text-gray-400 max-w-3xl leading-relaxed border-l-4 border-brand-red/50 pl-6 text-left">
                             We don't just upgrade cars; we transform them. From concert-level audio to showroom-finish detailing, explore our comprehensive range of premium services.
                         </p>
                     </div>
