@@ -102,6 +102,15 @@ const Products = () => {
                 { id: 46, name: "Precision Window Clarity", img: "/windowwash2.png" },
                 { id: 47, name: "Rapid Hydro Shield", img: "/carwashing3.png" },
             ]
+        },
+        {
+            title: "LED Lights & Ambience",
+            id: "led-lights",
+            items: [
+                { id: 108, name: "RGB Ambient Strips", img: "/ledlight1.jpg" },
+                { id: 109, name: "Footwell Glow Kit", img: "/ledlight2.png" },
+                { id: 110, name: "Starry Roof Ambience", img: "/ledlight3.png" },
+            ]
         }
     ];
 
