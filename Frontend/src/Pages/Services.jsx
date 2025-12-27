@@ -22,7 +22,7 @@ const Services = () => {
                         <h1 className="text-3xl md:text-5xl font-black text-white italic tracking-tighter uppercase mb-6 leading-none drop-shadow-2xl">
                             Our <span className="text-[#E31E24]">Services</span>
                         </h1>
-                        <p className="text-sm md:text-base text-gray-400 max-w-3xl leading-relaxed border-l-4 border-brand-red/50 pl-6 text-left">
+                        <p className="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed border-l-4 border-brand-red/50 pl-6 text-left font-medium tracking-wide">
                             We don't just upgrade cars; we transform them. From concert-level audio to showroom finish detailing, explore our comprehensive range of premium services.
                         </p>
                     </div>
