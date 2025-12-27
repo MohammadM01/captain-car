@@ -188,7 +188,7 @@ const Home = () => {
                             <img
                                 src="/contact/owner.png"
                                 alt="Tanveer Farooqui - Founder"
-                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[3s] relative z-0"
+                                className="w-full h-full object-cover relative z-0"
                             />
 
                             {/* Identifier Badge Overlay */}
