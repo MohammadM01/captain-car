@@ -106,11 +106,9 @@ const Home = () => {
                     </video>
                 </div>
 
-                <div className="relative z-20 w-full h-full flex flex-col justify-center items-start px-6 md:pl-20 lg:pl-32">
+                <div className="relative z-20 w-full h-full flex flex-col justify-center items-start px-6 md:pl-12 lg:pl-20 pb-95">
                     <ScrollReveal direction="left" delay={500} className="w-full">
-                        <div className={`glass-panel inline-block px-6 py-2 rounded-full mb-6 border-l-4 border-brand-red transition-all duration-1000 ${showHeroText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                            <span className="text-brand-red font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs">Premium Car Accessories</span>
-                        </div>
+
                         <h1 className="text-3xl md:text-5xl lg:text-6xl font-black mb-6 leading-[1.1] md:leading-[1.2] uppercase italic tracking-tighter drop-shadow-2xl">
                             <div className="flex gap-4">
                                 <span className={`block text-white transition-all duration-700 delay-[0ms] transform ${showHeroText ? 'translate-y-0 opacity-100' : 'translate-y-[100%] opacity-0'}`}>
@@ -129,13 +127,12 @@ const Home = () => {
                                 </span>
                             </div>
                         </h1>
-                        <div className="relative mb-10 max-w-2xl pl-6">
-                            {/* Animated Line */}
-                            <div className={`absolute left-0 top-0 bottom-0 w-[1px] bg-white/50 origin-top transition-transform duration-700 ease-out delay-[800ms] ${showBottomContent ? 'scale-y-100' : 'scale-y-0'}`} />
+                        <div className="relative mb-10 max-w-2xl pl-1">
+
 
                             {/* Animated Text */}
                             <p className={`text-gray-100 text-lg md:text-xl font-bold tracking-wide transition-all duration-1000 delay-[1200ms] transform ${showBottomContent ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
-                                Experience the pinnacle of automotive interior design. We don't just modify cars: we forge identities...
+                                Experience the pinnacle of automotive interior design.<br /> We don't just modify cars: we forge identities...
                             </p>
                         </div>
 
