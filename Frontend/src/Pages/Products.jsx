@@ -359,8 +359,12 @@ const Products = () => {
                     </div>
                 </div>
 
-                <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-center items-center text-xs text-gray-600 uppercase tracking-widest">
+                <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 uppercase tracking-widest gap-4">
                     <p>Copyright © 2025 Captain Car. All rights reserved.</p>
+                    <div className="flex flex-col items-center gap-1">
+                        <img src="/datamatexlogo.webp" alt="DataMatex" className="w-12 h-auto object-contain hover:scale-110 transition-all duration-300" />
+                        <p className="font-bold text-[10px]">Designed by <a href="https://datamatex.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors font-black"><span className="text-[#4F46E5]">Data</span><span className="text-[#F97316]">Matex</span></a></p>
+                    </div>
                 </div>
             </footer>
         </div>

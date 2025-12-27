@@ -58,7 +58,7 @@ const ContactUs = () => {
                             Reach <span className="text-[#E31E24] skew-x-[-10deg]">Captain.</span>
                         </h1>
                         <p className="text-gray-400 text-sm md:text-base max-w-2xl font-light leading-relaxed">
-                            Have a vision for your ride? Let's discuss your transformation. <br/>Our experts are ready to turn your automotive dreams into reality...
+                            Have a vision for your ride? Let's discuss your transformation. <br />Our experts are ready to turn your automotive dreams into reality...
                         </p>
                     </div>
                 </ScrollReveal>
@@ -238,7 +238,7 @@ const ContactUs = () => {
                         </div>
                         <div className="flex gap-12">
                             <div>
-                                <p className="text-xs text-gray-600 font-bold uppercase tracking-widest mb-1">Cars Customised</p>
+                                <p className="text-xs text-gray-600 font-bold uppercase tracking-widest mb-1">Cars Decorated</p>
                                 <p className="text-2xl font-black text-white italic tracking-tighter">5000+</p>
                             </div>
                             <div>
@@ -332,8 +332,12 @@ const ContactUs = () => {
                     </div>
                 </div>
 
-                <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-center items-center text-xs text-gray-600 uppercase tracking-widest">
+                <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 uppercase tracking-widest gap-4">
                     <p>Copyright © 2025 Captain Car. All rights reserved.</p>
+                    <div className="flex flex-col items-center gap-1">
+                        <img src="/datamatexlogo.webp" alt="DataMatex" className="w-12 h-auto object-contain hover:scale-110 transition-all duration-300" />
+                        <p className="font-bold text-[10px]">Designed by <a href="https://datamatex.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors font-black"><span className="text-[#4F46E5]">Data</span><span className="text-[#F97316]">Matex</span></a></p>
+                    </div>
                 </div>
             </footer>
         </div>
