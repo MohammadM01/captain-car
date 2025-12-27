@@ -111,10 +111,10 @@ const Home = () => {
                     </video>
                 </div>
 
-                <div className="relative z-20 w-full h-full flex flex-col justify-center items-start px-6 md:pl-12 lg:pl-20 pb-95">
+                <div className="relative z-20 w-full h-full flex flex-col justify-center items-start px-6 md:pl-12 lg:pl-20 pb-80">
                     <ScrollReveal direction="left" delay={500} className="w-full">
 
-                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-black mb-6 leading-[1.1] md:leading-[1.2] uppercase italic tracking-tighter drop-shadow-2xl">
+                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-black mb-6 leading-[0.9] md:leading-[0.85] uppercase italic tracking-tighter drop-shadow-2xl">
                             <div className="flex gap-4">
                                 <span className={`block text-white transition-all duration-700 delay-[0ms] transform ${showHeroText ? 'translate-y-0 opacity-100' : 'translate-y-[100%] opacity-0'}`}>
                                     CRAFT
