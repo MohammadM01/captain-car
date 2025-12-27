@@ -32,7 +32,7 @@ const WhyUs = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-32">
                     {[
                         { number: "15+", label: "Years Experience", desc: "Expert Hands Only" },
-                        { number: "5000+", label: "Cars Modified", desc: "Trusted by All" },
+                        { number: "5000+", label: "Cars Decored", desc: "Trusted by All" },
                         { number: "100%", label: "Genuine Parts", desc: "No Fake Products" }
                     ].map((stat, idx) => (
                         <ScrollReveal key={idx} direction="up" delay={idx * 150}>
@@ -226,7 +226,7 @@ const WhyUs = () => {
                                 </div>
 
                                 <div className="w-16 h-16 rounded-2xl bg-[#E31E24] flex items-center justify-center mb-8 shadow-lg">
-                                    <svg className="w-8 h-8 fill-white" viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 2.5 1.68 2.5 2.45 0 .84-.44 1.54-1.6 1.54-1.28 0-2.32-.6-2.61-1.9h-2.2c.28 2.22 1.99 3.59 4.31 3.97V21h3v-2.14c2.28-.45 3.8-1.98 3.8-3.89 0-2.5-2-3.69-5-4.38-2.65-.65-2.65-1.72-2.65-2.4 0-.75.61-1.29 1.64-1.29z" /></svg>
+                                    <span className="text-4xl text-white font-bold">₹</span>
                                 </div>
 
                                 <h3 className="text-2xl font-black text-[#E31E24] uppercase italic mb-6">Unbeatable Pricing</h3>

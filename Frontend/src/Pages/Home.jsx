@@ -200,7 +200,7 @@ const Home = () => {
                                 <h3 className="text-2xl md:text-4xl font-black text-white uppercase italic tracking-tighter mb-2 leading-none">
                                     Tanveer <span className="text-brand-red">Farooqui</span>
                                 </h3>
-                                <p className="text-gray-400 text-[10px] md:text-xs font-bold uppercase tracking-[0.4em]">The Heart of Captain Car Audio</p>
+                                <p className="text-gray-400 text-[10px] md:text-xs font-bold uppercase tracking-[0.4em]">The Heart of Captain Car Decor</p>
                             </div>
 
                             {/* Tech HUD Detail */}
@@ -242,7 +242,7 @@ const Home = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-2xl font-black text-white mb-1">5000+</h3>
-                                    <p className="text-[10px] text-gray-500 uppercase tracking-widest">Cars Modified</p>
+                                    <p className="text-[10px] text-gray-500 uppercase tracking-widest">Cars Decored</p>
                                 </div>
                             </div>
 
