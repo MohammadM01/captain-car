@@ -4,6 +4,19 @@ import SEO from '../Components/SEO';
 import ScrollReveal from '../Components/ScrollReveal';
 
 const WhyUs = () => {
+    const [currentImage, setCurrentImage] = React.useState(0);
+    const images = [
+        { src: "/modified-seltos.png", alt: "Captain Edition Seltos", label: "Side View" },
+        { src: "/modified-seltos-interior.png", alt: "Premium Interior", label: "Interior View" }
+    ];
+
+    React.useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentImage((prev) => (prev + 1) % images.length);
+        }, 4000);
+        return () => clearInterval(timer);
+    }, []);
+
     return (
         <div className="bg-black text-white min-h-screen pt-32 font-sans selection:bg-[#E31E24] selection:text-white overflow-hidden relative">
             <SEO
@@ -21,17 +34,41 @@ const WhyUs = () => {
 
                 {/* 1. HERO SECTION */}
                 <ScrollReveal direction="down">
-                    <div className="text-center mb-24">
-                        <div className="inline-block px-4 py-2 rounded-full border border-white/10 bg-white/5 mb-6 backdrop-blur-md">
-                            <span className="text-[#E31E24] text-xs font-black uppercase tracking-[0.3em]">The Captain Difference</span>
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-12 mb-24">
+                        {/* Text Side (Left) */}
+                        <div className="w-full md:w-1/2 text-left">
+                            <div className="inline-block px-4 py-2 rounded-full border border-white/10 bg-white/5 mb-6 backdrop-blur-md">
+                                <span className="text-[#E31E24] text-xs font-black uppercase tracking-[0.3em]">The Captain Difference</span>
+                            </div>
+                            <h1 className="text-4xl md:text-7xl font-black uppercase italic tracking-tighter mb-8 leading-[0.9]">
+                                Why We Are <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E31E24] to-red-600">The Best Choice.</span>
+                            </h1>
+                            <p className="text-gray-400 text-lg md:text-xl font-medium leading-relaxed mb-8">
+                                In Bhiwandi, many shops modify cars. But at <strong>Captain Car</strong>, we don't just fit parts we create art. We give you peace of mind, genuine quality, and a car that stands out from the crowd.
+                            </p>
                         </div>
-                        <h1 className="text-4xl md:text-7xl font-black uppercase italic tracking-tighter mb-8 leading-[0.9]">
-                            Why We Are <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E31E24] to-red-600">The Best Choice.</span>
-                        </h1>
-                        <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto font-medium leading-relaxed">
-                            In Bhiwandi, many shops modify cars. But at <strong>Captain Car</strong>, we don't just fit parts we create art. We give you peace of mind, genuine quality, and a car that stands out from the crowd.
-                        </p>
+
+                        {/* Image Side (Right) - Slideshow */}
+                        <div className="w-full md:w-1/2 relative group h-[300px] md:h-[400px]">
+                            <div className="absolute inset-0 bg-[#E31E24]/20 blur-[100px] rounded-full opacity-50 group-hover:opacity-70 transition-opacity duration-700"></div>
+
+                            {/* Slideshow Container */}
+                            <div className="relative w-full h-full rounded-3xl overflow-hidden border-2 border-white/5 shadow-2xl shadow-[#E31E24]/30">
+                                {images.map((img, index) => (
+                                    <div
+                                        key={index}
+                                        className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentImage ? 'opacity-100' : 'opacity-0'}`}
+                                    >
+                                        <img
+                                            src={img.src}
+                                            alt={img.alt}
+                                            className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-[2000ms]"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </ScrollReveal>
 
