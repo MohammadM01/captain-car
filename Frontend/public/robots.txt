@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://captaincarstudio.in/sitemap.xml

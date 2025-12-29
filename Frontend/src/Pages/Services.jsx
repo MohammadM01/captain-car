@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../Components/SEO';
 import ScrollReveal from '../Components/ScrollReveal';
 
 const Services = () => {
@@ -8,10 +8,12 @@ const Services = () => {
 
     return (
         <div className="min-h-screen bg-black text-white font-sans selection:bg-brand-red selection:text-white pt-20 relative">
-            <Helmet>
-                <title>Our Services - Captain Car</title>
-                <meta name="description" content="Explore our premium car modification services: Concert Audio, Custom Interiors, Sun Control Films, Paint Protection, and Security Systems." />
-            </Helmet>
+            <SEO
+                title="Our Services"
+                description="Explore our premium car modification services: Concert Audio, Custom Interiors, Sun Control Films, Paint Protection, and Security Systems."
+                keywords="car modification services, car audio installation, seat cover customization, sun control film, car security systems"
+                url="/services"
+            />
             {/* Background Texture */}
             <div className="absolute inset-0 z-0 opacity-20 pointer-events-none" style={{ backgroundImage: 'url(/assets/figma-img/bg-pattern.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }} />
             <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-brand-red/10 to-transparent pointer-events-none z-0" />
@@ -129,7 +131,7 @@ const Services = () => {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[500px] md:h-[600px]">
                         <ScrollReveal delay={0} className="col-span-2 row-span-2 h-full">
                             <div className="w-full h-full rounded-3xl overflow-hidden relative group">
-                                <img src="/seatcover6.png" alt="Showcase" className="w-full h-full object-contain bg-[#111]" />
+                                <img src="/seatcover6.png" alt="Premium Car Interior Showcase - Custom Seat Covers" className="w-full h-full object-contain bg-[#111]" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
                                     <span className="text-white font-bold uppercase">Premium Interiors</span>
                                 </div>
@@ -137,7 +139,7 @@ const Services = () => {
                         </ScrollReveal>
                         <ScrollReveal delay={100} className="col-span-2 row-span-2 h-full">
                             <div className="w-full h-full rounded-3xl overflow-hidden relative group">
-                                <img src="/new photos/somecarfilm1.jpg" alt="Showcase" className="w-full h-full object-cover" />
+                                <img src="/new photos/somecarfilm1.jpg" alt="Sun Control Film Installation Showcase" className="w-full h-full object-cover" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
                                     <span className="text-white font-bold uppercase">Sun Control & Glass</span>
                                 </div>

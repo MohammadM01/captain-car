@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../Components/SEO';
 import ScrollReveal from '../Components/ScrollReveal';
 import Button from '../Components/Button';
 
@@ -156,10 +156,12 @@ const Products = () => {
 
     return (
         <div className="bg-premium-black text-white font-sans overflow-x-hidden selection:bg-brand-red selection:text-white">
-            <Helmet>
-                <title>Our Products - Captain Car</title>
-                <meta name="description" content="Browse our wide range of car accessories: Android Players, Speakers, Seat Covers, LED Lights, and more. Quality you can trust." />
-            </Helmet>
+            <SEO
+                title="Our Products"
+                description="Browse our wide range of car accessories: Android Players, Speakers, Seat Covers, LED Lights, and more. Quality you can trust."
+                keywords="car accessories, car audio system, car seat covers, car led lights, car modification products"
+                url="/products"
+            />
 
             {/* ================= HERO HEADER ================= */}
             <div className="relative pt-32 pb-20 px-6 bg-black overflow-hidden">
@@ -296,7 +298,7 @@ const Products = () => {
                     </button>
                     <img
                         src={selectedImage}
-                        alt="Full review"
+                        alt="Enlarged view of selected premium car accessory"
                         className="max-w-full max-h-[90vh] object-contain drop-shadow-2xl animate-zoom-in"
                         onClick={(e) => e.stopPropagation()}
                     />

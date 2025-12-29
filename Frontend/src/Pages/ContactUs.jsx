@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../Components/SEO';
 import ScrollReveal from '../Components/ScrollReveal';
 
 const ContactUs = () => {
@@ -41,10 +41,12 @@ const ContactUs = () => {
 
     return (
         <div className="min-h-screen bg-[#050505] text-white pt-10 font-sans selection:bg-[#E31E24] selection:text-white relative overflow-hidden">
-            <Helmet>
-                <title>Contact Us - Captain Car</title>
-                <meta name="description" content="Get in touch with Captain Car Studio. Call +91-9822119832 or visit our workshop in Bhiwandi for premium car modifications." />
-            </Helmet>
+            <SEO
+                title="Contact Captain Car"
+                description="Get in touch with Captain Car Studio. Call +91-9822119832 or visit our workshop in Bhiwandi for premium car modifications."
+                keywords="contact car decor shop, car accessories near me, car mechanic phone number, bhiwandi car market"
+                url="/contact"
+            />
             {/* Background Glows */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#E31E24]/10 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#E31E24]/5 rounded-full blur-[120px] pointer-events-none" />

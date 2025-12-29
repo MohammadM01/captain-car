@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../Components/SEO';
 import Button from '../Components/Button';
 import ScrollReveal from '../Components/ScrollReveal';
 
@@ -90,12 +90,53 @@ const Home = () => {
         }
     };
 
+    const businessSchema = {
+        "@context": "https://schema.org",
+        "@type": "AutoAccessoriesStore",
+        "name": "Captain Car Studio",
+        "image": "https://captaincarstudio.in/logo.png",
+        "@id": "https://captaincarstudio.in",
+        "url": "https://captaincarstudio.in",
+        "telephone": "+919822119832",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Next to Greenland Hotel, Chavindra",
+            "addressLocality": "Bhiwandi",
+            "addressRegion": "Maharashtra",
+            "postalCode": "421302",
+            "addressCountry": "IN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 19.2741,
+            "longitude": 73.0586
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+            ],
+            "opens": "10:00",
+            "closes": "21:00"
+        },
+        "sameAs": [
+            "https://www.instagram.com/captain_car_studio",
+            "https://youtube.com/@captaincarstudio"
+        ]
+    };
+
     return (
         <div className="bg-premium-black text-white font-sans overflow-x-hidden selection:bg-brand-red selection:text-white">
-            <Helmet>
-                <title>Captain Car - Premium Car Decor & Audio</title>
-                <meta name="description" content="Transform your vehicle with Captain Car's premium decoration, concert-level audio, custom interiors, and tech upgrades. The #1 car modification studio in Bhiwandi." />
-            </Helmet>
+            <SEO
+                title="Premium Car Decor & Audio"
+                description="Transform your vehicle with Captain Car's premium decoration, concert-level audio, custom interiors, and tech upgrades. The #1 car modification studio in Bhiwandi."
+                schema={businessSchema}
+            />
 
             {/* ================= HERO SECTION ================= */}
             <div className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden">
