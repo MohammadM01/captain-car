@@ -138,7 +138,7 @@ const ContactUs = () => {
                     </div>
 
                     {/* Right Side: Form Section */}
-                    <ScrollReveal direction="right" delay={200} className="lg:col-span-7">
+                    <ScrollReveal direction="right" delay={200} className="lg:col-span-7 lg:-mt-60 lg:translate-x-12">
                         <div className="bg-[#080808] border border-white/10 rounded-[3rem] p-10 md:p-14 shadow-2xl relative overflow-hidden group">
                             {/* Inner Shadows and Lights */}
                             <div className="absolute top-0 right-0 w-64 h-64 bg-[#E31E24]/5 rounded-full blur-[80px] pointer-events-none group-hover:bg-[#E31E24]/10 transition-colors duration-700" />
@@ -232,6 +232,18 @@ const ContactUs = () => {
                                     </form>
                                 </>
                             )}
+                        </div>
+
+                        {/* Additional Showcase Image */}
+                        <div className="mt-8 rounded-[2.5rem] overflow-hidden border border-white/10 relative group shadow-2xl">
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 pointer-events-none" />
+                            <div className="absolute top-0 right-0 w-full h-full bg-[#E31E24]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none mix-blend-overlay" />
+                            <img
+                                src="/hmhm.jpeg"
+                                alt="Captain Car Modification"
+                                className="w-full h-80 object-cover object-center group-hover:scale-105 transition-transform duration-700 filter grayscale-[0.3] group-hover:grayscale-0"
+                            />
+
                         </div>
                     </ScrollReveal>
                 </div>
