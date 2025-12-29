@@ -500,12 +500,7 @@ const Home = () => {
                                     className="relative z-10 w-full rounded-[2rem] shadow-2xl border border-white/10 group-hover:scale-[1.02] transition-transform duration-700 object-cover"
                                 />
                                 {/* Cyberpunkish detail overlay */}
-                                <div className="absolute bottom-6 left-6 z-20">
-                                    <div className="bg-black/60 backdrop-blur-md border border-white/10 px-4 py-2 rounded-lg">
-                                        <p className="text-[#E31E24] text-[10px] font-black uppercase tracking-widest">Captain Edition</p>
-                                        <p className="text-white text-xs font-bold">Toyota Fortuner Legender</p>
-                                    </div>
-                                </div>
+
                             </div>
                         </ScrollReveal>
 
