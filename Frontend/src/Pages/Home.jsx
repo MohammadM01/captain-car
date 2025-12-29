@@ -487,43 +487,65 @@ const Home = () => {
             <div className="bg-[#050505] py-16 px-6 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#E31E24]/5 rounded-full blur-[120px] pointer-events-none" />
 
-                <div className="max-w-4xl mx-auto relative z-10">
-                    <ScrollReveal direction="up">
-                        <div className="text-center mb-16">
-                            <h2 className="text-2xl md:text-4xl font-black text-white uppercase italic tracking-tighter mb-4">
-                                You Asked, <span className="text-[#E31E24]">We Answered</span>
-                            </h2>
-                            <p className="text-gray-400 text-sm">Everything you need to know about our services.</p>
-                        </div>
-                    </ScrollReveal>
+                <div className="max-w-7xl mx-auto relative z-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        {/* Left: Modified Fortuner Image */}
+                        <ScrollReveal direction="right">
+                            <div className="relative group">
+                                <div className="absolute inset-0 bg-[#E31E24]/20 blur-[60px] rounded-full opacity-60 group-hover:opacity-80 transition-opacity duration-700" />
+                                <div className="absolute -inset-1 bg-gradient-to-r from-[#E31E24] to-transparent opacity-20 blur-lg rounded-[2rem] group-hover:opacity-40 transition-opacity" />
+                                <img
+                                    src="/assets/modified-fortuner.png"
+                                    alt="Modified Toyota Fortuner"
+                                    className="relative z-10 w-full rounded-[2rem] shadow-2xl border border-white/10 group-hover:scale-[1.02] transition-transform duration-700 object-cover"
+                                />
 
-                    <div className="space-y-4">
-                        {faqs.map((faq, idx) => (
-                            <ScrollReveal key={idx} direction="up" delay={idx * 100}>
-                                <div
-                                    className={`group border rounded-2xl overflow-hidden transition-all duration-500 ${openFaq === idx ? 'bg-[#0a0a0a] border-[#E31E24] shadow-[0_0_30px_-10px_rgba(227,30,36,0.3)]' : 'bg-[#0a0a0a] border-white/5 hover:border-white/10'}`}
-                                >
-                                    <button
-                                        onClick={() => toggleFaq(idx)}
-                                        className="w-full flex items-center justify-between p-6 text-left transition-colors"
-                                    >
-                                        <span className={`text-lg font-bold uppercase italic tracking-tight transition-colors duration-300 ${openFaq === idx ? 'text-[#E31E24]' : 'text-white group-hover:text-gray-200'}`}>
-                                            {faq.q}
-                                        </span>
-                                        <span className={`w-8 h-8 flex items-center justify-center rounded-full border transition-all duration-300 ${openFaq === idx ? 'bg-[#E31E24] border-[#E31E24] rotate-45' : 'border-white/10 group-hover:border-[#E31E24] group-hover:text-[#E31E24]'}`}>
-                                            <svg className={`w-4 h-4 transition-colors ${openFaq === idx ? 'fill-white' : 'fill-current'}`} viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
-                                        </span>
-                                    </button>
-                                    <div
-                                        className={`overflow-hidden transition-all duration-500 cubic-bezier(0.4, 0, 0.2, 1) ${openFaq === idx ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'}`}
-                                    >
-                                        <p className="p-6 pt-0 text-gray-400 leading-relaxed border-t border-white/5 mx-6 mt-2">
-                                            {faq.a}
-                                        </p>
-                                    </div>
+                            </div>
+                        </ScrollReveal>
+
+                        {/* Right: FAQ Content */}
+                        <div className="w-full">
+                            <ScrollReveal direction="left">
+                                <div className="text-left mb-12">
+                                    <h2 className="text-3xl md:text-5xl font-black text-white uppercase italic tracking-tighter mb-4 leading-none">
+                                        You Asked, <br />
+                                        <span className="text-[#E31E24]">We Answered.</span>
+                                    </h2>
+                                    <p className="text-gray-400 text-base font-medium max-w-md border-l-4 border-[#E31E24] pl-4">
+                                        Everything you need to know about our modification services, warranty, and quality.
+                                    </p>
                                 </div>
                             </ScrollReveal>
-                        ))}
+
+                            <div className="space-y-4">
+                                {faqs.map((faq, idx) => (
+                                    <ScrollReveal key={idx} direction="up" delay={idx * 100}>
+                                        <div
+                                            className={`group border rounded-2xl overflow-hidden transition-all duration-500 ${openFaq === idx ? 'bg-[#0a0a0a] border-[#E31E24] shadow-[0_0_30px_-10px_rgba(227,30,36,0.3)]' : 'bg-[#0a0a0a] border-white/5 hover:border-white/10'}`}
+                                        >
+                                            <button
+                                                onClick={() => toggleFaq(idx)}
+                                                className="w-full flex items-center justify-between p-6 text-left transition-colors"
+                                            >
+                                                <span className={`text-base md:text-lg font-bold uppercase italic tracking-tight transition-colors duration-300 pr-4 ${openFaq === idx ? 'text-[#E31E24]' : 'text-white group-hover:text-gray-200'}`}>
+                                                    {faq.q}
+                                                </span>
+                                                <span className={`flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full border transition-all duration-300 ${openFaq === idx ? 'bg-[#E31E24] border-[#E31E24] rotate-45' : 'border-white/10 group-hover:border-[#E31E24] group-hover:text-[#E31E24]'}`}>
+                                                    <svg className={`w-4 h-4 transition-colors ${openFaq === idx ? 'fill-white' : 'fill-current'}`} viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+                                                </span>
+                                            </button>
+                                            <div
+                                                className={`overflow-hidden transition-all duration-500 cubic-bezier(0.4, 0, 0.2, 1) ${openFaq === idx ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'}`}
+                                            >
+                                                <p className="p-6 pt-0 text-gray-400 leading-relaxed border-t border-white/5 mx-6 mt-2 text-sm md:text-base">
+                                                    {faq.a}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </ScrollReveal>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
