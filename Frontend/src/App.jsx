@@ -10,6 +10,7 @@ import WhyUs from './Pages/WhyUs';
 import NotFound from './Pages/NotFound';
 
 import ScrollToTop from './Components/ScrollToTop';
+import Chatbot from './Components/Chatbot';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <ScrollToTop />
       <div className="min-h-screen bg-black">
         <Navbar />
+        <Chatbot />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
