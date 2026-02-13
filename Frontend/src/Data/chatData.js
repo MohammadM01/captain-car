@@ -1060,6 +1060,7 @@ export const chatData = [
             }
         ]
     },
+
     {
         id: "services_overview",
         keywords: ["what services", "services list", "service detail", "detailing", "ppf", "coating", "wrapping", "kaam kya karte ho", "kaam", "work"],
@@ -1075,6 +1076,24 @@ export const chatData = [
             {
                 en: "Visit us for a consultation. We will suggest the best upgrades for your car model.",
                 hi: "Ek baar aake milo. Hum aapki gaadi ke hisaab se best upgrade batayenge."
+            }
+        ]
+    },
+    {
+        id: "pricing",
+        keywords: ["price", "pricing", "cost", "rate", "kitne ka", "price kya hai", "dam", "budget", "expensive", "cheap", "amount", "charge"],
+        responses: [
+            {
+                en: "Pricing depends on your car model and the brand you choose. 💰",
+                hi: "Price aapki gaadi aur brand ke hisaab se alag hota hai. 💰"
+            },
+            {
+                en: "We offer products for every budget - from Budget-Friendly to Premium. Visit us for a custom quote!",
+                hi: "Humare paas har budget ka samaan hai. Dukan pe aao, aapke liye best rate denge!"
+            },
+            {
+                en: "For exact pricing, please call Tanveer Sir at +91 9822119832.",
+                hi: "Exact rate ke liye Tanveer Sir ko call karein: +91 9822119832."
             }
         ]
     },
