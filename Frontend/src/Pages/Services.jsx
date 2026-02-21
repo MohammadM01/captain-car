@@ -434,7 +434,7 @@ const services = [
     detailImgTop: "/speaker/bossaudiosystem-removebg-preview.png",
     localPitch: "Boss Bass, Pura Hall Hila Denge!",
     detailedDesc:
-      "Experience studio-quality sound in your car. We install high-power woofers, DSPs, and amplifiers that give you a crystal clear output with zero distortion.",
+      "Experience studio-quality car audio upgrades. We install high-power under-seat active subwoofers, precision DSPs, and 4-way coaxial amplifiers that give you a crystal clear output with zero distortion.",
     icon: (
       <svg className="w-full h-full fill-current" viewBox="0 0 24 24">
         <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
@@ -444,12 +444,12 @@ const services = [
   {
     title: "Interior Accessories",
     description:
-      "Luxury meets comfort with custom seat covers and 7D mats. We give your vehicle a showroom-fresh interior feel.",
+      "Luxury meets comfort with custom bucket fit seat covers and 7D all-weather mats. We give your vehicle a premium factory finish.",
     image: "/seatcover1.png",
     detailImgTop: "/seat cover/seatcover2-removebg-preview.png",
     localPitch: "Interiors Jo Dil Jeet Le!",
     detailedDesc:
-      "From Nappa leather finishes to sweat-proof fabrics, our seat covers are stitched to perfection. Comfort aur style ka perfect combo.",
+      "From custom diamond stitch finishes to sweat-proof fabrics, our premium leatherette seat covers are stitched to perfection. Total comfort and VIP style.",
     icon: (
       <svg className="w-full h-full fill-current" viewBox="0 0 24 24">
         <path d="M4 18v3h3v-3h10v3h3v-6H4v3zm15-8h1V6c0-2.76-2.24-5-5-5H9c-2.76 0-5 2.24-5 5v4h1v5h14v-5z" />
@@ -459,12 +459,12 @@ const services = [
   {
     title: "Ambient Lighting",
     description:
-      "Set the mood with app-controlled LED strips and starlights. Create a vibrant atmosphere that matches your style.",
+      "Set the mood with RGB app-controlled LED strips and starlight roof installations. Create a vibrant atmosphere that matches your style.",
     image: "/cardisplay2.png",
     detailImgTop: "/ledlight2.png",
     localPitch: "Gaadi Hai Ya Disco?",
     detailedDesc:
-      "Multi-color ambient light strips with app control. Change colors according to your mood. Raat mein full vibe banegi!",
+      "Multi-color hidden ambient footwell glow kits with app control. Change colors according to your mood for a true Rolls Royce interior aesthetic.",
     icon: (
       <svg className="w-full h-full fill-current" viewBox="0 0 24 24">
         <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z" />
@@ -474,12 +474,12 @@ const services = [
   {
     title: "Privacy Films",
     description:
-      "Stay cool with advanced sun control films. Block harmful UV rays and heat, ensuring privacy and comfort on every ride.",
+      "Stay cool with advanced sun control films. Fix car AC cooling issues by blocking harmful UV rays and heat using premium thermal shields.",
     image: "/suntekwindowfilm.png",
     detailImgTop: "/windowwash.png",
     localPitch: "Dhoop Ka Tension Khatam!",
     detailedDesc:
-      "High-quality sun control films that keep your car cool even in peak summer. Privacy bhi, cooling bhi.",
+      "High-quality sun control films that prevent sun glare cracking your leather dashboard and keep your car cool even in peak summer.",
     icon: (
       <svg className="w-full h-full fill-current" viewBox="0 0 24 24">
         <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z" />
@@ -489,12 +489,12 @@ const services = [
   {
     title: "Security Systems",
     description:
-      "Protect your car with GPS trackers and central locking. We ensure your vehicle stays safe from theft and intrusion.",
+      "Protect your car with GPS trackers, dashcams, and plug-and-play central locking. We ensure your vehicle stays safe from theft and intrusion.",
     image: "/keylessentrysystem.png",
     detailImgTop: "/key-less-entry/key-less-entry-system-1-hero.png",
     localPitch: "Chori Ka Koi Chance Nahi!",
     detailedDesc:
-      "Protect your car with trusted central locking and GPS systems. Sleep peaceful knowing your car is safe.",
+      "Protect your car with trusted central locking, canbus wiring harnesses, and GPS systems. Sleep peaceful knowing your investment is secure.",
     icon: (
       <svg className="w-full h-full fill-current" viewBox="0 0 24 24">
         <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" />
@@ -504,12 +504,12 @@ const services = [
   {
     title: "Exterior Styling",
     description:
-      "Make a statement with custom body kits and stylish alloys. We give your car a commanding and unique road presence.",
+      "Make a statement with custom aerodynamic body kits, heavy-duty rear bumper protectors, and stylish alloys.",
     image: "/tyremiddle.png",
     detailImgTop: "/carrier/carrier5-removebg-hero.png",
     localPitch: "Road Pe Sirf Aap Dikhenge!",
     detailedDesc:
-      "Carriers, bumpers, and guards that give your car a heavy-duty muscular look. Presence aisi ki sab dekhte reh jayein.",
+      "Roof luggage carriers, ABS plastic bumpers, and guards that give your SUV a heavy-duty muscular look. Presence aisi ki sab dekhte reh jayein.",
     icon: (
       <svg className="w-full h-full fill-current" viewBox="0 0 24 24">
         <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />

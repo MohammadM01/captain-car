@@ -7,7 +7,17 @@ const __dirname = path.dirname(__filename);
 
 const BASE_URL = "https://captaincarstudio.in";
 
-const routes = ["/", "/services", "/products", "/why-us", "/contact"];
+const routes = [
+  "/",
+  "/services",
+  "/products",
+  "/why-us",
+  "/guides",
+  "/guides/ppf-vs-ceramic-coating",
+  "/guides/how-to-fix-android-player-lag",
+  "/guides/legal-sun-films",
+  "/contact",
+];
 
 const generateSitemap = () => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

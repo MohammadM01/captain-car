@@ -110,6 +110,116 @@
     "type": "structured"
   },
   {
+    "source": "GuideArticle.jsx",
+    "text": "PPF vs Ceramic Coating: The Ultimate 2025 Guide for Car Owners",
+    "type": "content"
+  },
+  {
+    "source": "GuideArticle.jsx",
+    "text": "Confused between Paint Protection Film and Ceramic Coating? Learn which is best to protect your car from Indian roads.",
+    "type": "content"
+  },
+  {
+    "source": "GuideArticle.jsx",
+    "text": "February 21, 2026",
+    "type": "content"
+  },
+  {
+    "source": "GuideArticle.jsx",
+    "text": "Exterior Protection",
+    "type": "content"
+  },
+  {
+    "source": "GuideArticle.jsx",
+    "text": "How to Fix Android Car Player Lag & Hanging Issues",
+    "type": "content"
+  },
+  {
+    "source": "GuideArticle.jsx",
+    "text": "February 20, 2026",
+    "type": "content"
+  },
+  {
+    "source": "GuideArticle.jsx",
+    "text": "Infotainment Upgrades",
+    "type": "content"
+  },
+  {
+    "source": "GuideArticle.jsx",
+    "text": "Bhaiya, mera touch screen hang ho raha hai.",
+    "type": "content"
+  },
+  {
+    "source": "GuideArticle.jsx",
+    "text": "RTO Legal Sun Control Films in India: Myths vs Reality",
+    "type": "content"
+  },
+  {
+    "source": "GuideArticle.jsx",
+    "text": "Tired of AC not cooling your car? Learn about 100% legal RTO-compliant heat rejection thermal films that keep you cool without risking a fine.",
+    "type": "content"
+  },
+  {
+    "source": "GuideArticle.jsx",
+    "text": "February 18, 2026",
+    "type": "content"
+  },
+  {
+    "source": "GuideArticle.jsx",
+    "text": "Privacy & Comfort",
+    "type": "content"
+  },
+  {
+    "source": "GuideArticle.jsx",
+    "text": "s cabin can quickly feel like an oven. Unfortunately, many car owners are terrified of putting sun films on their windows due to RTO regulations and the infamous Supreme Court ban on",
+    "type": "content"
+  },
+  {
+    "source": "Guides.jsx",
+    "text": "Infotainment upgrades",
+    "type": "content"
+  },
+  {
+    "source": "Guides.jsx",
+    "text": "min-h-screen bg-black text-white pt-24 px-6 md:px-12",
+    "type": "content"
+  },
+  {
+    "source": "Guides.jsx",
+    "text": "Car Modification Guides & Tips | Captain Car Studio",
+    "type": "content"
+  },
+  {
+    "source": "Guides.jsx",
+    "text": "Read expert guides on car modification, PPF vs Ceramic Coating, Android players, and legal sun films from Captain Car Studio Bhiwandi.",
+    "type": "content"
+  },
+  {
+    "source": "Guides.jsx",
+    "text": "max-w-7xl mx-auto",
+    "type": "content"
+  },
+  {
+    "source": "Guides.jsx",
+    "text": "text-center mb-16",
+    "type": "content"
+  },
+  {
+    "source": "Guides.jsx",
+    "text": "text-4xl md:text-5xl lg:text-6xl font-black uppercase italic tracking-wider mb-6",
+    "type": "content"
+  },
+  {
+    "source": "Guides.jsx",
+    "text": ">\r\n            Deep dive into the world of premium car modifications. Learn how to\r\n            protect your paint, upgrade your car",
+    "type": "content"
+  },
+  {
+    "source": "Guides.jsx",
+    "text": "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 pb-20",
+    "type": "content"
+  },
+  {
     "source": "Home.jsx",
     "text": "Do you provide warranty on modifications?",
     "type": "content"
@@ -221,12 +331,32 @@
   },
   {
     "source": "Home.jsx",
-    "text": "Premium Car Decor & Audio",
+    "text": "Premium Car Modification & Accessories Studio",
     "type": "content"
   },
   {
     "source": "Home.jsx",
-    "text": "Transform your vehicle with Captain Car",
+    "text": "s top destination for premium car modifications, audiophile car stereo upgrades, luxury custom interiors, and 9H paint protection films.",
+    "type": "content"
+  },
+  {
+    "source": "Home.jsx",
+    "text": "premium car modification studio, best car accessories shop, custom car interior modification, best android car stereo shop, paint protection film",
+    "type": "content"
+  },
+  {
+    "source": "Home.jsx",
+    "text": "relative w-full h-screen flex flex-col items-center justify-center overflow-hidden",
+    "type": "content"
+  },
+  {
+    "source": "Home.jsx",
+    "text": "absolute inset-0 z-0",
+    "type": "content"
+  },
+  {
+    "source": "Home.jsx",
+    "text": "w-full h-full object-cover scale-105 brightness-110",
     "type": "content"
   },
   {
@@ -521,7 +651,7 @@
   },
   {
     "source": "Services.jsx",
-    "text": "Experience studio-quality sound in your car. We install high-power woofers, DSPs, and amplifiers that give you a crystal clear output with zero distortion.",
+    "text": "Experience studio-quality car audio upgrades. We install high-power under-seat active subwoofers, precision DSPs, and 4-way coaxial amplifiers that give you a crystal clear output with zero distortion.",
     "type": "content"
   },
   {
@@ -536,7 +666,7 @@
   },
   {
     "source": "Services.jsx",
-    "text": "From Nappa leather finishes to sweat-proof fabrics, our seat covers are stitched to perfection. Comfort aur style ka perfect combo.",
+    "text": "From custom diamond stitch finishes to sweat-proof fabrics, our premium leatherette seat covers are stitched to perfection. Total comfort and VIP style.",
     "type": "content"
   },
   {
@@ -556,7 +686,7 @@
   },
   {
     "source": "Services.jsx",
-    "text": "High-quality sun control films that keep your car cool even in peak summer. Privacy bhi, cooling bhi.",
+    "text": "High-quality sun control films that prevent sun glare cracking your leather dashboard and keep your car cool even in peak summer.",
     "type": "content"
   },
   {
@@ -566,7 +696,7 @@
   },
   {
     "source": "Services.jsx",
-    "text": "Protect your car with trusted central locking and GPS systems. Sleep peaceful knowing your car is safe.",
+    "text": "Protect your car with trusted central locking, canbus wiring harnesses, and GPS systems. Sleep peaceful knowing your investment is secure.",
     "type": "content"
   },
   {
@@ -576,7 +706,7 @@
   },
   {
     "source": "Services.jsx",
-    "text": "Carriers, bumpers, and guards that give your car a heavy-duty muscular look. Presence aisi ki sab dekhte reh jayein.",
+    "text": "Roof luggage carriers, ABS plastic bumpers, and guards that give your SUV a heavy-duty muscular look. Presence aisi ki sab dekhte reh jayein.",
     "type": "content"
   },
   {

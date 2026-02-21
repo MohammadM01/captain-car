@@ -12,6 +12,9 @@ const ContactUs = lazy(() => import("./Pages/ContactUs"));
 const WhyUs = lazy(() => import("./Pages/WhyUs"));
 const NotFound = lazy(() => import("./Pages/NotFound"));
 
+const Guides = lazy(() => import("./Pages/Guides"));
+const GuideArticle = lazy(() => import("./Pages/GuideArticle"));
+
 function App() {
   return (
     <HelmetProvider>
@@ -32,6 +35,8 @@ function App() {
               <Route path="/services" element={<Services />} />
               <Route path="/products" element={<Products />} />
               <Route path="/why-us" element={<WhyUs />} />
+              <Route path="/guides" element={<Guides />} />
+              <Route path="/guides/:id" element={<GuideArticle />} />
               <Route path="/contact" element={<ContactUs />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

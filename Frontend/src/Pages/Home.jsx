@@ -144,9 +144,10 @@ const Home = () => {
   return (
     <div className="bg-premium-black text-white font-sans overflow-x-hidden selection:bg-brand-red selection:text-white">
       <Seo
-        title="Premium Car Decor & Audio"
-        description="Transform your vehicle with Captain Car's premium decoration, concert-level audio, custom interiors, and tech upgrades. The #1 car modification studio in Bhiwandi."
+        title="Premium Car Modification & Accessories Studio"
+        description="India's top destination for premium car modifications, audiophile car stereo upgrades, luxury custom interiors, and 9H paint protection films."
         schema={businessSchema}
+        keywords="premium car modification studio, best car accessories shop, custom car interior modification, best android car stereo shop, paint protection film"
       />
 
       {/* ================= HERO SECTION ================= */}
@@ -199,8 +200,10 @@ const Home = () => {
               <p
                 className={`text-gray-100 text-lg md:text-xl font-bold tracking-wide transition-all duration-1000 delay-[1200ms] transform ${showBottomContent ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
               >
-                Experience the pinnacle of automotive interior design.
-                <br /> We don't just modify cars: we forge identities...
+                Experience the pinnacle of automotive customization and vehicle
+                styling.
+                <br /> We don't just add aftermarket parts: we forge
+                identities...
               </p>
             </div>
 
@@ -287,7 +290,7 @@ const Home = () => {
               <div className="absolute bottom-0 left-0 w-full h-[300px] bg-brand-red/10 blur-[120px] rounded-full pointer-events-none z-0" />
 
               <img
-                src="/contact/owner.png"
+                src="/contact-images/owner.png"
                 alt="Tanveer Farooqui - Founder"
                 className="w-full h-full object-cover relative z-0"
                 loading="lazy"
@@ -305,7 +308,7 @@ const Home = () => {
                   Tanveer <span className="text-brand-red">Farooqui</span>
                 </h3>
                 <p className="text-gray-400 text-[10px] md:text-xs font-bold uppercase tracking-[0.4em]">
-                  The Heart of Captain Car Decor
+                  The Heart of Automotive Customization
                 </p>
               </div>
 
@@ -329,30 +332,31 @@ const Home = () => {
                 <p>
                   Started by{" "}
                   <strong className="text-white">Tanveer Farooqui</strong>,
-                  Captain Car isn't just a shop; it's a place for car lovers. We
-                  have become very popular in Bhiwandi because we truly love
-                  what we do. With over 15 years of experience, Tanveer is
-                  ambitious about every project. He treats your vehicle like his
-                  own, giving it full attention to make sure the work is neat,
-                  unique, and truly professional.
+                  Captain Car isn't just a shop; it's a premium car modification
+                  studio. We have become a top destination across Maharashtra
+                  because we specialize in factory finish upgrades. With over 15
+                  years of experience, Tanveer is ambitious about every project.
+                  He treats your vehicle like his own, giving it full attention
+                  to make sure the work is neat, unique, and truly professional.
                 </p>
 
                 <p>
                   We believe your car shows your personality. Whether it is
-                  fitting premium seat covers that feel luxurious or installing
-                  a heavy sound system that booms, we focus on every single
-                  detail. We are professional in work we never rush. We take our
-                  time to ensure every fitting is perfect, giving your car that
-                  rich, classy look you always wanted.
+                  fitting luxury cream quilted diamond stitch car seat covers or
+                  installing a heavy under-seat active subwoofer system that
+                  booms, we focus on every single detail. We are professional in
+                  work we never rush. We provide custom leatherette seat
+                  upholstery and ensure every fitting is perfect, giving your
+                  car that rich, classy look.
                 </p>
 
                 <p>
-                  We always stay updated with the new trends and fashion in
-                  cars. From installing smart Android players to designing
-                  luxury interiors, our work is known for being durable and
-                  stylish. We are dedicated to quality. We don't just add
-                  accessories; we upgrade your lifestyle, making your driving
-                  experience comfortable and elite.
+                  We always stay updated with the new trends and tech. From
+                  installing OEM fit android touch screens for cars to providing
+                  high gloss paint correction and 9h ceramic coating, our work
+                  is known for being durable and stylish. We don't just add
+                  accessories; we upgrade your lifestyle, offering the ultimate
+                  premium car detailing experience.
                 </p>
 
                 <p>

@@ -29,32 +29,32 @@ const Products = () => {
       items: [
         {
           id: 5,
-          name: "Premium Brown & Black Leather Seat Cover",
+          name: "Premium Brown & Black Leather Bucket Seat Cover",
           img: "/seat cover/seatcover5-removebg-preview.png",
         },
         {
           id: 4,
-          name: "Luxury Cream Quilted Seat Cover",
+          name: "Luxury Cream Quilted Diamond Stitch Seat Cover",
           img: "/seat cover/seatcover4-removebg-preview.png",
         },
         {
           id: 1,
-          name: "Sporty Blue & Black Seat Cover",
+          name: "Sporty Blue & Black Leatherette Seat Cover",
           img: "/seat cover/seatcover1-removebg-preview.png",
         },
         {
           id: 2,
-          name: "Classic Beige & Black Leatherette Cover",
+          name: "Classic Beige & Black Factory Fit Leather Cover",
           img: "/seat cover/seatcover2-removebg-preview.png",
         },
         {
           id: 6,
-          name: "Rich Brown Leather Custom Upholstery",
+          name: "Rich Brown Leather Custom Fit Upholstery",
           img: "/seatcover6.png",
         },
         {
           id: 8,
-          name: "Premium Beige Diamond Stitch Seat Cover",
+          name: "Premium Beige Genuine Diamond Stitch Seat Cover",
           img: "/seatcover8.png",
         },
       ],
@@ -80,7 +80,7 @@ const Products = () => {
         },
         {
           id: 41,
-          name: "Premium Single DIN Bluetooth Receiver",
+          name: "Wireless Apple CarPlay Single DIN Touchscreen Player",
           img: "/car-audio-player/car-audio-1-removebg-preview.png",
         },
         {
@@ -259,27 +259,27 @@ const Products = () => {
       items: [
         {
           id: 23,
-          name: "Beige 7D Precision Mat",
+          name: "Beige 7D Floor Mats Custom Fit",
           img: "/assets/nobgfloormat/floor-mat.png",
         },
         {
           id: 32,
-          name: "Red-Black Circuit Mat",
+          name: "Red-Black Circuit 7D Custom Mat",
           img: "/assets/nobgfloormat/floor-mat2.png",
         },
         {
           id: 33,
-          name: "Stealth All-Weather Mat",
+          name: "Stealth All Weather Deep Groove Rubber Mats",
           img: "/assets/nobgfloormat/floor-mat3.png",
         },
         {
           id: 36,
-          name: "Grey Custom Artisan Mat",
+          name: "Grey Custom Artisan Anti-Slip Mat",
           img: "/assets/nobgfloormat/floor-mat4.png",
         },
         {
           id: 37,
-          name: "Heavy Duty Vulcan Mat",
+          name: "Heavy Duty Vulcan Car Floor Mats",
           img: "/assets/nobgfloormat/floor-mat5.png",
         },
       ],

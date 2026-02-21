@@ -1812,12 +1812,12 @@ export const chatData = [
         hi: "Address: Greenland Hotel ke baaju mein, Chavindra, Bhiwandi, 421302. \n[Contact Info Dekhein](/contact)",
       },
       {
-        en: "We are located at Chavindra, Bhiwandi. \nNext to Greenland Hotel.\nhttps://captaincarstudio.in/contact",
-        hi: "Hum Chavindra, Bhiwandi mein hai. \nGreenland Hotel ke paas.\nhttps://captaincarstudio.in/contact",
+        en: "We are located at Chavindra, Bhiwandi. \nNext to Greenland Hotel. \n[Contact Info Dekhein](/contact)",
+        hi: "Hum Chavindra, Bhiwandi mein hai. \nGreenland Hotel ke paas. \n[Contact Info Dekhein](/contact)",
       },
       {
-        en: "Visit us at: Next to Greenland Hotel, Chavindra, Bhiwandi, 421302.",
-        hi: "Pata: Greenland Hotel ke baaju mein, Chavindra, Bhiwandi, 421302.",
+        en: "Visit us at: Next to Greenland Hotel, Chavindra, Bhiwandi, 421302. \n[Contact Info Dekhein](/contact)",
+        hi: "Pata: Greenland Hotel ke baaju mein, Chavindra, Bhiwandi, 421302. \n[Contact Info Dekhein](/contact)",
       },
     ],
   },
@@ -1836,6 +1836,308 @@ export const chatData = [
       {
         en: "Message us for quotes. +91 9822119832",
         hi: "Rate puchne ke liye message karo. +91 9822119832",
+      },
+    ],
+  },
+
+  // ==========================================
+  // SEO KNOWLEDGE EXPANSION: PROBLEM-BASED & INFORMATIONAL INTENTS
+  // ==========================================
+
+  // --- AUDIO / INFOTAINMENT PROBLEMS ---
+  {
+    id: "seo_car_player_lagging",
+    keywords: ["lagging", "hang", "slow", "android", "player", "hanging"],
+    responses: [
+      {
+        en: "If your Android car player is lagging, it usually means low RAM (1GB/2GB) or an outdated processor. We upgrade to 4GB/6GB Octa-core systems for zero lag.",
+        hi: "Agar aapka Android player hang ho raha hai, toh RAM kam hogi (1GB/2GB). Hum 4GB/6GB Octa-core systems lagate hai jo bilkul smooth chalte hai.",
+      },
+    ],
+  },
+  {
+    id: "seo_apple_carplay_disconnecting",
+    keywords: ["carplay", "disconnecting", "apple", "iphone", "dropping"],
+    responses: [
+      {
+        en: "Wireless Apple CarPlay dropping out? It's often a firmware issue or weak Wi-Fi antenna in the unit. Visit us for a system update or upgrade to a premium Sony/Pioneer system.",
+        hi: "Apple CarPlay bar bar disconnect ho raha hai? Yeh purane firmware ya weak antenna ka issue hota hai. Humare paas aaiye update ke liye ya naya Sony/Pioneer lagwaiye.",
+      },
+    ],
+  },
+  {
+    id: "seo_speaker_distortion",
+    keywords: ["crackle", "distortion", "speaker", "phat", "noise", "tearing"],
+    responses: [
+      {
+        en: "Speakers crackling at high volume? Your stock speakers might be blown, or the amplifier is clipping. We can install JBL or Infinity coaxial speakers with a proper DSP.",
+        hi: "Tez aawaz pe speaker phat rahe hai? Speaker kharab ho sakte hai ya amplifier weak hai. Hum JBL ya Infinity ke original speakers DSP ke sath lagate hai.",
+      },
+    ],
+  },
+  {
+    id: "seo_woofer_no_bass",
+    keywords: ["bass", "woofer", "subwoofer", "punch", "bump"],
+    responses: [
+      {
+        en: "Not feeling the bass? You either need an Under-Seat Active Subwoofer (saves space) or a dedicated Mono-Block Amplifier powering a boot enclosure.",
+        hi: "Bass nahi aa raha? Aapko gaadi mein Under-Seat Active Subwoofer (space bachata hai) ya dickey mein bada woofer with Mono amplifier lagwana padega.",
+      },
+    ],
+  },
+
+  // --- EXTERIOR / PROTECTION PROBLEMS ---
+  {
+    id: "seo_ppf_vs_ceramic",
+    keywords: ["ppf", "ceramic", "coating", "difference", "which is better"],
+    responses: [
+      {
+        en: "Ceramic Coating makes the car glossy and easy to wash, but won't stop scratches. PPF (Paint Protection Film) is a thick layer that actually heals scratches and prevents stone chips. PPF is ultimate protection.",
+        hi: "Ceramic Coating se gaadi chamakti hai par scratches nahi rukte. PPF ek moti film hoti hai jo scratches aur patthar lagne se gaadi ko bachati hai.",
+      },
+    ],
+  },
+  {
+    id: "seo_car_scratch_removal",
+    keywords: ["scratch", "paint", "correction", "rubbing", "polishing"],
+    responses: [
+      {
+        en: "Swirl marks and minor scratches can be permanently removed with our 3-step Paint Correction process, restoring your car's factory finish.",
+        hi: "Minor scratches aur swirl marks humari 3-step Paint Correction se bilkul saaf ho jate hai, gaadi nayi jaisi ho jayegi.",
+      },
+    ],
+  },
+  {
+    id: "seo_headlight_yellow",
+    keywords: ["yellow", "headlight", "foggy", "murky", "dull", "bright"],
+    responses: [
+      {
+        en: "Yellow, foggy headlights reduce night vision by 60%. We offer professional headlight restoration and high-power 300W Bi-Xenon or LED upgrades.",
+        hi: "Peele headlights se raat ka vision 60% kam hota hai. Hum headlights clear karke usme heavy 300W LED ya Bi-Xenon lagate hai.",
+      },
+    ],
+  },
+  {
+    id: "seo_sun_film_legal",
+    keywords: ["legal", "rto", "police", "tint", "sun film", "challan", "fine"],
+    responses: [
+      {
+        en: "Dark black films grab RTO fines. We install legal RTO-approved heat-rejection clear films (like Garware IceCool) that block 99% UV rays and heat without being dark.",
+        hi: "Kaali film pe challan hota hai. Hum RTO-approved clear film (jaise Garware IceCool) lagate hai, jo dikhne mein clear hoti hai par heat aur UV pura rok leti hai.",
+      },
+    ],
+  },
+
+  // --- INTERIOR & COMFORT ---
+  {
+    id: "seo_ac_not_cooling",
+    keywords: ["ac", "cooling", "hot", "summer", "heat", "glass"],
+    responses: [
+      {
+        en: "If your car AC struggles in summer, your windows are acting like a greenhouse. Applying premium thermal sun control film reduces cabin temperature by up to 15 degrees.",
+        hi: "Agar garmi mein AC kaam nahi kar raha, toh kaanch se bohot dhoop aa rahi hai. Premium sun control film lagane se cabin 15 degree tak thanda ho jata hai.",
+      },
+    ],
+  },
+  {
+    id: "seo_seat_sweating",
+    keywords: ["sweat", "sweating", "seat", "hot", "leather", "breathable"],
+    responses: [
+      {
+        en: "Cheap rexine seat covers cause heavy back sweating. We customize seat covers using perforated, breathable Nappa Leatherette for maximum comfort on long drives.",
+        hi: "Saste seat cover pe bohot pasina aata hai. Hum breathable Nappa Leatherette use karte hai jisme chhed (perforations) hote hai, long drive pe aaram ke liye.",
+      },
+    ],
+  },
+  {
+    id: "seo_car_floor_smell",
+    keywords: ["smell", "odor", "stink", "floor", "mat", "wet", "water"],
+    responses: [
+      {
+        en: "Foul smells often come from water trapped under basic fabric mats. Upgrade to 7D Custom Fit Mats—they are waterproof, trap dirt, and are extremely easy to clean.",
+        hi: "Gaadi ki gandi badboo aksar geele mats ki wajah se aati hai. 7D waterproof mats lagwaiye, isme paani andar nahi jata aur saaf karna bohot aasaan hai.",
+      },
+    ],
+  },
+  {
+    id: "seo_ambient_light_battery",
+    keywords: ["ambient", "light", "battery", "drain", "wiring", "warranty"],
+    responses: [
+      {
+        en: "Worried about ambient lights draining your battery or voiding the warranty? We use coupler-to-coupler wiring (no wire cutting) and LED strips that consume highly minimal power.",
+        hi: "Ambient light se battery kharab ya warranty void hone ka darr hai? Hum bina wire kaate (coupler-to-coupler) fitting karte hai. LEDs bohot kam power khati hai.",
+      },
+    ],
+  },
+
+  // --- SECURITY ISSUES ---
+  {
+    id: "seo_central_locking_broken",
+    keywords: ["remote", "lock", "key", "central", "locking", "door"],
+    responses: [
+      {
+        en: "Remote locking not working? It could be an actuator failure or a blown fuse. We install complete plug-and-play central locking systems with a 3-year warranty.",
+        hi: "Remote lock nahi chal raha? Motor (actuator) kharab ho sakti hai. Hum naya plug-and-play central locking lagate hai jisme 3 saal ki warranty aati hai.",
+      },
+    ],
+  },
+  {
+    id: "seo_car_tracking",
+    keywords: ["track", "gps", "stolen", "theft", "location", "app"],
+    responses: [
+      {
+        en: "Protect your car from theft with our hidden GPS trackers. You can track exact locations live from your phone and even cut off the engine remotely via the app.",
+        hi: "Chori se bachne ke liye hidden GPS tracker lagwaiye. Phone pe live location dekhein aur zaroorat padne pe app se hi engine band kardijiye.",
+      },
+    ],
+  },
+  {
+    id: "seo_dashcam_memory",
+    keywords: [
+      "dashcam",
+      "camera",
+      "recording",
+      "accident",
+      "proof",
+      "full",
+      "memory",
+    ],
+    responses: [
+      {
+        en: "Dashcam memory full? Modern dashcams feature 'Loop Recording' which automatically overwrites the oldest footage. We install dual-channel (front + rear) dashcams for full accident proof.",
+        hi: "Dashcam full ho gaya? Naye dashcams mein 'Loop Recording' hoti hai (purana video khud delete ho jata hai). Hum front aur rear dono camera lagate hai safety proof ke liye.",
+      },
+    ],
+  },
+  {
+    id: "seo_parking_camera_blurry",
+    keywords: ["parking", "camera", "blurry", "reverse", "night", "dark"],
+    responses: [
+      {
+        en: "Blurry reverse camera at night? Factory cameras lack night vision. We upgrade to AHD (Analog High Definition) moving-line night vision cameras for crystal clear reverse parking.",
+        hi: "Raat mein reverse camera dhundla dikhta hai? Hum AHD Night Vision camera lagate hai jisse andhere mein bhi clear dikhta hai aur parking line bhi move hoti hai.",
+      },
+    ],
+  },
+
+  // --- EXTERIOR STYLING / TOURING ---
+  {
+    id: "seo_alloy_wheel_size",
+    keywords: ["alloy", "rims", "size", "bigger", "upsize", "tyre"],
+    responses: [
+      {
+        en: "Upsizing alloy wheels looks great but reduces ride comfort if tyres become too thin. We calculate the perfect upsize ratio so your speedometer and handling remain perfect.",
+        hi: "Bade bade alloy wheels acche lagte hai par comfort kam kar sakte hai. Hum perfect size calculate karte hai taaki gaadi ka balance aur meter dono perfect rahein.",
+      },
+    ],
+  },
+  {
+    id: "seo_roof_carrier_noise",
+    keywords: ["carrier", "roof", "rack", "noise", "wind", "whistle", "road"],
+    responses: [
+      {
+        en: "Roof carriers whistling at highway speeds? That's wind drag. We install aerodynamically designed aluminum luggage carriers that eliminate wind noise and save fuel.",
+        hi: "Highway pe roof carrier se aawaz aati hai? Hum aerodynamic design wale aluminum carrier lagate hai jisse hawa nahi takrati aur aawaz band ho jati hai.",
+      },
+    ],
+  },
+  {
+    id: "seo_bumper_guard_illegal",
+    keywords: ["bumper", "guard", "bull", "bar", "legal", "fine", "challan"],
+    responses: [
+      {
+        en: "Steel bullbars on the front bumper are illegal and trigger airbag sensors incorrectly. We install RTO-compliant tough ABS plastic bumper protectors which look rugged and stay legal.",
+        hi: "Aage lohe ka bullbar lagana illegal hai aur isse airbags nahi khulte. Hum ABS plastic ke legal bumper protectors lagate hai jo heavy look bhi dete hai.",
+      },
+    ],
+  },
+  {
+    id: "seo_car_detailing",
+    keywords: [
+      "detail",
+      "detailing",
+      "washing",
+      "interior",
+      "cleaning",
+      "dirty",
+      "stain",
+    ],
+    responses: [
+      {
+        en: "Regular washing isn't detailing. Interior car detailing involves steam cleaning AC vents, extracting seat stains, and sanitizing the cabin. We bring the 'new car smell' back.",
+        hi: "Sada wash aur detailing mein farak hai. Interior detailing mein hum steam se AC vents saaf karte hai aur seat ke daag nikal kar nayi gaadi jaisi mehek laate hai.",
+      },
+    ],
+  },
+  {
+    id: "seo_denting_painting",
+    keywords: [
+      "dent",
+      "paint",
+      "scratch",
+      "accident",
+      "bumper",
+      "repair",
+      "painting",
+    ],
+    responses: [
+      {
+        en: "Big dent or bumper damage? We offer professional dent pulling and exact color-match booth painting so no one will ever know it was damaged.",
+        hi: "Bada dent lag gaya ya paint utar gaya? Hum professional denting aur computer color-match painting karte hai taki damage ka naam-o-nishan na rahe.",
+      },
+    ],
+  },
+  {
+    id: "seo_steering_leather",
+    keywords: ["steering", "cover", "leather", "slip", "grip", "slippery"],
+    responses: [
+      {
+        en: "Slippery steering wheel? Slip-on covers are dangerous. We do precision OEM-style hand-stitched leather steering wrap for perfect grip and luxury feel.",
+        hi: "Steering pe haath slip ho raha hai? Saste slip-on cover dangerous hote hai. Hum hath se silai wala OEM leather wrap banate hai jiska grip ekdum perfect hai.",
+      },
+    ],
+  },
+  {
+    id: "seo_damping_sheets",
+    keywords: [
+      "damping",
+      "soundproof",
+      "noise",
+      "road noise",
+      "vibration",
+      "door rattling",
+    ],
+    responses: [
+      {
+        en: "Too much road noise or doors rattling with high bass? We install premium multi-layer Damping sheets inside doors to block outside noise and enhance audio quality by 40%.",
+        hi: "Bahar ka shor aata hai ya bass se darwaze bajte hai? Hum darwazon mein premium Damping sheets lagate hai jisse aawaz 40% tak badh jati hai aur gaadi luxury lagti hai.",
+      },
+    ],
+  },
+  {
+    id: "seo_car_perfume",
+    keywords: [
+      "perfume",
+      "smell",
+      "fragrance",
+      "gel",
+      "best perfume",
+      "freshner",
+    ],
+    responses: [
+      {
+        en: "Looking for a lasting car perfume that doesn't cause headaches? We stock premium organic gel fragrances like My Shaldan and Areon Ken that last for up to 60 days.",
+        hi: "Aisa perfume chahiye jiski fragrance achchi ho aur sar dard na kare? Humare paas organic gel perfumes hai jaise My Shaldan aur Areon Ken jo 60 din chalte hai.",
+      },
+    ],
+  },
+  {
+    id: "seo_fog_lamp",
+    keywords: ["fog", "lamp", "light", "rain", "visibility", "night"],
+    responses: [
+      {
+        en: "Poor visibility in rain or fog? Stock headlights reflect off water droplets. We install yellow-tinted high penetration projecting fog lamps to cut through bad weather.",
+        hi: "Baarish ya fog mein kuch nahi dikhta? Hum yellow tint wale projector fog lamps lagate hai jo seedha rasta dikhate hai kharab mausam mein bhi.",
       },
     ],
   },
