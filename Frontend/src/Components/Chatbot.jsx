@@ -503,15 +503,15 @@ const Chatbot = () => {
       {!isOpen && (
         <button
           onClick={toggleChat}
-          className="w-16 h-16 bg-[#E31E24] rounded-full shadow-[0_0_30px_rgba(227,30,36,0.6)] flex items-center justify-center hover:scale-110 transition-transform duration-300 group z-100 relative animate-bounce-slow"
+          className="w-12 h-12 bg-[#E31E24] rounded-full shadow-[0_0_20px_rgba(227,30,36,0.6)] flex items-center justify-center hover:scale-110 transition-transform duration-300 group z-100 relative animate-bounce-slow"
         >
           <div className="absolute inset-0 bg-white rounded-full opacity-0 group-hover:animate-ping duration-1000"></div>
           <img
             src="/assets/captain/datamatex-ai-bot.png"
             alt="Bot"
-            className="w-12 h-12 rounded-full object-cover"
+            className="w-10 h-10 rounded-full object-cover"
           />
-          <span className="absolute top-0 right-0 w-4 h-4 bg-green-500 border-2 border-[#0a0a0a] rounded-full animate-pulse"></span>
+          <span className="absolute top-0 right-0 w-3 h-3 bg-green-500 border-2 border-[#0a0a0a] rounded-full animate-pulse"></span>
         </button>
       )}
     </div>
