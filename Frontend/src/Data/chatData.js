@@ -1572,6 +1572,7 @@ export const chatData = [
   {
     id: "services_overview",
     keywords: [
+      "services",
       "what services",
       "services list",
       "service detail",
@@ -1585,16 +1586,16 @@ export const chatData = [
     ],
     responses: [
       {
-        en: "We are experts in: \n🔊 Concert Audio \n💺 Custom Interiors \n❄️ Sun Control Films \n🛡️ Paint Protection (PPF) \n🚨 Security Systems.",
-        hi: "Hum experts hai: \n🔊 Concert Audio \n💺 Custom Interiors \n❄️ Sun Control Films \n🛡️ Paint Protection (PPF) \n🚨 Security Systems.",
+        en: "We are experts in: \n🔊 Concert Audio \n💺 Custom Interiors \n❄️ Sun Control Films \n🛡️ Paint Protection (PPF) \n🚨 Security Systems.\n\nCheck out all our services: [Our Services](https://captaincarstudio.in/services)",
+        hi: "Hum experts hai: \n🔊 Concert Audio \n💺 Custom Interiors \n❄️ Sun Control Films \n🛡️ Paint Protection (PPF) \n🚨 Security Systems.\n\nHamari sabhi services yaha dekhein: [Hamari Services](https://captaincarstudio.in/services)",
       },
       {
-        en: "We also do professional Detailing, Ceramic Coating, and full car restoration.",
-        hi: "Hum professional Detailing, Ceramic Coating aur puri car restoration bhi karte hai.",
+        en: "We also do professional Detailing, Ceramic Coating, and full car restoration.\nSee more here: [Services Page](https://captaincarstudio.in/services)",
+        hi: "Hum professional Detailing, Ceramic Coating aur puri car restoration bhi karte hai. Zyada jaankaari ke liye yaha check kare: [Services Page](https://captaincarstudio.in/services)",
       },
       {
-        en: "Visit us for a consultation. We will suggest the best upgrades for your car model.",
-        hi: "Ek baar aake milo. Hum aapki gaadi ke hisaab se best upgrade batayenge.",
+        en: "Visit us for a consultation. We will suggest the best upgrades for your car model. Explore our work: [Captain Car Services](https://captaincarstudio.in/services)",
+        hi: "Ek baar aake milo. Hum aapki gaadi ke hisaab se best upgrade batayenge. Hamara kaam yaha dekhein: [Captain Car Services](https://captaincarstudio.in/services)",
       },
     ],
   },

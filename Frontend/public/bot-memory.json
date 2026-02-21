@@ -1,157 +1,97 @@
 [
   {
     "source": "ContactUs.jsx",
-    "text": ",\r\n            subtitle:",
+    "text": "Contact Captain Car Studio",
     "type": "content"
   },
   {
     "source": "ContactUs.jsx",
-    "text": ",\r\n            value:",
+    "text": "Contact information for Captain Car Studio, including phone numbers, email, and address in Bhiwandi.",
     "type": "content"
   },
   {
     "source": "ContactUs.jsx",
-    "text": ",\r\n            subValue:",
+    "text": ",\r\n      name:",
     "type": "content"
   },
   {
     "source": "ContactUs.jsx",
-    "text": ",\r\n            color:",
+    "text": ",\r\n      image:",
     "type": "content"
   },
   {
     "source": "ContactUs.jsx",
-    "text": ",\r\n            href:",
+    "text": ",\r\n      telephone:",
     "type": "content"
   },
   {
     "source": "ContactUs.jsx",
-    "text": ">\r\n                            Have a vision for your ride? Let",
+    "text": ",\r\n        streetAddress:",
     "type": "content"
   },
   {
     "source": "ContactUs.jsx",
-    "text": "grid grid-cols-1 lg:grid-cols-12 gap-16 items-start",
+    "text": ",\r\n        addressLocality:",
     "type": "content"
   },
   {
     "source": "ContactUs.jsx",
-    "text": "lg:col-span-5 space-y-8",
+    "text": ",\r\n        addressRegion:",
     "type": "content"
   },
   {
     "source": "ContactUs.jsx",
-    "text": "text-xs font-black uppercase tracking-widest text-white group-hover:text-[#E31E24] transition-colors",
+    "text": ",\r\n        postalCode:",
     "type": "content"
   },
   {
     "source": "ContactUs.jsx",
-    "text": "text-xs font-black uppercase tracking-widest text-white group-hover:text-[#FF0000] transition-colors",
+    "text": ",\r\n        addressCountry:",
     "type": "content"
   },
   {
     "source": "ContactUs.jsx",
-    "text": "text-3xl font-black text-white uppercase italic mb-4",
+    "text": ",\r\n        ],\r\n        opens:",
     "type": "content"
   },
   {
     "source": "ContactUs.jsx",
-    "text": "text-gray-400 text-lg",
+    "text": ",\r\n        closes:",
+    "type": "content"
+  },
+  {
+    "source": "ContactUs.jsx",
+    "text": ",\r\n      subtitle:",
+    "type": "content"
+  },
+  {
+    "source": "ContactUs.jsx",
+    "text": ",\r\n      value:",
+    "type": "content"
+  },
+  {
+    "source": "ContactUs.jsx",
+    "text": ",\r\n      subValue:",
+    "type": "content"
+  },
+  {
+    "source": "ContactUs.jsx",
+    "text": ",\r\n      color:",
+    "type": "content"
+  },
+  {
+    "source": "ContactUs.jsx",
+    "text": ",\r\n      href:",
+    "type": "content"
+  },
+  {
+    "source": "ContactUs.jsx",
+    "text": ">\r\n              Have a vision for your ride? Let",
     "type": "content"
   },
   {
     "source": "ContactUs.jsx",
     "text": "inline-block mb-2",
-    "type": "content"
-  },
-  {
-    "source": "ContactUs.jsx",
-    "text": "h-16 w-auto object-contain",
-    "type": "content"
-  },
-  {
-    "source": "ContactUs.jsx",
-    "text": "text-gray-400 text-xs font-bold uppercase tracking-[0.2em] mb-6",
-    "type": "content"
-  },
-  {
-    "source": "ContactUs.jsx",
-    "text": "flex gap-4 mt-6",
-    "type": "content"
-  },
-  {
-    "source": "ContactUs.jsx",
-    "text": "noopener noreferrer",
-    "type": "content"
-  },
-  {
-    "source": "ContactUs.jsx",
-    "text": "w-6 h-6 fill-current",
-    "type": "content"
-  },
-  {
-    "source": "ContactUs.jsx",
-    "text": "w-5 h-5 fill-current",
-    "type": "content"
-  },
-  {
-    "source": "ContactUs.jsx",
-    "text": "font-bold uppercase tracking-wider text-xs text-[#25D366] group-hover:text-black",
-    "type": "content"
-  },
-  {
-    "source": "ContactUs.jsx",
-    "text": "text-[#E31E24] font-bold uppercase tracking-widest mb-6",
-    "type": "content"
-  },
-  {
-    "source": "ContactUs.jsx",
-    "text": "space-y-4 text-gray-400 font-medium",
-    "type": "content"
-  },
-  {
-    "source": "ContactUs.jsx",
-    "text": "hover:text-white transition-colors flex items-center gap-2",
-    "type": "content"
-  },
-  {
-    "source": "ContactUs.jsx",
-    "text": "text-white font-bold",
-    "type": "content"
-  },
-  {
-    "source": "ContactUs.jsx",
-    "text": "text-xl text-[#E31E24] font-black",
-    "type": "content"
-  },
-  {
-    "source": "ContactUs.jsx",
-    "text": "flex items-center gap-4 group",
-    "type": "content"
-  },
-  {
-    "source": "ContactUs.jsx",
-    "text": "text-2xl text-[#E31E24] group-hover:scale-110 transition-transform",
-    "type": "content"
-  },
-  {
-    "source": "ContactUs.jsx",
-    "text": "flex flex-col items-center gap-1",
-    "type": "content"
-  },
-  {
-    "source": "ContactUs.jsx",
-    "text": "w-12 h-auto object-contain hover:scale-110 transition-all duration-300",
-    "type": "content"
-  },
-  {
-    "source": "ContactUs.jsx",
-    "text": "font-bold text-[10px]",
-    "type": "content"
-  },
-  {
-    "source": "ContactUs.jsx",
-    "text": "hover:text-white transition-colors font-black",
     "type": "content"
   },
   {
@@ -206,17 +146,27 @@
   },
   {
     "source": "Home.jsx",
-    "text": ",\r\n            desc:",
+    "text": ",\r\n      desc:",
     "type": "content"
   },
   {
     "source": "Home.jsx",
-    "text": ",\r\n            img:",
+    "text": "Premium Interiors",
     "type": "content"
   },
   {
     "source": "Home.jsx",
-    "text": ",\r\n            link:",
+    "text": "Luxury meets comfort. Hand-crafted Nappa leather seat covers and ergonomic fittings that transform your cabin into a first-class lounge.",
+    "type": "content"
+  },
+  {
+    "source": "Home.jsx",
+    "text": "Exterior Styling",
+    "type": "content"
+  },
+  {
+    "source": "Home.jsx",
+    "text": "Command the road with presence. Custom body kits, premium alloy wheels, and professional chrome deletions that give your vehicle a distinct, aggressive edge.",
     "type": "content"
   },
   {
@@ -226,42 +176,57 @@
   },
   {
     "source": "Home.jsx",
-    "text": "Next to Greenland Hotel, Chavindra",
+    "text": ",\r\n      streetAddress:",
     "type": "content"
   },
   {
     "source": "Home.jsx",
-    "text": ": 19.2741,",
+    "text": ",\r\n      addressLocality:",
     "type": "content"
   },
   {
     "source": "Home.jsx",
-    "text": ": 73.0586\r\n        },",
+    "text": ",\r\n      addressRegion:",
     "type": "content"
   },
   {
     "source": "Home.jsx",
-    "text": ": [",
+    "text": ",\r\n      postalCode:",
     "type": "content"
   },
   {
     "source": "Home.jsx",
-    "text": "s premium decoration, concert-level audio, custom interiors, and tech upgrades. The #1 car modification studio in Bhiwandi.",
+    "text": ",\r\n      addressCountry:",
     "type": "content"
   },
   {
     "source": "Home.jsx",
-    "text": "relative w-full h-screen flex flex-col items-center justify-center overflow-hidden",
+    "text": ",\r\n      ],\r\n      opens:",
     "type": "content"
   },
   {
     "source": "Home.jsx",
-    "text": "absolute inset-0 z-0",
+    "text": ",\r\n      closes:",
     "type": "content"
   },
   {
     "source": "Home.jsx",
-    "text": "w-full h-full object-cover scale-105 brightness-110",
+    "text": ",\r\n    },\r\n    sameAs: [",
+    "type": "content"
+  },
+  {
+    "source": "Home.jsx",
+    "text": "bg-premium-black text-white font-sans overflow-x-hidden selection:bg-brand-red selection:text-white",
+    "type": "content"
+  },
+  {
+    "source": "Home.jsx",
+    "text": "Premium Car Decor & Audio",
+    "type": "content"
+  },
+  {
+    "source": "Home.jsx",
+    "text": "Transform your vehicle with Captain Car",
     "type": "content"
   },
   {
@@ -301,27 +266,22 @@
   },
   {
     "source": "Home.jsx",
-    "text": "relative py-24 px-6 bg-black overflow-hidden",
+    "text": "max-w-7xl mx-auto px-6",
     "type": "content"
   },
   {
     "source": "Home.jsx",
-    "text": "max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center",
+    "text": ",\r\n                title:",
     "type": "content"
   },
   {
     "source": "Home.jsx",
-    "text": "bg-transparent border border-white text-white hover:bg-white hover:text-black px-8 py-3 rounded-full uppercase font-bold tracking-widest transition-all",
+    "text": ",\r\n                desc:",
     "type": "content"
   },
   {
     "source": "Home.jsx",
-    "text": ",\r\n                                title:",
-    "type": "content"
-  },
-  {
-    "source": "Home.jsx",
-    "text": ",\r\n                                desc:",
+    "text": ",\r\n                      src:",
     "type": "content"
   },
   {
@@ -332,16 +292,6 @@
   {
     "source": "Home.jsx",
     "text": "h-16 md:h-24 w-auto object-contain brightness-0 invert opacity-100 drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]",
-    "type": "content"
-  },
-  {
-    "source": "Home.jsx",
-    "text": "py-12 bg-black relative",
-    "type": "content"
-  },
-  {
-    "source": "Home.jsx",
-    "text": "max-w-7xl w-full mx-auto px-6 mb-8 flex items-end justify-between",
     "type": "content"
   },
   {
@@ -362,11 +312,6 @@
   {
     "source": "Home.jsx",
     "text": "bg-[#E31E24] border-[#E31E24] rotate-45",
-    "type": "content"
-  },
-  {
-    "source": "Home.jsx",
-    "text": "max-h-48 opacity-100",
     "type": "content"
   },
   {
@@ -396,17 +341,7 @@
   },
   {
     "source": "Home.jsx",
-    "text": "Premium Interiors",
-    "type": "structured"
-  },
-  {
-    "source": "Home.jsx",
     "text": "Tech Upgrades",
-    "type": "structured"
-  },
-  {
-    "source": "Home.jsx",
-    "text": "Exterior Styling",
     "type": "structured"
   },
   {
@@ -436,67 +371,12 @@
   },
   {
     "source": "NotFound.jsx",
-    "text": ">\r\n                    The page you are looking for seems to have taken a different route.\r\n                    Let",
+    "text": ">\r\n          The page you are looking for seems to have taken a different route.\r\n          Let",
     "type": "content"
   },
   {
     "source": "Products.jsx",
-    "text": ",\r\n            id:",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Luxury Cream Quilted Seat Cover",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Sporty Blue & Black Seat Cover",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Classic Beige & Black Leatherette Cover",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Rich Brown Leather Custom Upholstery",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Premium Beige Diamond Stitch Seat Cover",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Audio & Video Hubs",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Wide Dynamic Dashboard",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "OEM Intelligent Interface",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Premium Single DIN Bluetooth Receiver",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Sony Style Single DIN Media Player",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Standard Single DIN MP3 Player",
+    "text": ",\r\n          img:",
     "type": "content"
   },
   {
@@ -531,181 +411,6 @@
   },
   {
     "source": "Products.jsx",
-    "text": "Pioneer TS Series Oval Speakers",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "JBL Coaxial Car Speakers",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "4-inch Dashboard Speakers",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Ampere Audio AA-8K 8000W Mono Block Amplifier",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Blaupunkt ICx 402 4-Way Coaxial Speakers",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Infinity REF-6532EX Reference 6.5 Coaxial",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "JBL Car Speakers",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Pioneer TS-A1671F 6.5 3-Way Coaxial",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Sony 3-Way Mica Reinforced Speakers",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Under-Seat Active Subwoofer 850W",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Pioneer DEQ-S1000A DSP",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Armor & Carriers",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Heavy Duty Front Bumper Guard",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Rear Steel Bumper Protector",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Custom Painted Front Bumpers",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "ABS Front Bumper Guard",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Wheel Precision Caps",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "PRIGAN 16 Inch Matte Black Wheel Cover",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Favmoto Blue Color",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Sport Ring Velocity",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Matte Black Stealth",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Silver Star Radiant",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Floor Architecture",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Red-Black Circuit Mat",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Stealth All-Weather Mat",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Grey Custom Artisan Mat",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Heavy Duty Vulcan Mat",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Elite Air Fragrances",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Areon Ken Gel Fragrance",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Godrej Aer Twist",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Aromahpure Hanging Car Perfume - Musk",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Lavender Lush Car Diffuser",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Aromahpure Hanging Pod - Lavender",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Premium Sandalwood Grain Perfume",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Sun Control & Glass",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
     "text": "Precision Window Clarity",
     "type": "content"
   },
@@ -721,52 +426,47 @@
   },
   {
     "source": "Products.jsx",
-    "text": "Cool White 200W Hyper Beam",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Hyundai 222W Alpha 1 LED",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "LIU HJG 300W H4 LED Headlight",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Osram H4H19 LED Bulb 50W",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "IPHCAR M617 Bi-Xenon Fog Lamp",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Electronics & Accessories",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
-    "text": "Car USB Charging Hubs",
-    "type": "content"
-  },
-  {
-    "source": "Products.jsx",
     "text": "RCA Audio Cable",
     "type": "content"
   },
   {
     "source": "Products.jsx",
-    "text": "bg-premium-black text-white font-sans overflow-x-hidden selection:bg-brand-red selection:text-white",
-    "type": "content"
+    "text": "Seat Covers",
+    "type": "structured"
   },
   {
     "source": "Products.jsx",
-    "text": "Seat Covers",
+    "text": "Audio & Video Hubs",
+    "type": "structured"
+  },
+  {
+    "source": "Products.jsx",
+    "text": "Armor & Carriers",
+    "type": "structured"
+  },
+  {
+    "source": "Products.jsx",
+    "text": "Wheel Precision Caps",
+    "type": "structured"
+  },
+  {
+    "source": "Products.jsx",
+    "text": "Floor Architecture",
+    "type": "structured"
+  },
+  {
+    "source": "Products.jsx",
+    "text": "Elite Air Fragrances",
+    "type": "structured"
+  },
+  {
+    "source": "Products.jsx",
+    "text": "Sun Control & Glass",
+    "type": "structured"
+  },
+  {
+    "source": "Products.jsx",
+    "text": "Electronics & Accessories",
     "type": "structured"
   },
   {
@@ -776,22 +476,22 @@
   },
   {
     "source": "Services.jsx",
-    "text": ", backgroundSize:",
+    "text": ",\r\n          backgroundSize:",
     "type": "content"
   },
   {
     "source": "Services.jsx",
-    "text": ", backgroundPosition:",
+    "text": ",\r\n          backgroundPosition:",
     "type": "content"
   },
   {
     "source": "Services.jsx",
-    "text": ", backgroundRepeat:",
+    "text": ",\r\n          backgroundRepeat:",
     "type": "content"
   },
   {
     "source": "Services.jsx",
-    "text": ">\r\n                            We don",
+    "text": ">\r\n              We don",
     "type": "content"
   },
   {
@@ -801,132 +501,82 @@
   },
   {
     "source": "Services.jsx",
-    "text": ">\r\n                            The Captain",
+    "text": ">\r\n              The Captain",
     "type": "content"
   },
   {
     "source": "Services.jsx",
-    "text": "We analyze your vehicle and understand your specific needs before recommending the best upgrades.",
+    "text": ",\r\n                icon:",
     "type": "content"
   },
   {
     "source": "Services.jsx",
-    "text": "Our certified technicians ensure factory-finish installation with zero wire cutting or warranty voiding.",
+    "text": ",\r\n    description:",
     "type": "content"
   },
   {
     "source": "Services.jsx",
-    "text": "Every upgrade goes through a rigorous testing phase to ensure flawless performance and longevity.",
+    "text": "Boss Bass, Pura Hall Hila Denge!",
     "type": "content"
   },
   {
     "source": "Services.jsx",
-    "text": "hidden md:block text-[#E31E24] font-bold uppercase tracking-widest text-[10px] border-b border-[#E31E24]",
+    "text": "Experience studio-quality sound in your car. We install high-power woofers, DSPs, and amplifiers that give you a crystal clear output with zero distortion.",
     "type": "content"
   },
   {
     "source": "Services.jsx",
-    "text": "grid grid-cols-2 md:grid-cols-4 gap-4 h-[500px] md:h-[600px]",
+    "text": "w-full h-full fill-current",
     "type": "content"
   },
   {
     "source": "Services.jsx",
-    "text": "col-span-2 row-span-2 h-full",
+    "text": "Interiors Jo Dil Jeet Le!",
     "type": "content"
   },
   {
     "source": "Services.jsx",
-    "text": "w-full h-full rounded-3xl overflow-hidden relative group",
+    "text": "From Nappa leather finishes to sweat-proof fabrics, our seat covers are stitched to perfection. Comfort aur style ka perfect combo.",
     "type": "content"
   },
   {
     "source": "Services.jsx",
-    "text": "Premium Car Interior Showcase - Custom Seat Covers",
+    "text": ",\r\n    localPitch:",
     "type": "content"
   },
   {
     "source": "Services.jsx",
-    "text": "w-full h-full object-contain bg-[#111]",
+    "text": ",\r\n    detailedDesc:",
     "type": "content"
   },
   {
     "source": "Services.jsx",
-    "text": "text-white font-bold uppercase",
+    "text": "Dhoop Ka Tension Khatam!",
     "type": "content"
   },
   {
     "source": "Services.jsx",
-    "text": "Sun Control Film Installation Showcase",
+    "text": "High-quality sun control films that keep your car cool even in peak summer. Privacy bhi, cooling bhi.",
     "type": "content"
   },
   {
     "source": "Services.jsx",
-    "text": "w-full h-full object-cover",
+    "text": "Chori Ka Koi Chance Nahi!",
     "type": "content"
   },
   {
     "source": "Services.jsx",
-    "text": "fixed inset-0 z-[1000] flex items-center justify-center p-4",
+    "text": "Protect your car with trusted central locking and GPS systems. Sleep peaceful knowing your car is safe.",
     "type": "content"
   },
   {
     "source": "Services.jsx",
-    "text": "relative h-60 md:h-72 w-full bg-[#151515] flex items-center justify-center overflow-hidden",
+    "text": "Road Pe Sirf Aap Dikhenge!",
     "type": "content"
   },
   {
     "source": "Services.jsx",
-    "text": "absolute inset-0 bg-gradient-to-t from-[#0f0f0f] via-transparent to-transparent z-10",
-    "type": "content"
-  },
-  {
-    "source": "Services.jsx",
-    "text": "w-full h-full object-contain p-4 relative z-0",
-    "type": "content"
-  },
-  {
-    "source": "Services.jsx",
-    "text": "p-8 md:p-10 relative z-20 -mt-24 md:-mt-32",
-    "type": "content"
-  },
-  {
-    "source": "Services.jsx",
-    "text": "inline-block px-3 py-1 rounded-lg bg-[#E31E24] text-white text-[10px] font-bold uppercase tracking-widest mb-4 shadow-lg",
-    "type": "content"
-  },
-  {
-    "source": "Services.jsx",
-    "text": "text-2xl md:text-3xl font-black uppercase italic tracking-tighter mb-2 drop-shadow-lg leading-none",
-    "type": "content"
-  },
-  {
-    "source": "Services.jsx",
-    "text": "text-[#E31E24] text-base md:text-lg font-bold italic mb-6",
-    "type": "content"
-  },
-  {
-    "source": "Services.jsx",
-    "text": ",\r\n        description:",
-    "type": "content"
-  },
-  {
-    "source": "Services.jsx",
-    "text": ",\r\n        image:",
-    "type": "content"
-  },
-  {
-    "source": "Services.jsx",
-    "text": ",\r\n        detailImgTop:",
-    "type": "content"
-  },
-  {
-    "source": "Services.jsx",
-    "text": ",\r\n        localPitch:",
-    "type": "content"
-  },
-  {
-    "source": "Services.jsx",
-    "text": ",\r\n        detailedDesc:",
+    "text": "Carriers, bumpers, and guards that give your car a heavy-duty muscular look. Presence aisi ki sab dekhte reh jayein.",
     "type": "content"
   },
   {
@@ -976,17 +626,17 @@
   },
   {
     "source": "WhyUs.jsx",
-    "text": "Expert Hands Only",
+    "text": ",\r\n              label:",
     "type": "content"
   },
   {
     "source": "WhyUs.jsx",
-    "text": "No Fake Products",
+    "text": ",\r\n              desc:",
     "type": "content"
   },
   {
     "source": "WhyUs.jsx",
-    "text": ">\r\n                                    Many local mechanics cut your car",
+    "text": ">\r\n                  Many local mechanics cut your car",
     "type": "content"
   },
   {
@@ -996,132 +646,37 @@
   },
   {
     "source": "WhyUs.jsx",
-    "text": "absolute bottom-0 right-0 bg-green-500 rounded-full p-2 border-4 border-black",
+    "text": ",\r\n                      icon:",
     "type": "content"
   },
   {
     "source": "WhyUs.jsx",
-    "text": "w-6 h-6 fill-white",
+    "text": ",\r\n                  captain:",
     "type": "content"
   },
   {
     "source": "WhyUs.jsx",
-    "text": "flex items-center gap-2",
+    "text": ",\r\n                  local:",
     "type": "content"
   },
   {
     "source": "WhyUs.jsx",
-    "text": "w-2 h-2 rounded-full bg-green-500 animate-pulse",
+    "text": ">\r\n              Don",
     "type": "content"
   },
   {
     "source": "WhyUs.jsx",
-    "text": "text-green-400 text-xs font-black uppercase tracking-widest",
-    "type": "content"
-  },
-  {
-    "source": "WhyUs.jsx",
-    "text": "absolute -top-2 -right-2 transform rotate-12",
-    "type": "content"
-  },
-  {
-    "source": "WhyUs.jsx",
-    "text": "w-12 h-12 fill-yellow-500 animate-bounce",
-    "type": "content"
-  },
-  {
-    "source": "WhyUs.jsx",
-    "text": "w-2 h-2 rounded-full bg-yellow-500 animate-pulse",
-    "type": "content"
-  },
-  {
-    "source": "WhyUs.jsx",
-    "text": "text-yellow-400 text-xs font-black uppercase tracking-widest",
-    "type": "content"
-  },
-  {
-    "source": "WhyUs.jsx",
-    "text": "text-3xl md:text-5xl font-black uppercase italic tracking-tighter mb-6 leading-none",
-    "type": "content"
-  },
-  {
-    "source": "WhyUs.jsx",
-    "text": "text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400",
-    "type": "content"
-  },
-  {
-    "source": "WhyUs.jsx",
-    "text": "text-gray-400 text-base md:text-lg leading-relaxed text-justify hyphens-auto tracking-tight break-words mb-8 border-l-4 border-yellow-500 pl-6",
-    "type": "content"
-  },
-  {
-    "source": "WhyUs.jsx",
-    "text": "text-2xl font-black text-white uppercase italic mb-6 group-hover:text-[#E31E24] transition-colors",
-    "type": "content"
-  },
-  {
-    "source": "WhyUs.jsx",
-    "text": "Same Day Installation",
-    "type": "content"
-  },
-  {
-    "source": "WhyUs.jsx",
-    "text": "Free Lifetime Tuning",
-    "type": "content"
-  },
-  {
-    "source": "WhyUs.jsx",
-    "text": "Clean Invisible Wiring",
-    "type": "content"
-  },
-  {
-    "source": "WhyUs.jsx",
-    "text": "flex items-center gap-3",
-    "type": "content"
-  },
-  {
-    "source": "WhyUs.jsx",
-    "text": "w-5 h-5 fill-gray-500 shrink-0",
-    "type": "content"
-  },
-  {
-    "source": "WhyUs.jsx",
-    "text": "text-white text-sm font-bold",
-    "type": "content"
-  },
-  {
-    "source": "WhyUs.jsx",
-    "text": "1-3 Year Manufacturer Warranty",
-    "type": "content"
-  },
-  {
-    "source": "WhyUs.jsx",
-    "text": "GST Invoice Provided",
-    "type": "content"
-  },
-  {
-    "source": "WhyUs.jsx",
-    "text": "Installation type",
-    "type": "content"
-  },
-  {
-    "source": "WhyUs.jsx",
-    "text": "15+ Years Expert",
-    "type": "content"
-  },
-  {
-    "source": "WhyUs.jsx",
-    "text": "Lifetime Support",
-    "type": "content"
-  },
-  {
-    "source": "WhyUs.jsx",
-    "text": ">\r\n                            Don",
-    "type": "content"
+    "text": "Expert Hands Only",
+    "type": "structured"
   },
   {
     "source": "WhyUs.jsx",
     "text": "Trusted by All",
+    "type": "structured"
+  },
+  {
+    "source": "WhyUs.jsx",
+    "text": "No Fake Products",
     "type": "structured"
   }
 ]

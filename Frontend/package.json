@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "npm run scan && vite",
-    "build": "npm run scan && vite build",
+    "build": "npm run scan && node scripts/generate-sitemap.js && vite build",
     "scan": "node scripts/scan-content.js",
     "lint": "eslint .",
     "preview": "vite preview"

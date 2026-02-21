@@ -1,385 +1,521 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import SEO from '../Components/SEO';
-import ScrollReveal from '../Components/ScrollReveal';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Seo from "../Components/Seo";
+import ScrollReveal from "../Components/ScrollReveal";
 
 const Services = () => {
-    const [selectedService, setSelectedService] = useState(null);
+  const [selectedService, setSelectedService] = useState(null);
 
-    return (
-        <div className="min-h-screen bg-black text-white font-sans selection:bg-brand-red selection:text-white pt-20 relative">
-            <SEO
-                title="Our Services"
-                description="Explore our premium car modification services: Concert Audio, Custom Interiors, Sun Control Films, Paint Protection, and Security Systems."
-                keywords="car modification services, car audio installation, seat cover customization, sun control film, car security systems"
-                url="/services"
+  return (
+    <div className="min-h-screen bg-black text-white font-sans selection:bg-brand-red selection:text-white pt-20 relative">
+      <Seo
+        title="Our Services"
+        description="Explore our premium car modification services: Concert Audio, Custom Interiors, Sun Control Films, Paint Protection, and Security Systems."
+        keywords="car modification services, car audio installation, seat cover customization, sun control film, car security systems"
+        url="/services"
+      />
+      {/* Background Texture */}
+      <div
+        className="absolute inset-0 z-0 opacity-20 pointer-events-none"
+        style={{
+          backgroundImage: "url(/assets/figma-img/bg-pattern.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
+      <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-brand-red/10 to-transparent pointer-events-none z-0" />
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        {/* Hero Section */}
+        <ScrollReveal>
+          <div className="text-left mb-16 relative pt-10 px-6 md:pl-20 lg:pl-32">
+            <div className="inline-block px-4 py-1.5 rounded-full border border-brand-red/30 bg-brand-red/5 text-brand-red text-xs font-bold uppercase tracking-[0.2em] mb-4 backdrop-blur-sm">
+              Expertise You Can Trust
+            </div>
+            <h1 className="text-3xl md:text-5xl font-black text-white italic tracking-tighter uppercase mb-6 leading-none drop-shadow-2xl">
+              Our <span className="text-[#E31E24]">Services</span>
+            </h1>
+            <p className="text-xl md:text-2xl lg:text-3xl text-white/90 max-w-4xl leading-relaxed border-l-4 border-[#E31E24] pl-6 text-left font-semibold tracking-wide drop-shadow-sm">
+              We don't just upgrade cars, we transform them. <br />
+              From concert level audio to showroom finish detailing, explore our
+              comprehensive range of premium services.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        {/* Workflow Stats (New) */}
+        <ScrollReveal delay={200}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20 border-y border-white/5 py-8">
+            {[
+              { label: "Years Experience", val: "15+" },
+              { label: "Premium Cars", val: "5000+" },
+              { label: "Expert Technicians", val: "12" },
+              { label: "Warranty Support", val: "100%" },
+            ].map((stat, i) => (
+              <div key={i} className="text-center">
+                <div className="text-4xl md:text-5xl font-black text-white italic mb-2">
+                  {stat.val}
+                </div>
+                <div className="text-sm md:text-base text-gray-400 font-bold uppercase tracking-widest">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-32">
+          {services.map((service, index) => (
+            <ScrollReveal key={index} delay={index * 100}>
+              <div
+                onClick={() => setSelectedService(service)}
+                className="h-full bg-gradient-to-b from-[#1a0505] to-black border border-white/5 hover:border-[#E31E24] hover:-translate-y-2 rounded-3xl p-6 transition-all duration-500 group relative overflow-hidden flex flex-col justify-between cursor-pointer shadow-[0_0_20px_rgba(0,0,0,0.5)] hover:shadow-[0_0_50px_rgba(227,30,36,0.3)]"
+              >
+                {/* Hover Image Background */}
+                <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-[10s]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
+                </div>
+
+                <div className="relative z-10 block">
+                  <div className="w-16 h-16 bg-black border border-[#E31E24]/20 rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:bg-[#E31E24] group-hover:border-[#E31E24] transition-colors duration-500">
+                    <div className="text-[#E31E24] w-8 h-8 group-hover:text-white transition-colors duration-500">
+                      {service.icon}
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-black text-white uppercase italic mb-4 tracking-tight group-hover:text-[#E31E24] transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed font-medium text-base group-hover:text-white transition-colors duration-300">
+                    {service.description}
+                  </p>
+                </div>
+
+                <div className="relative z-10 mt-8 pt-6 border-t border-white/5 flex items-center justify-between">
+                  <span className="uppercase text-xs font-bold tracking-[0.2em] text-[#E31E24]">
+                    Tap to Explore
+                  </span>
+                  <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-[#E31E24] group-hover:border-[#E31E24] transition-all duration-300">
+                    <span className="text-white text-sm transform -rotate-45 group-hover:rotate-0 transition-transform duration-500">
+                      →
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+
+        {/* THE PROCESS SECTION (New Content to increase page size) */}
+        <div className="mb-32 relative">
+          <ScrollReveal direction="left">
+            <h2 className="text-2xl md:text-4xl font-black text-white italic uppercase mb-12 tracking-tighter">
+              The Captain's <span className="text-[#E31E24]">Standard</span>
+            </h2>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+            {[
+              {
+                title: "Consultation",
+                desc: "We analyze your vehicle and understand your specific needs before recommending the best upgrades.",
+                icon: "01",
+              },
+              {
+                title: "Precision Install",
+                desc: "Our certified technicians ensure factory-finish installation with zero wire cutting or warranty voiding.",
+                icon: "02",
+              },
+              {
+                title: "Quality Check",
+                desc: "Every upgrade goes through a rigorous testing phase to ensure flawless performance and longevity.",
+                icon: "03",
+              },
+            ].map((step, idx) => (
+              <ScrollReveal key={idx} delay={idx * 150} direction="up">
+                <div className="bg-[#111] p-8 rounded-3xl border border-white/5 relative overflow-hidden group hover:border-[#E31E24]/50 transition-colors">
+                  <div className="absolute top-0 right-0 p-4 text-4xl font-black text-white/5 group-hover:text-[#E31E24]/10 transition-colors">
+                    {step.icon}
+                  </div>
+                  <div className="relative z-10">
+                    <h3 className="text-xl font-bold text-white uppercase mb-4">
+                      {step.title}
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed text-sm">
+                      {step.desc}
+                    </p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+
+        {/* TRANSFORMATION GALLERY (New Visual Content) */}
+        <div className="mb-40">
+          <ScrollReveal direction="right">
+            <div className="flex items-end justify-between mb-10">
+              <h2 className="text-2xl md:text-4xl font-black text-white italic uppercase tracking-tighter">
+                Recent <span className="text-[#E31E24]">Works</span>
+              </h2>
+              <Link
+                to="/products"
+                className="hidden md:block text-[#E31E24] font-bold uppercase tracking-widest text-[10px] border-b border-[#E31E24]"
+              >
+                View Full Catalogue
+              </Link>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[500px] md:h-[600px]">
+            <ScrollReveal delay={0} className="col-span-2 row-span-2 h-full">
+              <div className="w-full h-full rounded-3xl overflow-hidden relative group">
+                <img
+                  src="/seatcover6.png"
+                  alt="Premium Car Interior Showcase - Custom Seat Covers"
+                  className="w-full h-full object-contain bg-[#111]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                  <span className="text-white font-bold uppercase">
+                    Premium Interiors
+                  </span>
+                </div>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={100} className="col-span-2 row-span-2 h-full">
+              <div className="w-full h-full rounded-3xl overflow-hidden relative group">
+                <img
+                  src="/new photos/somecarfilm1.jpg"
+                  alt="Sun Control Film Installation Showcase"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                  <span className="text-white font-bold uppercase">
+                    Sun Control & Glass
+                  </span>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+
+        {/* MODAL POPUP OVERLAY */}
+        {/* MODAL POPUP OVERLAY */}
+        {selectedService && (
+          <div className="fixed inset-0 z-[1000] flex items-center justify-center p-4">
+            {/* Backdrop with Blur */}
+            <div
+              className="absolute inset-0 bg-black/80 backdrop-blur-md animate-in fade-in duration-300"
+              onClick={() => setSelectedService(null)}
             />
-            {/* Background Texture */}
-            <div className="absolute inset-0 z-0 opacity-20 pointer-events-none" style={{ backgroundImage: 'url(/assets/figma-img/bg-pattern.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }} />
-            <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-brand-red/10 to-transparent pointer-events-none z-0" />
 
-            <div className="max-w-7xl mx-auto px-6 relative z-10">
+            {/* Modal Card */}
+            <div className="relative bg-[#0f0f0f] border border-[#E31E24]/30 rounded-[2.5rem] w-full max-w-2xl max-h-[85vh] overflow-y-auto shadow-[0_0_100px_rgba(227,30,36,0.2)] animate-in zoom-in-95 duration-300 scrollbar-hide">
+              {/* Close Button */}
+              <button
+                onClick={() => setSelectedService(null)}
+                className="absolute top-4 right-4 z-[60] w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/10 hover:bg-[#E31E24] hover:border-[#E31E24] transition-colors"
+              >
+                ✕
+              </button>
 
-                {/* Hero Section */}
-                <ScrollReveal>
-                    <div className="text-left mb-16 relative pt-10 px-6 md:pl-20 lg:pl-32">
-                        <div className="inline-block px-4 py-1.5 rounded-full border border-brand-red/30 bg-brand-red/5 text-brand-red text-xs font-bold uppercase tracking-[0.2em] mb-4 backdrop-blur-sm">
-                            Expertise You Can Trust
-                        </div>
-                        <h1 className="text-3xl md:text-5xl font-black text-white italic tracking-tighter uppercase mb-6 leading-none drop-shadow-2xl">
-                            Our <span className="text-[#E31E24]">Services</span>
-                        </h1>
-                        <p className="text-xl md:text-2xl lg:text-3xl text-white/90 max-w-4xl leading-relaxed border-l-4 border-[#E31E24] pl-6 text-left font-semibold tracking-wide drop-shadow-sm">
-                            We don't just upgrade cars, we transform them. <br />
-                            From concert level audio to showroom finish detailing, explore our comprehensive range of premium services.
-                        </p>
-                    </div>
-                </ScrollReveal>
+              {/* Top Image / Hero */}
+              <div className="relative h-60 md:h-72 w-full bg-[#151515] flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f0f] via-transparent to-transparent z-10" />
+                <img
+                  src={selectedService.detailImgTop || selectedService.image}
+                  alt={selectedService.title}
+                  className="w-full h-full object-contain p-4 relative z-0"
+                />
+              </div>
 
-                {/* Workflow Stats (New) */}
-                <ScrollReveal delay={200}>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20 border-y border-white/5 py-8">
-                        {[
-                            { label: "Years Experience", val: "15+" },
-                            { label: "Premium Cars", val: "5000+" },
-                            { label: "Expert Technicians", val: "12" },
-                            { label: "Warranty Support", val: "100%" }
-                        ].map((stat, i) => (
-                            <div key={i} className="text-center">
-                                <div className="text-4xl md:text-5xl font-black text-white italic mb-2">{stat.val}</div>
-                                <div className="text-sm md:text-base text-gray-400 font-bold uppercase tracking-widest">{stat.label}</div>
-                            </div>
-                        ))}
-                    </div>
-                </ScrollReveal>
-
-                {/* Services Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-32">
-                    {services.map((service, index) => (
-                        <ScrollReveal key={index} delay={index * 100}>
-                            <div
-                                onClick={() => setSelectedService(service)}
-                                className="h-full bg-gradient-to-b from-[#1a0505] to-black border border-white/5 hover:border-[#E31E24] hover:-translate-y-2 rounded-3xl p-6 transition-all duration-500 group relative overflow-hidden flex flex-col justify-between cursor-pointer shadow-[0_0_20px_rgba(0,0,0,0.5)] hover:shadow-[0_0_50px_rgba(227,30,36,0.3)]"
-                            >
-                                {/* Hover Image Background */}
-                                <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                                    <img src={service.image} alt={service.title} className="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-[10s]" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
-                                </div>
-
-                                <div className="relative z-10 block">
-                                    <div className="w-16 h-16 bg-black border border-[#E31E24]/20 rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:bg-[#E31E24] group-hover:border-[#E31E24] transition-colors duration-500">
-                                        <div className="text-[#E31E24] w-8 h-8 group-hover:text-white transition-colors duration-500">
-                                            {service.icon}
-                                        </div>
-                                    </div>
-                                    <h3 className="text-2xl font-black text-white uppercase italic mb-4 tracking-tight group-hover:text-[#E31E24] transition-colors duration-300">{service.title}</h3>
-                                    <p className="text-gray-300 leading-relaxed font-medium text-base group-hover:text-white transition-colors duration-300">{service.description}</p>
-                                </div>
-
-                                <div className="relative z-10 mt-8 pt-6 border-t border-white/5 flex items-center justify-between">
-                                    <span className="uppercase text-xs font-bold tracking-[0.2em] text-[#E31E24]">Tap to Explore</span>
-                                    <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-[#E31E24] group-hover:border-[#E31E24] transition-all duration-300">
-                                        <span className="text-white text-sm transform -rotate-45 group-hover:rotate-0 transition-transform duration-500">→</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </ScrollReveal>
-                    ))}
+              <div className="p-8 md:p-10 relative z-20 -mt-24 md:-mt-32">
+                <div className="inline-block px-3 py-1 rounded-lg bg-[#E31E24] text-white text-[10px] font-bold uppercase tracking-widest mb-4 shadow-lg">
+                  Premium Service
                 </div>
 
-                {/* THE PROCESS SECTION (New Content to increase page size) */}
-                <div className="mb-32 relative">
-                    <ScrollReveal direction="left">
-                        <h2 className="text-2xl md:text-4xl font-black text-white italic uppercase mb-12 tracking-tighter">
-                            The Captain's <span className="text-[#E31E24]">Standard</span>
-                        </h2>
-                    </ScrollReveal>
+                <h2 className="text-2xl md:text-3xl font-black uppercase italic tracking-tighter mb-2 drop-shadow-lg leading-none">
+                  {selectedService.title}
+                </h2>
+                <h3 className="text-[#E31E24] text-base md:text-lg font-bold italic mb-6">
+                  "{selectedService.localPitch}"
+                </h3>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
-                        {[
-                            { title: "Consultation", desc: "We analyze your vehicle and understand your specific needs before recommending the best upgrades.", icon: "01" },
-                            { title: "Precision Install", desc: "Our certified technicians ensure factory-finish installation with zero wire cutting or warranty voiding.", icon: "02" },
-                            { title: "Quality Check", desc: "Every upgrade goes through a rigorous testing phase to ensure flawless performance and longevity.", icon: "03" }
-                        ].map((step, idx) => (
-                            <ScrollReveal key={idx} delay={idx * 150} direction="up">
-                                <div className="bg-[#111] p-8 rounded-3xl border border-white/5 relative overflow-hidden group hover:border-[#E31E24]/50 transition-colors">
-                                    <div className="absolute top-0 right-0 p-4 text-4xl font-black text-white/5 group-hover:text-[#E31E24]/10 transition-colors">
-                                        {step.icon}
-                                    </div>
-                                    <div className="relative z-10">
-                                        <h3 className="text-xl font-bold text-white uppercase mb-4">{step.title}</h3>
-                                        <p className="text-gray-400 leading-relaxed text-sm">{step.desc}</p>
-                                    </div>
-                                </div>
-                            </ScrollReveal>
-                        ))}
-                    </div>
+                <div className="text-gray-300 leading-relaxed mb-8 border-l-2 border-[#E31E24]/50 pl-6 text-sm md:text-base">
+                  {selectedService.detailedDesc}
                 </div>
 
-                {/* TRANSFORMATION GALLERY (New Visual Content) */}
-                <div className="mb-40">
-                    <ScrollReveal direction="right">
-                        <div className="flex items-end justify-between mb-10">
-                            <h2 className="text-2xl md:text-4xl font-black text-white italic uppercase tracking-tighter">
-                                Recent <span className="text-[#E31E24]">Works</span>
-                            </h2>
-                            <Link to="/products" className="hidden md:block text-[#E31E24] font-bold uppercase tracking-widest text-[10px] border-b border-[#E31E24]">View Full Catalogue</Link>
-                        </div>
-                    </ScrollReveal>
-
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[500px] md:h-[600px]">
-                        <ScrollReveal delay={0} className="col-span-2 row-span-2 h-full">
-                            <div className="w-full h-full rounded-3xl overflow-hidden relative group">
-                                <img src="/seatcover6.png" alt="Premium Car Interior Showcase - Custom Seat Covers" className="w-full h-full object-contain bg-[#111]" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
-                                    <span className="text-white font-bold uppercase">Premium Interiors</span>
-                                </div>
-                            </div>
-                        </ScrollReveal>
-                        <ScrollReveal delay={100} className="col-span-2 row-span-2 h-full">
-                            <div className="w-full h-full rounded-3xl overflow-hidden relative group">
-                                <img src="/new photos/somecarfilm1.jpg" alt="Sun Control Film Installation Showcase" className="w-full h-full object-cover" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
-                                    <span className="text-white font-bold uppercase">Sun Control & Glass</span>
-                                </div>
-                            </div>
-                        </ScrollReveal>
+                {/* Bottom Image (If exists) */}
+                {selectedService.detailImgBottom && (
+                  <div className="rounded-2xl overflow-hidden mb-8 border border-white/10 shadow-lg group relative">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+                    <img
+                      src={selectedService.detailImgBottom}
+                      alt="Detail View"
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute bottom-3 left-4 text-xs font-bold uppercase tracking-widest text-white/80">
+                      Signature Finish
                     </div>
-                </div>
-
-                {/* MODAL POPUP OVERLAY */}
-                {/* MODAL POPUP OVERLAY */}
-                {selectedService && (
-                    <div className="fixed inset-0 z-[1000] flex items-center justify-center p-4">
-                        {/* Backdrop with Blur */}
-                        <div
-                            className="absolute inset-0 bg-black/80 backdrop-blur-md animate-in fade-in duration-300"
-                            onClick={() => setSelectedService(null)}
-                        />
-
-                        {/* Modal Card */}
-                        <div className="relative bg-[#0f0f0f] border border-[#E31E24]/30 rounded-[2.5rem] w-full max-w-2xl max-h-[85vh] overflow-y-auto shadow-[0_0_100px_rgba(227,30,36,0.2)] animate-in zoom-in-95 duration-300 scrollbar-hide">
-
-                            {/* Close Button */}
-                            <button
-                                onClick={() => setSelectedService(null)}
-                                className="absolute top-4 right-4 z-[60] w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/10 hover:bg-[#E31E24] hover:border-[#E31E24] transition-colors"
-                            >
-                                ✕
-                            </button>
-
-                            {/* Top Image / Hero */}
-                            <div className="relative h-60 md:h-72 w-full bg-[#151515] flex items-center justify-center overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f0f] via-transparent to-transparent z-10" />
-                                <img
-                                    src={selectedService.detailImgTop || selectedService.image}
-                                    alt={selectedService.title}
-                                    className="w-full h-full object-contain p-4 relative z-0"
-                                />
-                            </div>
-
-                            <div className="p-8 md:p-10 relative z-20 -mt-24 md:-mt-32">
-                                <div className="inline-block px-3 py-1 rounded-lg bg-[#E31E24] text-white text-[10px] font-bold uppercase tracking-widest mb-4 shadow-lg">
-                                    Premium Service
-                                </div>
-
-                                <h2 className="text-2xl md:text-3xl font-black uppercase italic tracking-tighter mb-2 drop-shadow-lg leading-none">
-                                    {selectedService.title}
-                                </h2>
-                                <h3 className="text-[#E31E24] text-base md:text-lg font-bold italic mb-6">
-                                    "{selectedService.localPitch}"
-                                </h3>
-
-                                <div className="text-gray-300 leading-relaxed mb-8 border-l-2 border-[#E31E24]/50 pl-6 text-sm md:text-base">
-                                    {selectedService.detailedDesc}
-                                </div>
-
-                                {/* Bottom Image (If exists) */}
-                                {selectedService.detailImgBottom && (
-                                    <div className="rounded-2xl overflow-hidden mb-8 border border-white/10 shadow-lg group relative">
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
-                                        <img
-                                            src={selectedService.detailImgBottom}
-                                            alt="Detail View"
-                                            className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-700"
-                                        />
-                                        <div className="absolute bottom-3 left-4 text-xs font-bold uppercase tracking-widest text-white/80">
-                                            Signature Finish
-                                        </div>
-                                    </div>
-                                )}
-
-                                <a
-                                    href={`https://wa.me/919822119832?text=${encodeURIComponent(`Hey, I am interested in ${selectedService.title} service. Please share details.`)}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="block w-full"
-                                >
-                                    <button className="w-full bg-gradient-to-r from-[#E31E24] to-[#B01015] text-white py-4 rounded-xl font-black uppercase tracking-[0.2em] hover:shadow-[0_0_40px_rgba(227,30,36,0.4)] transition-all transform hover:-translate-y-1 relative overflow-hidden group">
-                                        <span className="relative z-10">Book Now via WhatsApp</span>
-                                        <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 skew-x-12" />
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                  </div>
                 )}
 
+                <a
+                  href={`https://wa.me/919822119832?text=${encodeURIComponent(`Hey, I am interested in ${selectedService.title} service. Please share details.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full"
+                >
+                  <button className="w-full bg-gradient-to-r from-[#E31E24] to-[#B01015] text-white py-4 rounded-xl font-black uppercase tracking-[0.2em] hover:shadow-[0_0_40px_rgba(227,30,36,0.4)] transition-all transform hover:-translate-y-1 relative overflow-hidden group">
+                    <span className="relative z-10">Book Now via WhatsApp</span>
+                    <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 skew-x-12" />
+                  </button>
+                </a>
+              </div>
             </div>
+          </div>
+        )}
+      </div>
 
-            {/* ================= CONTACT / FOOTER ================= */}
-            <footer className="bg-black pt-16 pb-10 border-t border-white/10 text-white relative z-50">
-                <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+      {/* ================= CONTACT / FOOTER ================= */}
+      <footer className="bg-black pt-16 pb-10 border-t border-white/10 text-white relative z-50">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+          {/* Brand */}
+          <div className="col-span-1">
+            <Link to="/" className="inline-block mb-2">
+              <img
+                src="/assets/figma-img/logo.png"
+                alt="Captain Car"
+                className="h-16 w-auto object-contain"
+              />
+            </Link>
+            <p className="text-gray-400 text-xs font-bold uppercase tracking-[0.2em] mb-6">
+              Car Audio & Accessories
+            </p>
 
-                    {/* Brand */}
-                    <div className="col-span-1">
-                        <Link to="/" className="inline-block mb-2">
-                            <img src="/assets/figma-img/logo.png" alt="Captain Car" className="h-16 w-auto object-contain" />
-                        </Link>
-                        <p className="text-gray-400 text-xs font-bold uppercase tracking-[0.2em] mb-6">Car Audio & Accessories</p>
+            <div className="flex gap-4 mt-6">
+              <a
+                href="https://www.instagram.com/captain_car_studio?igsh=N3JqNTNmOWVsNXZt"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#E31E24] hover:text-white transition-all group hover:scale-110 hover:shadow-[0_0_20px_rgba(227,30,36,0.4)]"
+              >
+                <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
+              </a>
+              <a
+                href="https://wa.me/919822119832?text=HEY!%20I%20have%20an%20enquiry%20about%20car%20accessories."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="h-12 px-6 rounded-full bg-[#25D366]/10 border border-[#25D366]/20 flex items-center justify-center gap-3 hover:bg-[#25D366] hover:text-black transition-all group hover:scale-105 hover:shadow-[0_0_20px_rgba(37,211,102,0.4)]"
+              >
+                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                <span className="font-bold uppercase tracking-wider text-xs text-[#25D366] group-hover:text-black">
+                  Chat With Us
+                </span>
+              </a>
+            </div>
+          </div>
 
-                        <div className="flex gap-4 mt-6">
-                            <a href="https://www.instagram.com/captain_car_studio?igsh=N3JqNTNmOWVsNXZt" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#E31E24] hover:text-white transition-all group hover:scale-110 hover:shadow-[0_0_20px_rgba(227,30,36,0.4)]">
-                                <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg>
-                            </a>
-                            <a href="https://wa.me/919822119832?text=HEY!%20I%20have%20an%20enquiry%20about%20car%20accessories." target="_blank" rel="noopener noreferrer" className="h-12 px-6 rounded-full bg-[#25D366]/10 border border-[#25D366]/20 flex items-center justify-center gap-3 hover:bg-[#25D366] hover:text-black transition-all group hover:scale-105 hover:shadow-[0_0_20px_rgba(37,211,102,0.4)]">
-                                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
-                                <span className="font-bold uppercase tracking-wider text-xs text-[#25D366] group-hover:text-black">Chat With Us</span>
-                            </a>
-                        </div>
-                    </div>
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-[#E31E24] font-bold uppercase tracking-widest mb-6">
+              Explore
+            </h4>
+            <ul className="space-y-4 text-gray-400 font-medium">
+              <li>
+                <Link
+                  to="/services"
+                  className="hover:text-white transition-colors flex items-center gap-2"
+                >
+                  <span className="text-[#E31E24]">›</span> Our Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/why-us"
+                  className="hover:text-white transition-colors flex items-center gap-2"
+                >
+                  <span className="text-[#E31E24]">›</span> Why Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="hover:text-white transition-colors flex items-center gap-2"
+                >
+                  <span className="text-[#E31E24]">›</span> Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
 
-                    {/* Quick Links */}
-                    <div>
-                        <h4 className="text-[#E31E24] font-bold uppercase tracking-widest mb-6">Explore</h4>
-                        <ul className="space-y-4 text-gray-400 font-medium">
-                            <li><Link to="/services" className="hover:text-white transition-colors flex items-center gap-2"><span className="text-[#E31E24]">›</span> Our Services</Link></li>
-                            <li><Link to="/why-us" className="hover:text-white transition-colors flex items-center gap-2"><span className="text-[#E31E24]">›</span> Why Us</Link></li>
-                            <li><Link to="/contact" className="hover:text-white transition-colors flex items-center gap-2"><span className="text-[#E31E24]">›</span> Contact</Link></li>
-                        </ul>
-                    </div>
-
-                    {/* Contact Us */}
-                    <div>
-                        <h4 className="text-[#E31E24] font-bold uppercase tracking-widest mb-6">Contact Us</h4>
-                        <div className="space-y-6 text-gray-400">
-                            <div className="flex items-start gap-4 group">
-                                <span className="text-2xl text-[#E31E24] group-hover:scale-110 transition-transform">
-                                    <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-2.2 2.2a15.057 15.057 0 01-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1.01A11.36 11.36 0 018.59 3.91c0-.55-.45-1-1-1H4.39c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z" /></svg>
-                                </span>
-                                <div>
-                                    <p className="text-white font-bold">Call Us:</p>
-                                    <p className="text-xl text-[#E31E24] font-black">9822119832</p>
-                                </div>
-                            </div>
-                            <div className="flex items-center gap-4 group">
-                                <span className="text-2xl text-[#E31E24] group-hover:scale-110 transition-transform">
-                                    <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" /></svg>
-                                </span>
-                                <p>captaincardecor@gmail.com</p>
-                            </div>
-                            <div className="flex items-center gap-4 group">
-                                <span className="text-2xl text-[#E31E24] group-hover:scale-110 transition-transform">
-                                    <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" /></svg>
-                                </span>
-                                <p>Mon - Sat: 10 AM - 9 PM</p>
-                            </div>
-                        </div>
-                    </div>
+          {/* Contact Us */}
+          <div>
+            <h4 className="text-[#E31E24] font-bold uppercase tracking-widest mb-6">
+              Contact Us
+            </h4>
+            <div className="space-y-6 text-gray-400">
+              <div className="flex items-start gap-4 group">
+                <span className="text-2xl text-[#E31E24] group-hover:scale-110 transition-transform">
+                  <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                    <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-2.2 2.2a15.057 15.057 0 01-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1.01A11.36 11.36 0 018.59 3.91c0-.55-.45-1-1-1H4.39c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z" />
+                  </svg>
+                </span>
+                <div>
+                  <p className="text-white font-bold">Call Us:</p>
+                  <p className="text-xl text-[#E31E24] font-black">
+                    9822119832
+                  </p>
                 </div>
-
-                <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 uppercase tracking-widest gap-4">
-                    <p>Copyright © 2025 Captain Car. All rights reserved.</p>
-                    <div className="flex flex-col items-center gap-1">
-                        <img src="/datamatexlogo.webp" alt="DataMatex" className="w-12 h-auto object-contain hover:scale-110 transition-all duration-300" />
-                        <p className="font-bold text-[10px]">Designed by <a href="https://datamatex.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors font-black"><span className="text-[#4F46E5]">Data</span><span className="text-[#F97316]">Matex</span></a></p>
-                    </div>
-                </div>
-            </footer>
+              </div>
+              <div className="flex items-center gap-4 group">
+                <span className="text-2xl text-[#E31E24] group-hover:scale-110 transition-transform">
+                  <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                  </svg>
+                </span>
+                <p>captaincardecor@gmail.com</p>
+              </div>
+              <div className="flex items-center gap-4 group">
+                <span className="text-2xl text-[#E31E24] group-hover:scale-110 transition-transform">
+                  <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                    <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+                  </svg>
+                </span>
+                <p>Mon - Sat: 10 AM - 9 PM</p>
+              </div>
+            </div>
+          </div>
         </div>
-    );
+
+        <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 uppercase tracking-widest gap-4">
+          <p>Copyright © 2025 Captain Car. All rights reserved.</p>
+          <div className="flex flex-col items-center gap-1">
+            <img
+              src="/datamatexlogo.webp"
+              alt="DataMatex"
+              className="w-12 h-auto object-contain hover:scale-110 transition-all duration-300"
+            />
+            <p className="font-bold text-[10px]">
+              Designed by{" "}
+              <a
+                href="https://datamatex.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors font-black"
+              >
+                <span className="text-[#4F46E5]">Data</span>
+                <span className="text-[#F97316]">Matex</span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
 };
 
 const services = [
-    {
-        title: "Concert Audio",
-        description: "Experience high-fidelity sound with deep bass and crystal clear vocals. We turn every drive into a live concert performance.",
-        image: "/bossaudiosystem.png",
-        detailImgTop: "/speaker/bossaudiosystem-removebg-preview.png",
-        localPitch: "Boss Bass, Pura Hall Hila Denge!",
-        detailedDesc: "Experience studio-quality sound in your car. We install high-power woofers, DSPs, and amplifiers that give you a crystal clear output with zero distortion.",
-        icon: (
-            <svg className="w-full h-full fill-current" viewBox="0 0 24 24">
-                <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
-            </svg>
-        )
-    },
-    {
-        title: "Interior Accessories",
-        description: "Luxury meets comfort with custom seat covers and 7D mats. We give your vehicle a showroom-fresh interior feel.",
-        image: "/seatcover1.png",
-        detailImgTop: "/seat cover/seatcover2-removebg-preview.png",
-        localPitch: "Interiors Jo Dil Jeet Le!",
-        detailedDesc: "From Nappa leather finishes to sweat-proof fabrics, our seat covers are stitched to perfection. Comfort aur style ka perfect combo.",
-        icon: (
-            <svg className="w-full h-full fill-current" viewBox="0 0 24 24">
-                <path d="M4 18v3h3v-3h10v3h3v-6H4v3zm15-8h1V6c0-2.76-2.24-5-5-5H9c-2.76 0-5 2.24-5 5v4h1v5h14v-5z" />
-            </svg>
-        )
-    },
-    {
-        title: "Ambient Lighting",
-        description: "Set the mood with app-controlled LED strips and starlights. Create a vibrant atmosphere that matches your style.",
-        image: "/cardisplay2.png",
-        detailImgTop: "/ledlight2.png",
-        localPitch: "Gaadi Hai Ya Disco?",
-        detailedDesc: "Multi-color ambient light strips with app control. Change colors according to your mood. Raat mein full vibe banegi!",
-        icon: (
-            <svg className="w-full h-full fill-current" viewBox="0 0 24 24">
-                <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z" />
-            </svg>
-        )
-    },
-    {
-        title: "Privacy Films",
-        description: "Stay cool with advanced sun control films. Block harmful UV rays and heat, ensuring privacy and comfort on every ride.",
-        image: "/suntekwindowfilm.png",
-        detailImgTop: "/windowwash.png",
-        localPitch: "Dhoop Ka Tension Khatam!",
-        detailedDesc: "High-quality sun control films that keep your car cool even in peak summer. Privacy bhi, cooling bhi.",
-        icon: (
-            <svg className="w-full h-full fill-current" viewBox="0 0 24 24">
-                <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z" />
-            </svg>
-        )
-    },
-    {
-        title: "Security Systems",
-        description: "Protect your car with GPS trackers and central locking. We ensure your vehicle stays safe from theft and intrusion.",
-        image: "/keylessentrysystem.png",
-        detailImgTop: "/key-less-entry/key-less-entry-system-1-hero.png",
-        localPitch: "Chori Ka Koi Chance Nahi!",
-        detailedDesc: "Protect your car with trusted central locking and GPS systems. Sleep peaceful knowing your car is safe.",
-        icon: (
-            <svg className="w-full h-full fill-current" viewBox="0 0 24 24">
-                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" />
-            </svg>
-        )
-    },
-    {
-        title: "Exterior Styling",
-        description: "Make a statement with custom body kits and stylish alloys. We give your car a commanding and unique road presence.",
-        image: "/tyremiddle.png",
-        detailImgTop: "/carrier/carrier5-removebg-hero.png",
-        localPitch: "Road Pe Sirf Aap Dikhenge!",
-        detailedDesc: "Carriers, bumpers, and guards that give your car a heavy-duty muscular look. Presence aisi ki sab dekhte reh jayein.",
-        icon: (
-            <svg className="w-full h-full fill-current" viewBox="0 0 24 24">
-                <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
-            </svg>
-        )
-    }
+  {
+    title: "Concert Audio",
+    description:
+      "Experience high-fidelity sound with deep bass and crystal clear vocals. We turn every drive into a live concert performance.",
+    image: "/bossaudiosystem.png",
+    detailImgTop: "/speaker/bossaudiosystem-removebg-preview.png",
+    localPitch: "Boss Bass, Pura Hall Hila Denge!",
+    detailedDesc:
+      "Experience studio-quality sound in your car. We install high-power woofers, DSPs, and amplifiers that give you a crystal clear output with zero distortion.",
+    icon: (
+      <svg className="w-full h-full fill-current" viewBox="0 0 24 24">
+        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Interior Accessories",
+    description:
+      "Luxury meets comfort with custom seat covers and 7D mats. We give your vehicle a showroom-fresh interior feel.",
+    image: "/seatcover1.png",
+    detailImgTop: "/seat cover/seatcover2-removebg-preview.png",
+    localPitch: "Interiors Jo Dil Jeet Le!",
+    detailedDesc:
+      "From Nappa leather finishes to sweat-proof fabrics, our seat covers are stitched to perfection. Comfort aur style ka perfect combo.",
+    icon: (
+      <svg className="w-full h-full fill-current" viewBox="0 0 24 24">
+        <path d="M4 18v3h3v-3h10v3h3v-6H4v3zm15-8h1V6c0-2.76-2.24-5-5-5H9c-2.76 0-5 2.24-5 5v4h1v5h14v-5z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Ambient Lighting",
+    description:
+      "Set the mood with app-controlled LED strips and starlights. Create a vibrant atmosphere that matches your style.",
+    image: "/cardisplay2.png",
+    detailImgTop: "/ledlight2.png",
+    localPitch: "Gaadi Hai Ya Disco?",
+    detailedDesc:
+      "Multi-color ambient light strips with app control. Change colors according to your mood. Raat mein full vibe banegi!",
+    icon: (
+      <svg className="w-full h-full fill-current" viewBox="0 0 24 24">
+        <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Privacy Films",
+    description:
+      "Stay cool with advanced sun control films. Block harmful UV rays and heat, ensuring privacy and comfort on every ride.",
+    image: "/suntekwindowfilm.png",
+    detailImgTop: "/windowwash.png",
+    localPitch: "Dhoop Ka Tension Khatam!",
+    detailedDesc:
+      "High-quality sun control films that keep your car cool even in peak summer. Privacy bhi, cooling bhi.",
+    icon: (
+      <svg className="w-full h-full fill-current" viewBox="0 0 24 24">
+        <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Security Systems",
+    description:
+      "Protect your car with GPS trackers and central locking. We ensure your vehicle stays safe from theft and intrusion.",
+    image: "/keylessentrysystem.png",
+    detailImgTop: "/key-less-entry/key-less-entry-system-1-hero.png",
+    localPitch: "Chori Ka Koi Chance Nahi!",
+    detailedDesc:
+      "Protect your car with trusted central locking and GPS systems. Sleep peaceful knowing your car is safe.",
+    icon: (
+      <svg className="w-full h-full fill-current" viewBox="0 0 24 24">
+        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Exterior Styling",
+    description:
+      "Make a statement with custom body kits and stylish alloys. We give your car a commanding and unique road presence.",
+    image: "/tyremiddle.png",
+    detailImgTop: "/carrier/carrier5-removebg-hero.png",
+    localPitch: "Road Pe Sirf Aap Dikhenge!",
+    detailedDesc:
+      "Carriers, bumpers, and guards that give your car a heavy-duty muscular look. Presence aisi ki sab dekhte reh jayein.",
+    icon: (
+      <svg className="w-full h-full fill-current" viewBox="0 0 24 24">
+        <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
+      </svg>
+    ),
+  },
 ];
 
 export default Services;
