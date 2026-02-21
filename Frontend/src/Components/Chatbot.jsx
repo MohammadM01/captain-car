@@ -96,7 +96,9 @@ const Chatbot = () => {
       "dada",
     ];
     const lowerText = text.toLowerCase();
-    return hindiKeywords.some((word) => lowerText.includes(word));
+    return hindiKeywords.some((word) =>
+      new RegExp(`\\b${word}\\b`, "i").test(lowerText),
+    );
   };
 
   // Helper: Levenshtein Distance for fuzzy matching
@@ -192,7 +194,8 @@ const Chatbot = () => {
         const lowerKeyword = keyword.toLowerCase();
 
         // 1. Exact Phrase Match (Highest Priority)
-        if (lowerInput.includes(lowerKeyword)) {
+        const regex = new RegExp(`\\b${lowerKeyword}\\b`, "i");
+        if (regex.test(lowerInput)) {
           score += 10;
           continue; // Skip other checks if exact match found
         }

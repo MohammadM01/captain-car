@@ -30,6 +30,29 @@ export const chatData = [
     ],
   },
   {
+    id: "about",
+    keywords: [
+      "what is this",
+      "what is this website",
+      "what is this website about",
+      "about",
+      "who are you",
+      "kya hai ye",
+      "captain car studio",
+      "captain car",
+    ],
+    responses: [
+      {
+        en: "Captain Car Studio is Bhiwandi's premier destination for luxury car modifications, premium audio upgrades, and professional detailing like Ceramic Coating and PPF. We are the ultimate workshop for car lovers!",
+        hi: "Captain Car Studio Bhiwandi ka sabse premium car modification, audio upgrade, aur detailing (jaise Ceramic Coating aur PPF) workshop hai. Hum gaadiyo ke deewano ke liye the best jagah hai!",
+      },
+      {
+        en: "We specialize in making your car look and sound amazing. From high-end Android displays to bulletproof PPF, we do it all.",
+        hi: "Hum aapki car ko behtareen look aur sound dene mein maahir hain. High-end Android screen se lekar zabardast PPF tak, hum sab karte hain.",
+      },
+    ],
+  },
+  {
     id: "owner",
     keywords: [
       "owner",
